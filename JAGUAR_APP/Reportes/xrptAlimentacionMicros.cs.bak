@@ -1,0 +1,173 @@
+﻿using System;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
+using DevExpress.XtraReports.UI;
+using System.Data.SqlClient;
+using ACS.Classes;
+
+namespace JAGUAR_APP.Reportes
+{
+    public partial class xrptAlimentacionMicros : DevExpress.XtraReports.UI.XtraReport
+    {
+        int Pid;
+        int Pencabezado;
+        int id_mp;
+        DataOperations dp = new DataOperations();
+        public xrptAlimentacionMicros(int idm, int id_encabezado)
+        {
+            //PESAJE NUCLEO
+            InitializeComponent();
+            DataOperations dp = new DataOperations();
+            Pid = idm;
+            Pencabezado = id_encabezado;
+            id_mp = 0;
+            Load_detalle();
+            load_Encabezado();
+            load_cantidades();
+        }
+        public xrptAlimentacionMicros(int pid_encabezado, int pid_rm, int pbatch_completados)
+        {
+            //PESAJE INDIVIDUAL
+            InitializeComponent();
+            DataOperations dp = new DataOperations();
+            Pid = 0;
+            id_mp = pid_rm;
+            Pencabezado = pid_encabezado;
+            xrLabel8.Visible = false;
+            txtnumero.Visible = false;
+            xrLabel9.Text = "Pesaje Individual de Micro Ingrediente";
+            batchpesados.Text = Convert.ToString(pbatch_completados);
+            Load_detalle();
+            load_encabezado_pesaje_individual();
+            load_cantidades();
+
+        }
+
+        public void load_cantidades() 
+        {
+            try
+            {
+                string query = @"sp_load_op_reporte_detalle_micro_ingrediente";
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(query,cn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ami_id", Pid);
+                cmd.Parameters.AddWithValue("@id_orden", Pencabezado);
+                cmd.Parameters.AddWithValue("@id_mp", id_mp);
+                dsReportes2.detalle_rpt_5toNivel.Clear();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dsReportes2.detalle_rpt_5toNivel);
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+        public void Load_detalle() 
+        {
+            //int tipo_pesaje;
+           
+            string query = @"sp_load_op_reporte_detalle_micro_ingrediente";
+            SqlConnection cn = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ami_id", Pid);
+                cmd.Parameters.AddWithValue("@id_orden", Pencabezado);
+                cmd.Parameters.AddWithValue("@id_mp", id_mp);
+                dsReportes2.detalle_rpt_micros.Clear();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dsReportes2.detalle_rpt_micros);
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                //
+                CajaDialogo.Error(ex.Message);
+            }
+           
+        }
+
+        public void load_encabezado_pesaje_individual()
+        {
+            string query = @"sp_load_encabezado_reporte_micros_individual";
+            SqlConnection cn = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_rm", id_mp);
+                cmd.Parameters.AddWithValue("@id_orden", Pencabezado);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    dtFecha.Text = string.Format("{0:dd/MM/yyyy}", dr.GetDateTime(1));
+                    txtlote.Text = dr.GetInt32(2).ToString();
+                    txtcodigoPT.Text = dr.GetString(5);
+                    txtturno.Text = dr.GetString(7);
+                    txtformula.Text = dr.GetString(6);
+                    txtproducto.Text = dr.GetString(4);
+                    txt_barcode.Text = dr.GetString(9);
+                    batchpesados.Text = dr.GetInt32(8).ToString();
+                    txtnumero.Text = Pid.ToString();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
+        public void load_Encabezado()
+        {
+
+            string query = @"sp_load_encabezado_reporte_micros";
+            SqlConnection cn = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ami_id", Pid);
+                cmd.Parameters.AddWithValue("@id_orden", Pencabezado);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    dtFecha.Text = string.Format("{0:dd/MM/yyyy}", dr.GetDateTime(1));
+                    txtlote.Text = dr.GetInt32(2).ToString();
+                    txtcodigoPT.Text = dr.GetString(5);
+                    txtturno.Text = dr.GetString(7);
+                    txtformula.Text = dr.GetString(6);
+                    txtproducto.Text = dr.GetString(4);
+                    txt_barcode.Text = dr.GetInt32(9).ToString();
+                    batchpesados.Text = dr.GetInt32(8).ToString();
+                    txtnumero.Text = Pid.ToString();
+                    txt_barcode.Text = dr.GetString(10);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                CajaDialogo.Error(ex.Message);
+            }
+        }   
+        
+
+        private void SubReporte1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+
+        }
+    }
+}

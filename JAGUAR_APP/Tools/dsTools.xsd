@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsTools" targetNamespace="http://tempuri.org/dsTools.xsd" xmlns:mstns="http://tempuri.org/dsTools.xsd" xmlns="http://tempuri.org/dsTools.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsTools" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTools" msprop:Generator_UserDSName="dsTools">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Notificaciones" msprop:Generator_TableClassName="NotificacionesDataTable" msprop:Generator_TableVarName="tableNotificaciones" msprop:Generator_RowChangedName="NotificacionesRowChanged" msprop:Generator_TablePropName="Notificaciones" msprop:Generator_RowDeletingName="NotificacionesRowDeleting" msprop:Generator_RowChangingName="NotificacionesRowChanging" msprop:Generator_RowEvHandlerName="NotificacionesRowChangeEventHandler" msprop:Generator_RowDeletedName="NotificacionesRowDeleted" msprop:Generator_RowClassName="NotificacionesRow" msprop:Generator_UserTableName="Notificaciones" msprop:Generator_RowEvArgName="NotificacionesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="Descripcion" msprop:nullValue="" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="leida" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="leida" msprop:Generator_ColumnVarNameInTable="columnleida" msprop:Generator_ColumnPropNameInTable="leidaColumn" msprop:Generator_UserColumnName="leida" type="xs:boolean" minOccurs="0" />
+              <xs:element name="id_tipo_notificacion" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="id_tipo_notificacion" msprop:Generator_ColumnVarNameInTable="columnid_tipo_notificacion" msprop:Generator_ColumnPropNameInTable="id_tipo_notificacionColumn" msprop:Generator_UserColumnName="id_tipo_notificacion" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha_creacion" msprop:Generator_ColumnVarNameInTable="columnfecha_creacion" msprop:Generator_ColumnPropNameInRow="fecha_creacion" msprop:Generator_ColumnPropNameInTable="fecha_creacionColumn" msprop:Generator_UserColumnName="fecha_creacion" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NotificacionesLeidas" msprop:Generator_TableClassName="NotificacionesLeidasDataTable" msprop:Generator_TableVarName="tableNotificacionesLeidas" msprop:Generator_TablePropName="NotificacionesLeidas" msprop:Generator_RowDeletingName="NotificacionesLeidasRowDeleting" msprop:Generator_RowChangingName="NotificacionesLeidasRowChanging" msprop:Generator_RowEvHandlerName="NotificacionesLeidasRowChangeEventHandler" msprop:Generator_RowDeletedName="NotificacionesLeidasRowDeleted" msprop:Generator_UserTableName="NotificacionesLeidas" msprop:Generator_RowChangedName="NotificacionesLeidasRowChanged" msprop:Generator_RowEvArgName="NotificacionesLeidasRowChangeEvent" msprop:Generator_RowClassName="NotificacionesLeidasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="Descripcion" msprop:nullValue="" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="leida" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="leida" msprop:Generator_ColumnVarNameInTable="columnleida" msprop:Generator_ColumnPropNameInTable="leidaColumn" msprop:Generator_UserColumnName="leida" type="xs:boolean" minOccurs="0" />
+              <xs:element name="id_tipo_notificacion" msprop:Generator_ColumnVarNameInTable="columnid_tipo_notificacion" msprop:Generator_ColumnPropNameInRow="id_tipo_notificacion" msprop:Generator_ColumnPropNameInTable="id_tipo_notificacionColumn" msprop:Generator_UserColumnName="id_tipo_notificacion" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha_creacion" msprop:Generator_ColumnVarNameInTable="columnfecha_creacion" msprop:Generator_ColumnPropNameInRow="fecha_creacion" msprop:Generator_ColumnPropNameInTable="fecha_creacionColumn" msprop:Generator_UserColumnName="fecha_creacion" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsTarima" targetNamespace="http://tempuri.org/dsTarima.xsd" xmlns:mstns="http://tempuri.org/dsTarima.xsd" xmlns="http://tempuri.org/dsTarima.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsTarima" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTarima" msprop:Generator_UserDSName="dsTarima">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bodega_origen" msprop:Generator_TableClassName="bodega_origenDataTable" msprop:Generator_TableVarName="tablebodega_origen" msprop:Generator_TablePropName="bodega_origen" msprop:Generator_RowDeletingName="bodega_origenRowDeleting" msprop:Generator_RowChangingName="bodega_origenRowChanging" msprop:Generator_RowEvHandlerName="bodega_origenRowChangeEventHandler" msprop:Generator_RowDeletedName="bodega_origenRowDeleted" msprop:Generator_UserTableName="bodega_origen" msprop:Generator_RowChangedName="bodega_origenRowChanged" msprop:Generator_RowEvArgName="bodega_origenRowChangeEvent" msprop:Generator_RowClassName="bodega_origenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="existencia" msprop:Generator_ColumnVarNameInTable="columnexistencia" msprop:Generator_ColumnPropNameInRow="existencia" msprop:Generator_ColumnPropNameInTable="existenciaColumn" msprop:Generator_UserColumnName="existencia" type="xs:decimal" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bodega_destino" msprop:Generator_TableClassName="bodega_destinoDataTable" msprop:Generator_TableVarName="tablebodega_destino" msprop:Generator_RowChangedName="bodega_destinoRowChanged" msprop:Generator_TablePropName="bodega_destino" msprop:Generator_RowDeletingName="bodega_destinoRowDeleting" msprop:Generator_RowChangingName="bodega_destinoRowChanging" msprop:Generator_RowEvHandlerName="bodega_destinoRowChangeEventHandler" msprop:Generator_RowDeletedName="bodega_destinoRowDeleted" msprop:Generator_RowClassName="bodega_destinoRow" msprop:Generator_UserTableName="bodega_destino" msprop:Generator_RowEvArgName="bodega_destinoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="existencia" msprop:Generator_ColumnVarNameInTable="columnexistencia" msprop:Generator_ColumnPropNameInRow="existencia" msprop:Generator_ColumnPropNameInTable="existenciaColumn" msprop:Generator_UserColumnName="existencia" type="xs:decimal" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bodega_destino_pt" msprop:Generator_TableClassName="bodega_destino_ptDataTable" msprop:Generator_TableVarName="tablebodega_destino_pt" msprop:Generator_TablePropName="bodega_destino_pt" msprop:Generator_RowDeletingName="bodega_destino_ptRowDeleting" msprop:Generator_RowChangingName="bodega_destino_ptRowChanging" msprop:Generator_RowEvHandlerName="bodega_destino_ptRowChangeEventHandler" msprop:Generator_RowDeletedName="bodega_destino_ptRowDeleted" msprop:Generator_UserTableName="bodega_destino_pt" msprop:Generator_RowChangedName="bodega_destino_ptRowChanged" msprop:Generator_RowEvArgName="bodega_destino_ptRowChangeEvent" msprop:Generator_RowClassName="bodega_destino_ptRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="existencia" msprop:Generator_ColumnVarNameInTable="columnexistencia" msprop:Generator_ColumnPropNameInRow="existencia" msprop:Generator_ColumnPropNameInTable="existenciaColumn" msprop:Generator_UserColumnName="existencia" type="xs:decimal" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReportesRequisicionesManuales" targetNamespace="http://tempuri.org/dsReportesRequisicionesManuales.xsd" xmlns:mstns="http://tempuri.org/dsReportesRequisicionesManuales.xsd" xmlns="http://tempuri.org/dsReportesRequisicionesManuales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReportesRequisicionesManuales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReportesRequisicionesManuales" msprop:Generator_UserDSName="dsReportesRequisicionesManuales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="reporte_requisiciones" msprop:Generator_TableClassName="reporte_requisicionesDataTable" msprop:Generator_TableVarName="tablereporte_requisiciones" msprop:Generator_RowChangedName="reporte_requisicionesRowChanged" msprop:Generator_TablePropName="reporte_requisiciones" msprop:Generator_RowDeletingName="reporte_requisicionesRowDeleting" msprop:Generator_RowChangingName="reporte_requisicionesRowChanging" msprop:Generator_RowEvHandlerName="reporte_requisicionesRowChangeEventHandler" msprop:Generator_RowDeletedName="reporte_requisicionesRowDeleted" msprop:Generator_RowClassName="reporte_requisicionesRow" msprop:Generator_UserTableName="reporte_requisiciones" msprop:Generator_RowEvArgName="reporte_requisicionesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_x0020_Id" msprop:Generator_ColumnVarNameInTable="columnCod_Id" msprop:Generator_ColumnPropNameInRow="Cod_Id" msprop:Generator_ColumnPropNameInTable="Cod_IdColumn" msprop:Generator_UserColumnName="Cod Id" type="xs:int" minOccurs="0" />
+              <xs:element name="id_orden" msprop:Generator_ColumnVarNameInTable="columnid_orden" msprop:Generator_ColumnPropNameInRow="id_orden" msprop:Generator_ColumnPropNameInTable="id_ordenColumn" msprop:Generator_UserColumnName="id_orden" type="xs:long" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Doc_x0020_Num" msprop:Generator_ColumnVarNameInTable="columnDoc_Num" msprop:Generator_ColumnPropNameInRow="Doc_Num" msprop:Generator_ColumnPropNameInTable="Doc_NumColumn" msprop:Generator_UserColumnName="Doc Num" type="xs:int" minOccurs="0" />
+              <xs:element name="Code_x0020_SAP_x0020_PT" msprop:Generator_ColumnVarNameInTable="columnCode_SAP_PT" msprop:Generator_ColumnPropNameInRow="Code_SAP_PT" msprop:Generator_ColumnPropNameInTable="Code_SAP_PTColumn" msprop:Generator_UserColumnName="Code SAP PT" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombre_x0020_PT" msprop:Generator_ColumnVarNameInTable="columnNombre_PT" msprop:Generator_ColumnPropNameInRow="Nombre_PT" msprop:Generator_ColumnPropNameInTable="Nombre_PTColumn" msprop:Generator_UserColumnName="Nombre PT" type="xs:string" minOccurs="0" />
+              <xs:element name="MP_x0020_SAP_x0020_CODE" msprop:Generator_ColumnVarNameInTable="columnMP_SAP_CODE" msprop:Generator_ColumnPropNameInRow="MP_SAP_CODE" msprop:Generator_ColumnPropNameInTable="MP_SAP_CODEColumn" msprop:Generator_UserColumnName="MP SAP CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombre_x0020_MP" msprop:Generator_ColumnVarNameInTable="columnNombre_MP" msprop:Generator_ColumnPropNameInRow="Nombre_MP" msprop:Generator_ColumnPropNameInTable="Nombre_MPColumn" msprop:Generator_UserColumnName="Nombre MP" type="xs:string" minOccurs="0" />
+              <xs:element name="Cant._x0020_Solicitada_x0020_Kg" msprop:Generator_ColumnVarNameInTable="_columnCant__Solicitada_Kg" msprop:Generator_ColumnPropNameInRow="_Cant__Solicitada_Kg" msprop:Generator_ColumnPropNameInTable="_Cant__Solicitada_KgColumn" msprop:Generator_UserColumnName="Cant. Solicitada Kg" type="xs:decimal" minOccurs="0" />
+              <xs:element name="id_usuario" msprop:Generator_ColumnVarNameInTable="columnid_usuario" msprop:Generator_ColumnPropNameInRow="id_usuario" msprop:Generator_ColumnPropNameInTable="id_usuarioColumn" msprop:Generator_UserColumnName="id_usuario" type="xs:int" minOccurs="0" />
+              <xs:element name="Usuario_x0020_Solicita" msprop:Generator_ColumnVarNameInTable="columnUsuario_Solicita" msprop:Generator_ColumnPropNameInRow="Usuario_Solicita" msprop:Generator_ColumnPropNameInTable="Usuario_SolicitaColumn" msprop:Generator_UserColumnName="Usuario Solicita" type="xs:string" minOccurs="0" />
+              <xs:element name="PP_x0020_Order" msprop:Generator_ColumnVarNameInTable="columnPP_Order" msprop:Generator_ColumnPropNameInRow="PP_Order" msprop:Generator_ColumnPropNameInTable="PP_OrderColumn" msprop:Generator_UserColumnName="PP Order" type="xs:string" minOccurs="0" />
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
