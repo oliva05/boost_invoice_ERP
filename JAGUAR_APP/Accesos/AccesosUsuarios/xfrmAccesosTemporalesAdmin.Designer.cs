@@ -76,14 +76,12 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataMember = "Accesos_Temporales";
             this.gridControl1.DataSource = this.dsAccesosBindingSource;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControl1.Location = new System.Drawing.Point(0, 107);
+            this.gridControl1.Location = new System.Drawing.Point(0, 87);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEditar});
-            this.gridControl1.Size = new System.Drawing.Size(1084, 322);
+            this.gridControl1.Size = new System.Drawing.Size(929, 417);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -117,102 +115,89 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             this.colid_usuario_created,
             this.colusuario_created,
             this.gridColumn1});
-            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsEditForm.PopupEditFormWidth = 686;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colid_usuario
             // 
             this.colid_usuario.FieldName = "id_usuario";
-            this.colid_usuario.MinWidth = 23;
             this.colid_usuario.Name = "colid_usuario";
-            this.colid_usuario.Width = 87;
             // 
             // colusuario
             // 
             this.colusuario.Caption = "Usuario";
             this.colusuario.FieldName = "usuario";
-            this.colusuario.MinWidth = 23;
             this.colusuario.Name = "colusuario";
             this.colusuario.Visible = true;
             this.colusuario.VisibleIndex = 0;
-            this.colusuario.Width = 134;
+            this.colusuario.Width = 115;
             // 
             // colid_ventana
             // 
             this.colid_ventana.FieldName = "id_ventana";
-            this.colid_ventana.MinWidth = 23;
             this.colid_ventana.Name = "colid_ventana";
-            this.colid_ventana.Width = 87;
             // 
             // colventana
             // 
             this.colventana.Caption = "Ventana";
             this.colventana.FieldName = "ventana";
-            this.colventana.MinWidth = 23;
             this.colventana.Name = "colventana";
             this.colventana.Visible = true;
             this.colventana.VisibleIndex = 1;
-            this.colventana.Width = 134;
+            this.colventana.Width = 115;
             // 
             // colfecha_inicio
             // 
             this.colfecha_inicio.Caption = "Fecha Inicio";
             this.colfecha_inicio.FieldName = "fecha_inicio";
-            this.colfecha_inicio.MinWidth = 23;
             this.colfecha_inicio.Name = "colfecha_inicio";
             this.colfecha_inicio.Visible = true;
             this.colfecha_inicio.VisibleIndex = 3;
-            this.colfecha_inicio.Width = 134;
+            this.colfecha_inicio.Width = 115;
             // 
             // colfecha_fin
             // 
             this.colfecha_fin.Caption = "Fecha Fin";
             this.colfecha_fin.FieldName = "fecha_fin";
-            this.colfecha_fin.MinWidth = 23;
             this.colfecha_fin.Name = "colfecha_fin";
             this.colfecha_fin.Visible = true;
             this.colfecha_fin.VisibleIndex = 4;
-            this.colfecha_fin.Width = 134;
+            this.colfecha_fin.Width = 115;
             // 
             // colfecha_vinculo
             // 
             this.colfecha_vinculo.Caption = "Fecha Vínculo";
             this.colfecha_vinculo.FieldName = "fecha_vinculo";
-            this.colfecha_vinculo.MinWidth = 23;
             this.colfecha_vinculo.Name = "colfecha_vinculo";
             this.colfecha_vinculo.Visible = true;
             this.colfecha_vinculo.VisibleIndex = 2;
-            this.colfecha_vinculo.Width = 134;
+            this.colfecha_vinculo.Width = 115;
             // 
             // colid_usuario_created
             // 
             this.colid_usuario_created.FieldName = "id_usuario_created";
-            this.colid_usuario_created.MinWidth = 23;
             this.colid_usuario_created.Name = "colid_usuario_created";
-            this.colid_usuario_created.Width = 87;
             // 
             // colusuario_created
             // 
             this.colusuario_created.Caption = "Usuario Creación";
             this.colusuario_created.FieldName = "usuario_created";
-            this.colusuario_created.MinWidth = 23;
             this.colusuario_created.Name = "colusuario_created";
             this.colusuario_created.Visible = true;
             this.colusuario_created.VisibleIndex = 5;
-            this.colusuario_created.Width = 185;
+            this.colusuario_created.Width = 159;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Editar";
             this.gridColumn1.ColumnEdit = this.btnEditar;
-            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 6;
-            this.gridColumn1.Width = 72;
+            this.gridColumn1.Width = 62;
             // 
             // btnEditar
             // 
@@ -236,10 +221,9 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             this.cmdNew.Appearance.Options.UseForeColor = true;
             this.cmdNew.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdNew.ImageOptions.Image")));
-            this.cmdNew.Location = new System.Drawing.Point(806, 26);
-            this.cmdNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmdNew.Location = new System.Drawing.Point(691, 21);
             this.cmdNew.Name = "cmdNew";
-            this.cmdNew.Size = new System.Drawing.Size(120, 55);
+            this.cmdNew.Size = new System.Drawing.Size(103, 45);
             this.cmdNew.TabIndex = 1;
             this.cmdNew.Text = "Nuevo";
             this.cmdNew.Click += new System.EventHandler(this.cmdNew_Click);
@@ -255,10 +239,9 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             this.cmdCancelar.Appearance.Options.UseForeColor = true;
             this.cmdCancelar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdCancelar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdCancelar.ImageOptions.SvgImage")));
-            this.cmdCancelar.Location = new System.Drawing.Point(938, 26);
-            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmdCancelar.Location = new System.Drawing.Point(804, 21);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(120, 55);
+            this.cmdCancelar.Size = new System.Drawing.Size(103, 45);
             this.cmdCancelar.TabIndex = 2;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
@@ -272,10 +255,9 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(0, 17);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(0, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1084, 31);
+            this.labelControl1.Size = new System.Drawing.Size(929, 25);
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Acceso Temporal de Usuarios";
             // 
@@ -288,18 +270,16 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(13, 69);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl2.Location = new System.Drawing.Point(11, 56);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(77, 28);
+            this.labelControl2.Size = new System.Drawing.Size(63, 21);
             this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "Usuario:";
             // 
             // gridLookUpEdit2
             // 
             this.gridLookUpEdit2.EditValue = "";
-            this.gridLookUpEdit2.Location = new System.Drawing.Point(93, 65);
-            this.gridLookUpEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridLookUpEdit2.Location = new System.Drawing.Point(80, 53);
             this.gridLookUpEdit2.Name = "gridLookUpEdit2";
             this.gridLookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridLookUpEdit2.Properties.Appearance.Options.UseFont = true;
@@ -311,7 +291,7 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             this.gridLookUpEdit2.Properties.DisplayMember = "user";
             this.gridLookUpEdit2.Properties.PopupView = this.searchLookUpEdit1View;
             this.gridLookUpEdit2.Properties.ValueMember = "id";
-            this.gridLookUpEdit2.Size = new System.Drawing.Size(337, 34);
+            this.gridLookUpEdit2.Size = new System.Drawing.Size(289, 28);
             this.gridLookUpEdit2.TabIndex = 5;
             this.gridLookUpEdit2.EditValueChanged += new System.EventHandler(this.gridLookUpEdit2_EditValueChanged);
             // 
@@ -319,9 +299,9 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             // 
             this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn3});
-            this.searchLookUpEdit1View.DetailHeight = 431;
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsEditForm.PopupEditFormWidth = 686;
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
@@ -329,27 +309,23 @@ namespace JAGUAR_APP.Accesos.AccesosUsuarios
             // 
             this.gridColumn3.Caption = "Usuario";
             this.gridColumn3.FieldName = "user";
-            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
-            this.gridColumn3.Width = 87;
             // 
             // xfrmAccesosTemporalesAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 430);
+            this.ClientSize = new System.Drawing.Size(929, 504);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdNew);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.gridLookUpEdit2);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "xfrmAccesosTemporalesAdmin";
             this.Text = "Acceso Temporal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.xfrmAccesosTemporalesAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAccesosBindingSource)).EndInit();

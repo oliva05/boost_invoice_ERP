@@ -102,5 +102,10 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
         {
             cargarDatos();
         }
+
+        private void frmNumeracionFiscal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

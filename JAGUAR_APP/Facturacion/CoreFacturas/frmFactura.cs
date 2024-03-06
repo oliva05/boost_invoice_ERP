@@ -1357,7 +1357,8 @@ namespace Eatery.Ventas
                 }
                 else
                 {
-                    row["total_fila"] = (Convert.ToDecimal(row["cantidad"]) * Convert.ToDecimal(row["precio"]));
+                    //row["total_fila"] = (Convert.ToDecimal(row["cantidad"]) * Convert.ToDecimal(row["precio"]));
+                    row["total_fila"] = ((Convert.ToDecimal(row["cantidad"]) * Convert.ToDecimal(row["precio"])) - Convert.ToDecimal(row["descuento"]) + Convert.ToDecimal(row["isv1"]));
                 }
                 
                 //decimal Totfila = 
@@ -1886,10 +1887,10 @@ namespace Eatery.Ventas
                             rowF.cantidad = rowF.cantidad + 1;
                             rowF.isv1 = rowF.isv2 = rowF.isv3 = 0;
                             rowF.isv1 = ((rowF.cantidad * rowF.precio) - rowF.descuento) * rowF.tasa_isv;
-                            rowF.total_linea = (rowF.cantidad * rowF.precio) - rowF.descuento + rowF.isv1 + rowF.isv2 + rowF.isv3;
+                            rowF.total_linea = ((rowF.cantidad * rowF.precio) - rowF.descuento) + rowF.isv1 + rowF.isv2 + rowF.isv3;
                             AgregarNuevo = false;
                         }
-                        valor_total += (rowF.total_linea + rowF.isv1);
+                        valor_total += (rowF.total_linea);
                         txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
                     }
 
@@ -1969,12 +1970,13 @@ namespace Eatery.Ventas
                             row1.precio = (row1.precio - row1.descuento);
                         }
 
-                        row1.total_linea = (row1.cantidad * row1.precio) + (row1.cantidad * row1.isv1) + (row1.cantidad * row1.isv2) + (row1.cantidad * row1.isv3);
+                        row1.total_linea = ((row1.cantidad * row1.precio) - row1.descuento) + (row1.cantidad * row1.isv1) + (row1.cantidad * row1.isv2) + (row1.cantidad * row1.isv3);
 
 
                         //dsCompras.oc_d_normal.Addoc_d_normalRow(row1);
                         dsVentas1.detalle_factura_transaction.Adddetalle_factura_transactionRow(row1);
-                        valor_total += (row1.total_linea + row1.isv1);
+                        //valor_total += (row1.total_linea + row1.isv1);
+                        valor_total += row1.total_linea;
                         txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
 
                         if(dsVentas1.detalle_factura_transaction.Count>0)

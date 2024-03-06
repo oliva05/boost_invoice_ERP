@@ -79,15 +79,13 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gcMP.DataSource = this.mPBindingSource;
-            this.gcMP.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gcMP.Location = new System.Drawing.Point(-2, 113);
+            this.gcMP.Location = new System.Drawing.Point(-2, 81);
             this.gcMP.MainView = this.gvMP;
-            this.gcMP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcMP.Name = "gcMP";
             this.gcMP.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdEdit,
             this.cmdDelete});
-            this.gcMP.Size = new System.Drawing.Size(1540, 526);
+            this.gcMP.Size = new System.Drawing.Size(1320, 438);
             this.gcMP.TabIndex = 0;
             this.gcMP.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMP});
@@ -122,115 +120,104 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3});
-            this.gvMP.DetailHeight = 431;
             this.gvMP.GridControl = this.gcMP;
             this.gvMP.Name = "gvMP";
+            this.gvMP.OptionsEditForm.PopupEditFormWidth = 686;
             this.gvMP.OptionsView.ShowAutoFilterRow = true;
             this.gvMP.OptionsView.ShowGroupPanel = false;
             // 
             // colid
             // 
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
-            this.colid.Width = 152;
+            this.colid.Width = 130;
             // 
             // colnombre_comercial
             // 
             this.colnombre_comercial.Caption = "Nombre Comercial";
             this.colnombre_comercial.FieldName = "nombre_comercial";
-            this.colnombre_comercial.MinWidth = 23;
             this.colnombre_comercial.Name = "colnombre_comercial";
             this.colnombre_comercial.OptionsColumn.AllowEdit = false;
             this.colnombre_comercial.Visible = true;
             this.colnombre_comercial.VisibleIndex = 1;
-            this.colnombre_comercial.Width = 266;
+            this.colnombre_comercial.Width = 228;
             // 
             // colaplic_costos
             // 
             this.colaplic_costos.Caption = "Aplica Costos";
             this.colaplic_costos.FieldName = "aplic_costos";
-            this.colaplic_costos.MinWidth = 23;
             this.colaplic_costos.Name = "colaplic_costos";
             this.colaplic_costos.OptionsColumn.AllowEdit = false;
-            this.colaplic_costos.Width = 153;
+            this.colaplic_costos.Width = 131;
             // 
             // colfecha_creadao
             // 
             this.colfecha_creadao.Caption = "Fecha Creación";
             this.colfecha_creadao.FieldName = "fecha_creado";
-            this.colfecha_creadao.MinWidth = 23;
             this.colfecha_creadao.Name = "colfecha_creadao";
             this.colfecha_creadao.OptionsColumn.AllowEdit = false;
             this.colfecha_creadao.Visible = true;
             this.colfecha_creadao.VisibleIndex = 5;
-            this.colfecha_creadao.Width = 189;
+            this.colfecha_creadao.Width = 162;
             // 
             // colnombre
             // 
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
-            this.colnombre.MinWidth = 23;
             this.colnombre.Name = "colnombre";
             this.colnombre.OptionsColumn.AllowEdit = false;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 2;
-            this.colnombre.Width = 189;
+            this.colnombre.Width = 162;
             // 
             // colcode
             // 
             this.colcode.Caption = "Codigo";
             this.colcode.FieldName = "code";
-            this.colcode.MinWidth = 23;
             this.colcode.Name = "colcode";
             this.colcode.OptionsColumn.AllowEdit = false;
             this.colcode.Visible = true;
             this.colcode.VisibleIndex = 0;
-            this.colcode.Width = 121;
+            this.colcode.Width = 104;
             // 
             // colid_tipo
             // 
             this.colid_tipo.FieldName = "id_tipo";
-            this.colid_tipo.MinWidth = 23;
             this.colid_tipo.Name = "colid_tipo";
-            this.colid_tipo.Width = 143;
+            this.colid_tipo.Width = 123;
             // 
             // colTipo
             // 
             this.colTipo.FieldName = "Tipo";
-            this.colTipo.MinWidth = 23;
             this.colTipo.Name = "colTipo";
             this.colTipo.OptionsColumn.AllowEdit = false;
             this.colTipo.Visible = true;
             this.colTipo.VisibleIndex = 3;
-            this.colTipo.Width = 189;
+            this.colTipo.Width = 162;
             // 
             // colid_estado
             // 
             this.colid_estado.FieldName = "id_estado";
-            this.colid_estado.MinWidth = 23;
             this.colid_estado.Name = "colid_estado";
-            this.colid_estado.Width = 143;
+            this.colid_estado.Width = 123;
             // 
             // colEstado
             // 
             this.colEstado.FieldName = "Estado";
-            this.colEstado.MinWidth = 23;
             this.colEstado.Name = "colEstado";
             this.colEstado.OptionsColumn.AllowEdit = false;
             this.colEstado.Visible = true;
             this.colEstado.VisibleIndex = 4;
-            this.colEstado.Width = 198;
+            this.colEstado.Width = 170;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Editar";
             this.gridColumn1.ColumnEdit = this.cmdEdit;
-            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 7;
-            this.gridColumn1.Width = 94;
+            this.gridColumn1.Width = 81;
             // 
             // cmdEdit
             // 
@@ -246,11 +233,10 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             // 
             this.gridColumn2.Caption = "Borrar";
             this.gridColumn2.ColumnEdit = this.cmdDelete;
-            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 8;
-            this.gridColumn2.Width = 111;
+            this.gridColumn2.Width = 95;
             // 
             // cmdDelete
             // 
@@ -266,12 +252,11 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             // 
             this.gridColumn3.Caption = "Presentación";
             this.gridColumn3.FieldName = "tipo_presentacion";
-            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 6;
-            this.gridColumn3.Width = 153;
+            this.gridColumn3.Width = 131;
             // 
             // cmdNew
             // 
@@ -281,10 +266,9 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             this.cmdNew.Appearance.Options.UseFont = true;
             this.cmdNew.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdNew.ImageOptions.SvgImage")));
-            this.cmdNew.Location = new System.Drawing.Point(28, 34);
-            this.cmdNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmdNew.Location = new System.Drawing.Point(24, 28);
             this.cmdNew.Name = "cmdNew";
-            this.cmdNew.Size = new System.Drawing.Size(141, 58);
+            this.cmdNew.Size = new System.Drawing.Size(121, 47);
             this.cmdNew.TabIndex = 1;
             this.cmdNew.Text = "Nuevo";
             this.cmdNew.Click += new System.EventHandler(this.cmdNew_Click);
@@ -298,10 +282,9 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             this.cmdClose.Appearance.Options.UseFont = true;
             this.cmdClose.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdClose.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.cancel;
-            this.cmdClose.Location = new System.Drawing.Point(1376, 34);
-            this.cmdClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmdClose.Location = new System.Drawing.Point(1179, 28);
             this.cmdClose.Name = "cmdClose";
-            this.cmdClose.Size = new System.Drawing.Size(151, 58);
+            this.cmdClose.Size = new System.Drawing.Size(129, 47);
             this.cmdClose.TabIndex = 2;
             this.cmdClose.Text = "Cerrar";
             this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
@@ -315,10 +298,9 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(-2, 34);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(-2, -3);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1540, 31);
+            this.labelControl1.Size = new System.Drawing.Size(1320, 25);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Maestro de Materia Prima";
             // 
@@ -331,10 +313,9 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             this.btnActualizar.Appearance.Options.UseFont = true;
             this.btnActualizar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnActualizar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.ImageOptions.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(1217, 34);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnActualizar.Location = new System.Drawing.Point(1043, 28);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(153, 58);
+            this.btnActualizar.Size = new System.Drawing.Size(131, 47);
             this.btnActualizar.TabIndex = 14;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -348,26 +329,24 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             this.cmdExportExcel.Appearance.Options.UseFont = true;
             this.cmdExportExcel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdExportExcel.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.excel32px;
-            this.cmdExportExcel.Location = new System.Drawing.Point(1028, 34);
-            this.cmdExportExcel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmdExportExcel.Location = new System.Drawing.Point(881, 28);
             this.cmdExportExcel.Name = "cmdExportExcel";
-            this.cmdExportExcel.Size = new System.Drawing.Size(183, 58);
+            this.cmdExportExcel.Size = new System.Drawing.Size(157, 47);
             this.cmdExportExcel.TabIndex = 15;
             this.cmdExportExcel.Text = "Exportar a Excel";
             this.cmdExportExcel.Click += new System.EventHandler(this.cmdExportExcel_Click);
             // 
             // xfrmMasterMP_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1539, 640);
+            this.ClientSize = new System.Drawing.Size(1319, 520);
             this.Controls.Add(this.cmdExportExcel);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.cmdNew);
             this.Controls.Add(this.gcMP);
             this.Controls.Add(this.labelControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "xfrmMasterMP_Admin";
             this.Text = "Materia Prima";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

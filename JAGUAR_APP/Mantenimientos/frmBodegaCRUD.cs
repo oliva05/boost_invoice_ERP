@@ -86,5 +86,13 @@ namespace JAGUAR_APP.Mantenimientos
         {
             Teclado.abrirTeclado();
         }
+
+        private void memoDescripcion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                txtDescripcionCorta.Focus();
+            }
+        }
     }
 }

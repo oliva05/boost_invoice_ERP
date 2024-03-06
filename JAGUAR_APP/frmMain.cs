@@ -187,7 +187,7 @@ namespace JAGUAR_APP
                         frmOpciones frm = new frmOpciones(user1);
                         //if (this.MdiParent != null)
                         frm.MdiParent = this.MdiParent;
-                        frm.WindowState = FormWindowState.Maximized;
+                        //frm.WindowState = FormWindowState.Maximized;
                         frm.Show();
                         this.DialogResult = DialogResult.OK;
                         this.Close();
@@ -253,11 +253,11 @@ namespace JAGUAR_APP
                 HostName == "DESKTOP-U63MQ6A" ||
                 HostName == "EUCEDA-PC" /*Euceda*/)
             {
-                cmdIngresarAdmin.Visible = SaltarLogin.Visible = simpleButton2.Visible = SaltarLoginPRD.Visible = true;
+                cmdIngresarAdmin.Visible =  true;
             }
             else
             {
-                cmdIngresarAdmin.Visible = SaltarLogin.Visible = simpleButton2.Visible = SaltarLoginPRD.Visible = false;
+                cmdIngresarAdmin.Visible = false;
             }
         }
         public string AssemblyVersion

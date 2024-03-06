@@ -97,7 +97,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MDIParentFormLOSA";
-            this.Text = "Ovejita";
+            this.Text = "Boost Invoice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Click += new System.EventHandler(this.MDIParentFormLOSA_Click_1);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MDIParentFormLOSA_MouseClick_1);

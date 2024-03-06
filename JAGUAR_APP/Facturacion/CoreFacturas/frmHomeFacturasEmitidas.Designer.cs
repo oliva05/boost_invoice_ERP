@@ -110,7 +110,7 @@
             this.btnImprimir,
             this.cmdPagarFactura,
             this.btnAutorizar});
-            this.gridControl1.Size = new System.Drawing.Size(886, 424);
+            this.gridControl1.Size = new System.Drawing.Size(1190, 557);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvFacturas});
@@ -165,7 +165,7 @@
             this.colnumero_documento.OptionsColumn.ReadOnly = true;
             this.colnumero_documento.Visible = true;
             this.colnumero_documento.VisibleIndex = 0;
-            this.colnumero_documento.Width = 55;
+            this.colnumero_documento.Width = 128;
             // 
             // colenable
             // 
@@ -199,7 +199,7 @@
             this.colfecha_documento.OptionsColumn.ReadOnly = true;
             this.colfecha_documento.Visible = true;
             this.colfecha_documento.VisibleIndex = 1;
-            this.colfecha_documento.Width = 77;
+            this.colfecha_documento.Width = 105;
             // 
             // colid_cliente
             // 
@@ -213,7 +213,7 @@
             this.colRTN.OptionsColumn.ReadOnly = true;
             this.colRTN.Visible = true;
             this.colRTN.VisibleIndex = 2;
-            this.colRTN.Width = 63;
+            this.colRTN.Width = 86;
             // 
             // colnum_orden_compra
             // 
@@ -237,7 +237,7 @@
             this.colcliente_nombre.OptionsColumn.ReadOnly = true;
             this.colcliente_nombre.Visible = true;
             this.colcliente_nombre.VisibleIndex = 3;
-            this.colcliente_nombre.Width = 86;
+            this.colcliente_nombre.Width = 118;
             // 
             // colid_tipo_pago
             // 
@@ -251,7 +251,7 @@
             this.colTotalFactura.OptionsColumn.ReadOnly = true;
             this.colTotalFactura.Visible = true;
             this.colTotalFactura.VisibleIndex = 4;
-            this.colTotalFactura.Width = 82;
+            this.colTotalFactura.Width = 112;
             // 
             // colEstadoName
             // 
@@ -260,7 +260,7 @@
             this.colEstadoName.OptionsColumn.ReadOnly = true;
             this.colEstadoName.Visible = true;
             this.colEstadoName.VisibleIndex = 5;
-            this.colEstadoName.Width = 65;
+            this.colEstadoName.Width = 89;
             // 
             // colUsarioCreateName
             // 
@@ -269,7 +269,7 @@
             this.colUsarioCreateName.OptionsColumn.ReadOnly = true;
             this.colUsarioCreateName.Visible = true;
             this.colUsarioCreateName.VisibleIndex = 6;
-            this.colUsarioCreateName.Width = 43;
+            this.colUsarioCreateName.Width = 59;
             // 
             // colPuntoVentaName
             // 
@@ -278,7 +278,7 @@
             this.colPuntoVentaName.OptionsColumn.ReadOnly = true;
             this.colPuntoVentaName.Visible = true;
             this.colPuntoVentaName.VisibleIndex = 7;
-            this.colPuntoVentaName.Width = 52;
+            this.colPuntoVentaName.Width = 71;
             // 
             // colTipoPagoName
             // 
@@ -287,7 +287,7 @@
             this.colTipoPagoName.OptionsColumn.ReadOnly = true;
             this.colTipoPagoName.Visible = true;
             this.colTipoPagoName.VisibleIndex = 8;
-            this.colTipoPagoName.Width = 61;
+            this.colTipoPagoName.Width = 84;
             // 
             // gridColumn1
             // 
@@ -296,7 +296,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 10;
-            this.gridColumn1.Width = 43;
+            this.gridColumn1.Width = 59;
             // 
             // btnImprimir
             // 
@@ -315,7 +315,7 @@
             this.colPagar.Name = "colPagar";
             this.colPagar.Visible = true;
             this.colPagar.VisibleIndex = 11;
-            this.colPagar.Width = 47;
+            this.colPagar.Width = 64;
             // 
             // cmdPagarFactura
             // 
@@ -335,7 +335,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 12;
-            this.gridColumn2.Width = 37;
+            this.gridColumn2.Width = 50;
             // 
             // btnAutorizar
             // 
@@ -353,7 +353,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 13;
-            this.gridColumn3.Width = 34;
+            this.gridColumn3.Width = 58;
             // 
             // colid_termino_pago
             // 
@@ -369,7 +369,7 @@
             this.coltermino_pago_name.OptionsColumn.ReadOnly = true;
             this.coltermino_pago_name.Visible = true;
             this.coltermino_pago_name.VisibleIndex = 9;
-            this.coltermino_pago_name.Width = 60;
+            this.coltermino_pago_name.Width = 82;
             // 
             // cmdRefresh
             // 
@@ -393,7 +393,7 @@
             this.cmdExportToExcel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdExportToExcel.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.excel32px;
             this.cmdExportToExcel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdExportToExcel.Location = new System.Drawing.Point(592, 24);
+            this.cmdExportToExcel.Location = new System.Drawing.Point(896, 24);
             this.cmdExportToExcel.Name = "cmdExportToExcel";
             this.cmdExportToExcel.Size = new System.Drawing.Size(144, 44);
             this.cmdExportToExcel.TabIndex = 50;
@@ -408,7 +408,7 @@
             this.btnAtras.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnAtras.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.ImageOptions.Image")));
             this.btnAtras.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAtras.Location = new System.Drawing.Point(743, 24);
+            this.btnAtras.Location = new System.Drawing.Point(1047, 24);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(145, 44);
             this.btnAtras.TabIndex = 49;
@@ -493,7 +493,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 497);
+            this.ClientSize = new System.Drawing.Size(1193, 630);
             this.Controls.Add(this.dtHasta);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.dtDesde);

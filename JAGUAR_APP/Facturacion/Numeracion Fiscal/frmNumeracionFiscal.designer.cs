@@ -30,14 +30,14 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleContains formatConditionRuleContains1 = new DevExpress.XtraEditors.FormatConditionRuleContains();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleContains formatConditionRuleContains2 = new DevExpress.XtraEditors.FormatConditionRuleContains();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNumeracionFiscal));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.colEstado_desc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.numeracionFiscalBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -90,12 +90,12 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataSource = this.numeracionFiscalBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(-1, 84);
+            this.gridControl1.Location = new System.Drawing.Point(-1, 73);
             this.gridControl1.MainView = this.gvNumeracionFiscal;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEditar});
-            this.gridControl1.Size = new System.Drawing.Size(1526, 535);
+            this.gridControl1.Size = new System.Drawing.Size(1250, 527);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvNumeracionFiscal});
@@ -135,13 +135,13 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             this.gridColumn1,
             this.colEstado_desc,
             this.gridColumn2});
-            gridFormatRule1.ApplyToRow = true;
-            gridFormatRule1.Column = this.colEstado_desc;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleContains1.PredefinedName = "Green Fill, Green Text";
-            formatConditionRuleContains1.Values = ((System.Collections.IList)(resources.GetObject("formatConditionRuleContains1.Values")));
-            gridFormatRule1.Rule = formatConditionRuleContains1;
-            this.gvNumeracionFiscal.FormatRules.Add(gridFormatRule1);
+            gridFormatRule2.ApplyToRow = true;
+            gridFormatRule2.Column = this.colEstado_desc;
+            gridFormatRule2.Name = "Format0";
+            formatConditionRuleContains2.PredefinedName = "Green Fill, Green Text";
+            formatConditionRuleContains2.Values = ((System.Collections.IList)(resources.GetObject("formatConditionRuleContains2.Values")));
+            gridFormatRule2.Rule = formatConditionRuleContains2;
+            this.gvNumeracionFiscal.FormatRules.Add(gridFormatRule2);
             this.gvNumeracionFiscal.GridControl = this.gridControl1;
             this.gvNumeracionFiscal.Name = "gvNumeracionFiscal";
             this.gvNumeracionFiscal.OptionsView.ShowAutoFilterRow = true;
@@ -288,9 +288,9 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             // btnEditar
             // 
             this.btnEditar.AutoHeight = false;
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
             this.btnEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnEditar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -319,10 +319,11 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnCancel.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.cancel_48;
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCancel.Location = new System.Drawing.Point(1442, 12);
+            this.btnCancel.Location = new System.Drawing.Point(1180, 12);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(57, 55);
             this.btnCancel.TabIndex = 2;
@@ -339,7 +340,7 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Location = new System.Drawing.Point(-1, 44);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1526, 23);
+            this.labelControl1.Size = new System.Drawing.Size(1250, 23);
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Numeración Fiscal";
             // 
@@ -351,7 +352,7 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             this.cmdRefresh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdRefresh.ImageOptions.Image")));
             this.cmdRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdRefresh.Location = new System.Drawing.Point(1322, 12);
+            this.cmdRefresh.Location = new System.Drawing.Point(1060, 12);
             this.cmdRefresh.Name = "cmdRefresh";
             this.cmdRefresh.Size = new System.Drawing.Size(99, 55);
             this.cmdRefresh.TabIndex = 72;
@@ -362,7 +363,7 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1525, 620);
+            this.ClientSize = new System.Drawing.Size(1249, 601);
             this.Controls.Add(this.cmdRefresh);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
@@ -374,6 +375,7 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             this.Name = "frmNumeracionFiscal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numeración Fiscal";
+            this.Load += new System.EventHandler(this.frmNumeracionFiscal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeracionFiscalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsNumeracionFiscal)).EndInit();

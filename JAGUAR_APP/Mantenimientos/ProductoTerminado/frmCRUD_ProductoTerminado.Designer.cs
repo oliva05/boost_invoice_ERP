@@ -134,7 +134,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             this.cmdCerrar.Appearance.Options.UseFont = true;
             this.cmdCerrar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdCerrar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdCerrar.ImageOptions.SvgImage")));
-            this.cmdCerrar.Location = new System.Drawing.Point(222, 456);
+            this.cmdCerrar.Location = new System.Drawing.Point(222, 389);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(157, 42);
             this.cmdCerrar.TabIndex = 13;
@@ -149,7 +149,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             this.cmdGuardar.Appearance.Options.UseFont = true;
             this.cmdGuardar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdGuardar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdGuardar.ImageOptions.SvgImage")));
-            this.cmdGuardar.Location = new System.Drawing.Point(50, 456);
+            this.cmdGuardar.Location = new System.Drawing.Point(50, 389);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(157, 42);
             this.cmdGuardar.TabIndex = 14;
@@ -300,7 +300,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(16, 155);
+            this.labelControl4.Location = new System.Drawing.Point(16, 159);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(190, 15);
             this.labelControl4.TabIndex = 21;
@@ -330,7 +330,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(16, 186);
+            this.labelControl5.Location = new System.Drawing.Point(16, 190);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(210, 15);
             this.labelControl5.TabIndex = 23;
@@ -407,16 +407,17 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(16, 256);
+            this.labelControl7.Location = new System.Drawing.Point(34, 529);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(220, 15);
             this.labelControl7.TabIndex = 28;
             this.labelControl7.Text = "Costo Mano de Obra por Arroba?_________";
+            this.labelControl7.Visible = false;
             // 
             // tggCosteoPorArroba
             // 
             this.tggCosteoPorArroba.EditValue = true;
-            this.tggCosteoPorArroba.Location = new System.Drawing.Point(204, 252);
+            this.tggCosteoPorArroba.Location = new System.Drawing.Point(222, 525);
             this.tggCosteoPorArroba.Name = "tggCosteoPorArroba";
             this.tggCosteoPorArroba.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tggCosteoPorArroba.Properties.Appearance.Options.UseFont = true;
@@ -424,12 +425,13 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             this.tggCosteoPorArroba.Properties.OnText = "Si";
             this.tggCosteoPorArroba.Size = new System.Drawing.Size(115, 20);
             this.tggCosteoPorArroba.TabIndex = 29;
+            this.tggCosteoPorArroba.Visible = false;
             this.tggCosteoPorArroba.Toggled += new System.EventHandler(this.tggCosteoPorArroba_Toggled);
             // 
             // txtCostoPorArroba
             // 
             this.txtCostoPorArroba.EditValue = "0.00";
-            this.txtCostoPorArroba.Location = new System.Drawing.Point(204, 279);
+            this.txtCostoPorArroba.Location = new System.Drawing.Point(222, 552);
             this.txtCostoPorArroba.Name = "txtCostoPorArroba";
             this.txtCostoPorArroba.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCostoPorArroba.Properties.Appearance.Options.UseFont = true;
@@ -438,22 +440,24 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             this.txtCostoPorArroba.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCostoPorArroba.Size = new System.Drawing.Size(177, 22);
             this.txtCostoPorArroba.TabIndex = 30;
+            this.txtCostoPorArroba.Visible = false;
             this.txtCostoPorArroba.Validated += new System.EventHandler(this.txtCostoPorArroba_Validated);
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(16, 287);
+            this.labelControl8.Location = new System.Drawing.Point(34, 560);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(196, 15);
             this.labelControl8.TabIndex = 31;
             this.labelControl8.Text = "Costo por Arroba_____________________";
+            this.labelControl8.Visible = false;
             // 
             // glueTipoFacturacion
             // 
             this.glueTipoFacturacion.EditValue = "";
-            this.glueTipoFacturacion.Location = new System.Drawing.Point(204, 308);
+            this.glueTipoFacturacion.Location = new System.Drawing.Point(204, 241);
             this.glueTipoFacturacion.Name = "glueTipoFacturacion";
             this.glueTipoFacturacion.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.glueTipoFacturacion.Properties.Appearance.Options.UseFont = true;
@@ -507,7 +511,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(16, 316);
+            this.labelControl9.Location = new System.Drawing.Point(16, 249);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(203, 15);
             this.labelControl9.TabIndex = 33;
@@ -517,7 +521,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(16, 344);
+            this.labelControl10.Location = new System.Drawing.Point(16, 277);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(188, 15);
             this.labelControl10.TabIndex = 35;
@@ -526,7 +530,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // glueTipoBuffet
             // 
             this.glueTipoBuffet.EditValue = "";
-            this.glueTipoBuffet.Location = new System.Drawing.Point(204, 336);
+            this.glueTipoBuffet.Location = new System.Drawing.Point(204, 269);
             this.glueTipoBuffet.Name = "glueTipoBuffet";
             this.glueTipoBuffet.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.glueTipoBuffet.Properties.Appearance.Options.UseFont = true;
@@ -574,7 +578,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // gridLookUpEditTipoFacturacionDestino
             // 
             this.gridLookUpEditTipoFacturacionDestino.EditValue = "";
-            this.gridLookUpEditTipoFacturacionDestino.Location = new System.Drawing.Point(204, 366);
+            this.gridLookUpEditTipoFacturacionDestino.Location = new System.Drawing.Point(204, 299);
             this.gridLookUpEditTipoFacturacionDestino.Name = "gridLookUpEditTipoFacturacionDestino";
             this.gridLookUpEditTipoFacturacionDestino.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridLookUpEditTipoFacturacionDestino.Properties.Appearance.Options.UseFont = true;
@@ -625,7 +629,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(16, 374);
+            this.labelControl11.Location = new System.Drawing.Point(16, 307);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(246, 15);
             this.labelControl11.TabIndex = 37;
@@ -634,7 +638,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // gle_ClaseProducto
             // 
             this.gle_ClaseProducto.EditValue = "";
-            this.gle_ClaseProducto.Location = new System.Drawing.Point(204, 396);
+            this.gle_ClaseProducto.Location = new System.Drawing.Point(204, 329);
             this.gle_ClaseProducto.Name = "gle_ClaseProducto";
             this.gle_ClaseProducto.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gle_ClaseProducto.Properties.Appearance.Options.UseFont = true;
@@ -688,7 +692,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(16, 404);
+            this.labelControl12.Location = new System.Drawing.Point(16, 337);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(225, 15);
             this.labelControl12.TabIndex = 39;
@@ -697,7 +701,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // gleImpuestoAplicable
             // 
             this.gleImpuestoAplicable.EditValue = "";
-            this.gleImpuestoAplicable.Location = new System.Drawing.Point(204, 424);
+            this.gleImpuestoAplicable.Location = new System.Drawing.Point(204, 357);
             this.gleImpuestoAplicable.Name = "gleImpuestoAplicable";
             this.gleImpuestoAplicable.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gleImpuestoAplicable.Properties.Appearance.Options.UseFont = true;
@@ -751,7 +755,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(14, 432);
+            this.labelControl13.Location = new System.Drawing.Point(14, 365);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(247, 15);
             this.labelControl13.TabIndex = 41;
@@ -764,7 +768,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 502);
+            this.ClientSize = new System.Drawing.Size(422, 440);
             this.Controls.Add(this.gleImpuestoAplicable);
             this.Controls.Add(this.labelControl13);
             this.Controls.Add(this.gle_ClaseProducto);
@@ -796,7 +800,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             this.Controls.Add(this.labelControl9);
             this.IconOptions.ShowIcon = false;
             this.Name = "frmCRUD_ProductoTerminado";
-            this.Text = "Producto Terminado";
+            this.Text = "21";
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_Presentaciones.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePresentacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsProductoTerminado1)).EndInit();

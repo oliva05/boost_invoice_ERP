@@ -40,7 +40,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
 
                 SqlCommand cmd = new SqlCommand("[codesahn].sp_get_datos_maestros_pt_list_crudV2", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ver_todos", tggViewFilter.IsOn);
+                cmd.Parameters.AddWithValue("@ver_todos", tggVerDisables.IsOn);
                 dsProductoTerminado1.lista_main_CRUD.Clear();
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 adat.Fill(dsProductoTerminado1.lista_main_CRUD);
@@ -159,6 +159,11 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
             {
                 CajaDialogo.Error("No cuenta con los privilegios para acceder a esta opción! Permiso requerido #1");
             }
+        }
+
+        private void tggVerDisables_Toggled(object sender, EventArgs e)
+        {
+            LoadDataDetallePT();
         }
     }
 }

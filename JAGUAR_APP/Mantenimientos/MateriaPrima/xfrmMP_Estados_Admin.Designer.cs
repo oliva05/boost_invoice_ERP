@@ -104,13 +104,13 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gcEstado.DataSource = this.mPEstadosBindingSource;
-            this.gcEstado.Location = new System.Drawing.Point(-1, 114);
+            this.gcEstado.Location = new System.Drawing.Point(-1, 94);
             this.gcEstado.MainView = this.gvEstado;
             this.gcEstado.Name = "gcEstado";
             this.gcEstado.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdEdit,
             this.cmdDelete});
-            this.gcEstado.Size = new System.Drawing.Size(1381, 477);
+            this.gcEstado.Size = new System.Drawing.Size(1381, 495);
             this.gcEstado.TabIndex = 5;
             this.gcEstado.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvEstado});
@@ -273,7 +273,6 @@ namespace JAGUAR_APP.Mantenimientos.MateriaPrima
             this.Controls.Add(this.labelControl1);
             this.Name = "xfrmMP_Estados_Admin";
             this.Text = "Estados de Materia Prima";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gcEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mPEstadosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento)).EndInit();

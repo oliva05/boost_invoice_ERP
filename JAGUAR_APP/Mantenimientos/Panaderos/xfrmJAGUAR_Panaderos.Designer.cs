@@ -55,13 +55,13 @@ namespace JAGUAR_APP.Mantenimientos.Panaderos
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdContact = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cmdClose = new DevExpress.XtraEditors.SimpleButton();
             this.cmdNew = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnActualizar = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcPanaderos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimientoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento)).BeginInit();
@@ -78,14 +78,14 @@ namespace JAGUAR_APP.Mantenimientos.Panaderos
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gcPanaderos.DataMember = "Panadero";
             this.gcPanaderos.DataSource = this.dsMantenimientoBindingSource;
-            this.gcPanaderos.Location = new System.Drawing.Point(0, 113);
+            this.gcPanaderos.Location = new System.Drawing.Point(0, 84);
             this.gcPanaderos.MainView = this.gvPanaderos;
             this.gcPanaderos.Name = "gcPanaderos";
             this.gcPanaderos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdEdit,
             this.cmdDelete,
             this.cmdContact});
-            this.gcPanaderos.Size = new System.Drawing.Size(1610, 425);
+            this.gcPanaderos.Size = new System.Drawing.Size(1010, 403);
             this.gcPanaderos.TabIndex = 6;
             this.gcPanaderos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPanaderos});
@@ -173,6 +173,24 @@ namespace JAGUAR_APP.Mantenimientos.Panaderos
             this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 1132;
             // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Código";
+            this.gridColumn4.FieldName = "codigo";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 0;
+            this.gridColumn4.Width = 100;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Fecha Creación";
+            this.gridColumn5.FieldName = "FechaCreacion";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 2;
+            this.gridColumn5.Width = 200;
+            // 
             // cmdContact
             // 
             this.cmdContact.AutoHeight = false;
@@ -191,7 +209,7 @@ namespace JAGUAR_APP.Mantenimientos.Panaderos
             this.cmdClose.Appearance.Options.UseFont = true;
             this.cmdClose.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdClose.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.cancel;
-            this.cmdClose.Location = new System.Drawing.Point(1455, 31);
+            this.cmdClose.Location = new System.Drawing.Point(877, 31);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(121, 47);
             this.cmdClose.TabIndex = 10;
@@ -224,7 +242,7 @@ namespace JAGUAR_APP.Mantenimientos.Panaderos
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Location = new System.Drawing.Point(0, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1610, 25);
+            this.labelControl1.Size = new System.Drawing.Size(1010, 25);
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Panaderos";
             // 
@@ -237,36 +255,18 @@ namespace JAGUAR_APP.Mantenimientos.Panaderos
             this.btnActualizar.Appearance.Options.UseFont = true;
             this.btnActualizar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnActualizar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.ImageOptions.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(1304, 31);
+            this.btnActualizar.Location = new System.Drawing.Point(726, 31);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(121, 47);
             this.btnActualizar.TabIndex = 15;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Código";
-            this.gridColumn4.FieldName = "codigo";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 0;
-            this.gridColumn4.Width = 100;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Fecha Creación";
-            this.gridColumn5.FieldName = "FechaCreacion";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 2;
-            this.gridColumn5.Width = 200;
-            // 
             // xfrmJAGUAR_Panaderos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1610, 535);
+            this.ClientSize = new System.Drawing.Size(1010, 484);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.cmdNew);
@@ -274,7 +274,6 @@ namespace JAGUAR_APP.Mantenimientos.Panaderos
             this.Controls.Add(this.gcPanaderos);
             this.Name = "xfrmJAGUAR_Panaderos";
             this.Text = "CAI";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gcPanaderos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimientoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento)).EndInit();

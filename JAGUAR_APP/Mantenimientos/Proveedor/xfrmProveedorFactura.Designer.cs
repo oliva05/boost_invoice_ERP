@@ -74,13 +74,13 @@ namespace JAGUAR_APP.Mantenimientos.Proveedor
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gcFactura.DataMember = "Proveedor_Factura";
             this.gcFactura.DataSource = this.dsMantenimientoBindingSource;
-            this.gcFactura.Location = new System.Drawing.Point(-1, 103);
+            this.gcFactura.Location = new System.Drawing.Point(-1, 72);
             this.gcFactura.MainView = this.gvFactura;
             this.gcFactura.Name = "gcFactura";
             this.gcFactura.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdEdit,
             this.cmdDelete});
-            this.gcFactura.Size = new System.Drawing.Size(1465, 483);
+            this.gcFactura.Size = new System.Drawing.Size(1099, 493);
             this.gcFactura.TabIndex = 7;
             this.gcFactura.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvFactura});
@@ -226,7 +226,7 @@ namespace JAGUAR_APP.Mantenimientos.Proveedor
             this.cmdClose.Appearance.Options.UseFont = true;
             this.cmdClose.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdClose.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.cancel;
-            this.cmdClose.Location = new System.Drawing.Point(1323, 58);
+            this.cmdClose.Location = new System.Drawing.Point(966, 27);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(121, 39);
             this.cmdClose.TabIndex = 13;
@@ -241,7 +241,7 @@ namespace JAGUAR_APP.Mantenimientos.Proveedor
             this.cmdNew.Appearance.Options.UseFont = true;
             this.cmdNew.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdNew.ImageOptions.SvgImage")));
-            this.cmdNew.Location = new System.Drawing.Point(12, 58);
+            this.cmdNew.Location = new System.Drawing.Point(21, 27);
             this.cmdNew.Name = "cmdNew";
             this.cmdNew.Size = new System.Drawing.Size(121, 39);
             this.cmdNew.TabIndex = 12;
@@ -257,9 +257,9 @@ namespace JAGUAR_APP.Mantenimientos.Proveedor
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(-1, 27);
+            this.labelControl1.Location = new System.Drawing.Point(-1, -4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1465, 25);
+            this.labelControl1.Size = new System.Drawing.Size(1099, 25);
             this.labelControl1.TabIndex = 14;
             this.labelControl1.Text = "Facturas de  Proveedores";
             // 
@@ -272,7 +272,7 @@ namespace JAGUAR_APP.Mantenimientos.Proveedor
             this.btnActualizar.Appearance.Options.UseFont = true;
             this.btnActualizar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnActualizar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.ImageOptions.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(1179, 58);
+            this.btnActualizar.Location = new System.Drawing.Point(822, 27);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(121, 39);
             this.btnActualizar.TabIndex = 17;
@@ -283,7 +283,7 @@ namespace JAGUAR_APP.Mantenimientos.Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1465, 582);
+            this.ClientSize = new System.Drawing.Size(1099, 561);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.cmdNew);
@@ -291,7 +291,6 @@ namespace JAGUAR_APP.Mantenimientos.Proveedor
             this.Controls.Add(this.gcFactura);
             this.Name = "xfrmProveedorFactura";
             this.Text = "Factura";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gcFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimientoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento)).EndInit();

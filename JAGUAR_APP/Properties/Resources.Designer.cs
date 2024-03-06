@@ -19,7 +19,7 @@ namespace JAGUAR_APP.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -1953,6 +1953,56 @@ namespace JAGUAR_APP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Papirus_Team_Papirus_Apps_Flow_128 {
+            get {
+                object obj = ResourceManager.GetObject("Papirus-Team-Papirus-Apps-Flow.128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Papirus_Team_Papirus_Apps_Flow_32 {
+            get {
+                object obj = ResourceManager.GetObject("Papirus-Team-Papirus-Apps-Flow.32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Papirus_Team_Papirus_Apps_Flow_48 {
+            get {
+                object obj = ResourceManager.GetObject("Papirus-Team-Papirus-Apps-Flow.48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Papirus_Team_Papirus_Apps_Flow_64 {
+            get {
+                object obj = ResourceManager.GetObject("Papirus-Team-Papirus-Apps-Flow.64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Papirus_Team_Papirus_Apps_Flow_72 {
+            get {
+                object obj = ResourceManager.GetObject("Papirus-Team-Papirus-Apps-Flow.72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pdf_24x24 {
             get {
                 object obj = ResourceManager.GetObject("pdf_24x24", resourceCulture);
@@ -3156,6 +3206,16 @@ namespace JAGUAR_APP.Properties {
         internal static System.Drawing.Bitmap wheat {
             get {
                 object obj = ResourceManager.GetObject("wheat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap workers32px {
+            get {
+                object obj = ResourceManager.GetObject("workers32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

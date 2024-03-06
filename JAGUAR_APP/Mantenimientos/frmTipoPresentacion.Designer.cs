@@ -319,7 +319,6 @@
             this.Name = "frmTipoPresentacion";
             this.ShowIcon = false;
             this.Text = "Tipos Presentaciones";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.tiposPresentacionesDataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcTiposPresentaciones)).EndInit();

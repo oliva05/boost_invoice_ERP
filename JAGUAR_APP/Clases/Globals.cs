@@ -24,13 +24,20 @@ namespace ACS.Classes
 
 
         //Jaguar
-        //public static string JAGUAR_ServerAddress = "p3nwplsk12sql-v04.shr.prod.phx3.secureserver.net";
-        //public static string JAGUAR_ServerName = "p3nwplsk12sql-v04.shr.prod.phx3.secureserver.net";
-        public static string JAGUAR_ServerAddress = "mssql-123688-0.cloudclusters.net,18285";
-        public static string JAGUAR_ServerName = "mssql-123688-0.cloudclusters.net,18285";
+
+        //public static string JAGUAR_ServerAddress = "mssql-123688-0.cloudclusters.net,18285";
+        //public static string JAGUAR_ServerName = "mssql-123688-0.cloudclusters.net,18285";
+        public static string JAGUAR_ServerAddress = "7L12TV3";
+        public static string JAGUAR_ServerName = "7L12TV3";
+        //public static string JAGUAR_ServerName = "DESKTOP-P55C1OL";
+        //public static string JAGUAR_ServerAddress = "DESKTOP-P55C1OL";
+
+        //public static string JAGUAR_ServerAddress = "10.101.0.204";
+        //public static string JAGUAR_ServerName = "10.101.0.204";
         public static string JAGUAR_ActiveDB = "JAGUAR_DB";
-        public static string JAGUAR_DB_User = "codesahn";
-        public static string JAGUAR_DB_Pass = " ZqTbv7rt";
+        public static string JAGUAR_DB_User = "sa";
+        public static string JAGUAR_DB_Pass = "Aq4x_3Fj2#";
+        //public static string JAGUAR_DB_Pass = "Alza2023*";
 
         //Jaguar Server Fisico
         //public static string JAGUAR_ServerAddress = @"PANSVR01\PANSVR01";

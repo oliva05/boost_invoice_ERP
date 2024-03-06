@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKardexTipoTransaccion));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnAgregar = new DevExpress.XtraEditors.SimpleButton();
             this.btnAtras = new DevExpress.XtraEditors.SimpleButton();
             this.dsMantenimiento = new JAGUAR_APP.Mantenimientos.dsMantenimiento();
@@ -63,9 +63,9 @@
             this.btnAgregar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnAgregar.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.plus;
             this.btnAgregar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAgregar.Location = new System.Drawing.Point(1, 75);
+            this.btnAgregar.Location = new System.Drawing.Point(1, 53);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(199, 71);
+            this.btnAgregar.Size = new System.Drawing.Size(199, 46);
             this.btnAgregar.TabIndex = 28;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -78,9 +78,9 @@
             this.btnAtras.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnAtras.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.ImageOptions.Image")));
             this.btnAtras.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAtras.Location = new System.Drawing.Point(427, 75);
+            this.btnAtras.Location = new System.Drawing.Point(427, 53);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(199, 71);
+            this.btnAtras.Size = new System.Drawing.Size(199, 46);
             this.btnAtras.TabIndex = 27;
             this.btnAtras.Text = "Atras";
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -102,13 +102,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gcKardexTiposTransacciones.DataSource = this.kardexTiposTransaccionesDataTableBindingSource;
             this.gcKardexTiposTransacciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.gcKardexTiposTransacciones.Location = new System.Drawing.Point(1, 152);
+            this.gcKardexTiposTransacciones.Location = new System.Drawing.Point(1, 105);
             this.gcKardexTiposTransacciones.MainView = this.gvKardexTiposTransacciones;
             this.gcKardexTiposTransacciones.Name = "gcKardexTiposTransacciones";
             this.gcKardexTiposTransacciones.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEditar,
             this.repositoryItemCheckEdit1});
-            this.gcKardexTiposTransacciones.Size = new System.Drawing.Size(638, 408);
+            this.gcKardexTiposTransacciones.Size = new System.Drawing.Size(638, 455);
             this.gcKardexTiposTransacciones.TabIndex = 29;
             this.gcKardexTiposTransacciones.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvKardexTiposTransacciones});
@@ -193,9 +193,9 @@
             // btnEditar
             // 
             this.btnEditar.AutoHeight = false;
-            editorButtonImageOptions1.Image = global::JAGUAR_APP.Properties.Resources.edit;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.btnEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -212,7 +212,7 @@
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(638, 60);
+            this.labelControl1.Size = new System.Drawing.Size(638, 47);
             this.labelControl1.TabIndex = 30;
             this.labelControl1.Text = "Mantenimiento de Tipo de Transacción (Kardex)";
             // 
@@ -226,10 +226,8 @@
             this.Controls.Add(this.gcKardexTiposTransacciones);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnAtras);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKardexTipoTransaccion";
-            this.Text = "frmKardexTipoTransaccion";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Tipo de Transaccion Kardex";
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kardexTiposTransaccionesDataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcKardexTiposTransacciones)).EndInit();

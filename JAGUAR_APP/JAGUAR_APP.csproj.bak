@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>ftp://us-east-1.sftpcloud.io/ovejita_test/</PublishUrl>
+    <PublishUrl>ftp://st41241%4064.20.46.106:21/ovejita/ovejita_test/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -23,15 +23,15 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>//localhost/FTP_Ovejita/</InstallUrl>
+    <InstallUrl>\\localhost\ovejita_installer\</InstallUrl>
     <TargetCulture>en</TargetCulture>
-    <ProductName>OVEJITA</ProductName>
-    <PublisherName>Danys Oliva</PublisherName>
+    <ProductName>Ovejita</ProductName>
+    <PublisherName>CODESA</PublisherName>
     <SuiteName>ERP</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>578</ApplicationRevision>
+    <ApplicationRevision>576</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -200,6 +200,7 @@
     <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.Sparkline.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -230,18 +231,16 @@
     <Reference Include="DevExpress.XtraDialogs.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.XtraGauges.v23.2.Win, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -249,7 +248,6 @@
     <Reference Include="DevExpress.XtraNavBar.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -2024,6 +2022,11 @@
     <Compile Include="RecuentoInventario\frmReporteInvPorLoteA_LaFecha.Designer.cs">
       <DependentUpon>frmReporteInvPorLoteA_LaFecha.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\dsKardexReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsKardexReportes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\dsReportes.cs">
       <DependentUpon>dsReportes.xsd</DependentUpon>
     </Compile>
@@ -3239,6 +3242,17 @@
     <None Include="RecuentoInventario\dsReportesRecuentosINV.xss">
       <DependentUpon>dsReportesRecuentosINV.xsd</DependentUpon>
     </None>
+    <None Include="Reportes\dsKardexReportes.xsc">
+      <DependentUpon>dsKardexReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsKardexReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsKardexReportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsKardexReportes.xss">
+      <DependentUpon>dsKardexReportes.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\dsReportes.xsc">
       <DependentUpon>dsReportes.xsd</DependentUpon>
     </None>
@@ -3499,6 +3513,11 @@
     <None Include="Resources\Ovejita.png" />
     <None Include="Resources\paper-bag32px.png" />
     <None Include="Resources\PDV.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.64.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.48.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.32.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.72.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.128.png" />
     <Content Include="Resources\plus.png" />
     <None Include="Resources\produccion.png" />
     <None Include="Resources\Producto_terminado.png" />
@@ -3578,6 +3597,7 @@
     <None Include="Resources\warehouse32px1.png" />
     <Content Include="Resources\weighing_machine24px.png" />
     <Content Include="Resources\wheat.png" />
+    <None Include="Resources\workers32px.png" />
     <Content Include="Resources\wrench.png" />
   </ItemGroup>
   <ItemGroup>

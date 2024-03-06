@@ -78,14 +78,14 @@ namespace JAGUAR_APP.Mantenimientos
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gcConversion.DataMember = "Conversiones";
             this.gcConversion.DataSource = this.dsMantenimientoBindingSource;
-            this.gcConversion.Location = new System.Drawing.Point(0, 96);
+            this.gcConversion.Location = new System.Drawing.Point(0, 79);
             this.gcConversion.MainView = this.gvConversion;
             this.gcConversion.Name = "gcConversion";
             this.gcConversion.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdEdit,
             this.cmdDelete,
             this.cmdContact});
-            this.gcConversion.Size = new System.Drawing.Size(1610, 442);
+            this.gcConversion.Size = new System.Drawing.Size(1072, 459);
             this.gcConversion.TabIndex = 6;
             this.gcConversion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvConversion});
@@ -216,7 +216,7 @@ namespace JAGUAR_APP.Mantenimientos
             this.cmdClose.Appearance.Options.UseFont = true;
             this.cmdClose.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdClose.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.cancel;
-            this.cmdClose.Location = new System.Drawing.Point(1478, 43);
+            this.cmdClose.Location = new System.Drawing.Point(961, 26);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(111, 45);
             this.cmdClose.TabIndex = 10;
@@ -231,7 +231,7 @@ namespace JAGUAR_APP.Mantenimientos
             this.cmdNew.Appearance.Options.UseFont = true;
             this.cmdNew.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdNew.ImageOptions.SvgImage")));
-            this.cmdNew.Location = new System.Drawing.Point(12, 43);
+            this.cmdNew.Location = new System.Drawing.Point(7, 26);
             this.cmdNew.Name = "cmdNew";
             this.cmdNew.Size = new System.Drawing.Size(111, 45);
             this.cmdNew.TabIndex = 9;
@@ -247,9 +247,9 @@ namespace JAGUAR_APP.Mantenimientos
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(-1, 12);
+            this.labelControl1.Location = new System.Drawing.Point(0, -5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1610, 25);
+            this.labelControl1.Size = new System.Drawing.Size(1072, 25);
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Conversiones Tipo Presentación";
             // 
@@ -262,7 +262,7 @@ namespace JAGUAR_APP.Mantenimientos
             this.btnActualizar.Appearance.Options.UseFont = true;
             this.btnActualizar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnActualizar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.ImageOptions.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(1337, 43);
+            this.btnActualizar.Location = new System.Drawing.Point(820, 26);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(121, 47);
             this.btnActualizar.TabIndex = 13;
@@ -272,7 +272,7 @@ namespace JAGUAR_APP.Mantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1610, 535);
+            this.ClientSize = new System.Drawing.Size(1072, 535);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.cmdNew);
@@ -280,7 +280,6 @@ namespace JAGUAR_APP.Mantenimientos
             this.Controls.Add(this.gcConversion);
             this.Name = "xfrmJAGUAR_TipoPresentacionConversion";
             this.Text = "Conversiones Tipo Presentación";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gcConversion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimientoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento)).EndInit();

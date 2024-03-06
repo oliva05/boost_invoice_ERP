@@ -225,8 +225,8 @@
     <Reference Include="DevExpress.XtraDialogs.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -3928,6 +3928,11 @@
     <None Include="Resources\Ovejita.png" />
     <None Include="Resources\paper-bag32px.png" />
     <None Include="Resources\PDV.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.64.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.48.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.32.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.72.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Flow.128.png" />
     <Content Include="Resources\plus.png" />
     <None Include="Resources\produccion.png" />
     <None Include="Resources\Producto_terminado.png" />
@@ -4007,6 +4012,7 @@
     <None Include="Resources\warehouse32px1.png" />
     <Content Include="Resources\weighing_machine24px.png" />
     <Content Include="Resources\wheat.png" />
+    <None Include="Resources\workers32px.png" />
     <Content Include="Resources\wrench.png" />
   </ItemGroup>
   <ItemGroup>

@@ -75,9 +75,9 @@ namespace JAGUAR_APP.Mantenimientos.Formulas
             this.cmdClose.Appearance.Options.UseFont = true;
             this.cmdClose.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdClose.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.cancel;
-            this.cmdClose.Location = new System.Drawing.Point(1229, 26);
+            this.cmdClose.Location = new System.Drawing.Point(691, 26);
             this.cmdClose.Name = "cmdClose";
-            this.cmdClose.Size = new System.Drawing.Size(139, 62);
+            this.cmdClose.Size = new System.Drawing.Size(139, 48);
             this.cmdClose.TabIndex = 7;
             this.cmdClose.Text = "Cerrar";
             this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
@@ -90,9 +90,9 @@ namespace JAGUAR_APP.Mantenimientos.Formulas
             this.cmdNew.Appearance.Options.UseFont = true;
             this.cmdNew.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdNew.ImageOptions.SvgImage")));
-            this.cmdNew.Location = new System.Drawing.Point(26, 26);
+            this.cmdNew.Location = new System.Drawing.Point(25, 26);
             this.cmdNew.Name = "cmdNew";
-            this.cmdNew.Size = new System.Drawing.Size(139, 62);
+            this.cmdNew.Size = new System.Drawing.Size(139, 48);
             this.cmdNew.TabIndex = 6;
             this.cmdNew.Text = "Nuevo";
             this.cmdNew.Click += new System.EventHandler(this.cmdNew_Click);
@@ -103,13 +103,13 @@ namespace JAGUAR_APP.Mantenimientos.Formulas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gcFormula.DataSource = this.fMLTipoBindingSource;
-            this.gcFormula.Location = new System.Drawing.Point(-1, 114);
+            this.gcFormula.Location = new System.Drawing.Point(-1, 80);
             this.gcFormula.MainView = this.gvTipoFML;
             this.gcFormula.Name = "gcFormula";
             this.gcFormula.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdEdit,
             this.cmdDelete});
-            this.gcFormula.Size = new System.Drawing.Size(1381, 477);
+            this.gcFormula.Size = new System.Drawing.Size(843, 375);
             this.gcFormula.TabIndex = 5;
             this.gcFormula.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTipoFML});
@@ -232,7 +232,7 @@ namespace JAGUAR_APP.Mantenimientos.Formulas
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Location = new System.Drawing.Point(-1, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1380, 25);
+            this.labelControl1.Size = new System.Drawing.Size(842, 25);
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Tipos de Fórmula";
             // 
@@ -240,14 +240,13 @@ namespace JAGUAR_APP.Mantenimientos.Formulas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 592);
+            this.ClientSize = new System.Drawing.Size(842, 456);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.cmdNew);
             this.Controls.Add(this.gcFormula);
             this.Controls.Add(this.labelControl1);
             this.Name = "xfrmMP_Tipo_Formula_Admin";
             this.Text = "Tipos de Materia Prima";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gcFormula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMLTipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento)).EndInit();

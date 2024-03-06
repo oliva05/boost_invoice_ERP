@@ -141,10 +141,10 @@ namespace JAGUAR_APP
                             break;
                         case 4://Depth With Delta
                             //tabOpciones.TabPages[0].PageVisible = true;
-                            tabOpciones.TabPages[1].PageVisible = true;
-                            tabOpciones.TabPages[2].PageVisible = false;
-                            tabOpciones.TabPages[3].PageVisible = true;
-                            tabOpciones.TabPages[4].PageVisible = false;
+                            tabOpciones.TabPages[1].PageVisible = true; //Logistica
+                            tabOpciones.TabPages[2].PageVisible = false;//Calidad
+                            tabOpciones.TabPages[3].PageVisible = true; //Admin
+                            tabOpciones.TabPages[4].PageVisible = false;//Produccion
                             tabOpciones.TabPages[5].PageVisible = false;
                             tabOpciones.TabPages[6].PageVisible = false;
                             tabOpciones.TabPages[7].PageVisible = false;
@@ -357,7 +357,41 @@ namespace JAGUAR_APP
                     break;
                 case GrupoUser.GrupoUsuario.Facturacion_Admin:
                     xtraTabControl2.TabPages[2].PageVisible = true;
+                    int pidNivel_11 = pUser.idNivelAcceso(pUser.Id, 11);//7 = ALOSY 11=JAGUAR
+                    switch (pidNivel_11)
+                    {
+                        case 1://Basic View
+                            UsuarioLogeado.Idnivel = pidNivel_11;
+                            break;
+                        case 2://Basic No Autorization
+
+                            break;
+                        case 3://Medium Autorization
+                            tabOpciones.TabPages[1].PageVisible = true; //Logistica
+                            xtraTabControl2.TabPages[2].PageVisible = true;
+                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
+                            NBI_Cliente.Visible = true;
+                            break;
+                        case 4://Depth With Delta
+                            tabOpciones.TabPages[1].PageVisible = true; //Logistica
+                            xtraTabControl2.TabPages[2].PageVisible = true;
+                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
+                            NBI_Cliente.Visible = true;
+                            break;
+                        case 5://Depth Without Delta
+                            xtraTabControl2.TabPages[2].PageVisible = true;
+                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
+                            NBI_Cliente.Visible = true;
+                            break;
+                        default:
+                            break;
+                    }
+                    tabPageFacturacion.PageVisible = true;
                     break;
+
                 case GrupoUser.GrupoUsuario.Facturacion_EndUser:
                     int idNivel_11 = pUser.idNivelAcceso(pUser.Id, 11);//7 = ALOSY 11=JAGUAR
                     switch (idNivel_11)
@@ -417,6 +451,7 @@ namespace JAGUAR_APP
         private void BtnBodegas_Click(object sender, EventArgs e)
         {
             frmBodega frm = new frmBodega();
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
@@ -433,12 +468,14 @@ namespace JAGUAR_APP
         private void BtnKardexTiposTransacciones_Click(object sender, EventArgs e)
         {
             frmKardexTipoTransaccion frm = new frmKardexTipoTransaccion();
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
         private void BtnEstadosRequisiciones_Click(object sender, EventArgs e)
         {
             frmEstadoRequisicion frm = new frmEstadoRequisicion();
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
@@ -900,7 +937,7 @@ namespace JAGUAR_APP
             if (this.MdiParent != null)
                 frm.MdiParent = this.MdiParent;
 
-            frm.WindowState = FormWindowState.Maximized;
+            //frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
 
@@ -910,7 +947,7 @@ namespace JAGUAR_APP
             if (this.MdiParent != null)
                 frm.MdiParent = this.MdiParent;
 
-            frm.WindowState = FormWindowState.Maximized;
+            //frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
 
@@ -920,7 +957,7 @@ namespace JAGUAR_APP
             if (this.MdiParent != null)
                 frm.MdiParent = this.MdiParent;
 
-            frm.WindowState = FormWindowState.Maximized;
+            //frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
 
@@ -930,7 +967,7 @@ namespace JAGUAR_APP
             if (this.MdiParent != null)
                 frm.MdiParent = this.MdiParent;
 
-            frm.WindowState = FormWindowState.Maximized;
+            //frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
 
@@ -940,7 +977,7 @@ namespace JAGUAR_APP
             if (this.MdiParent != null)
                 frm.MdiParent = this.MdiParent;
 
-            frm.WindowState = FormWindowState.Maximized;
+            //frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
 
@@ -3264,7 +3301,7 @@ namespace JAGUAR_APP
             if (this.MdiParent != null)
                 frm.MdiParent = this.MdiParent;
 
-            frm.WindowState = FormWindowState.Maximized;
+            //frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
 
@@ -3499,6 +3536,7 @@ namespace JAGUAR_APP
             switch (idNivel)                                                      //11 = Jaguar
             {
                 case 1://Basic View
+                    accesoprevio = false;
                     break;
                 case 2://Basic No Autorization
                     accesoprevio = false;
@@ -3508,6 +3546,7 @@ namespace JAGUAR_APP
                     break;
                 case 4://Depth With Delta
                 case 5://Depth Without Delta
+                    accesoprevio = true;
                     xfrmFacturacion_Clientes frm = new xfrmFacturacion_Clientes(UsuarioLogeado);
                     frm.MdiParent = this.MdiParent;
                     frm.Show();
@@ -3541,6 +3580,7 @@ namespace JAGUAR_APP
             switch (idNivel)                                                      //11 = Jaguar
             {
                 case 1://Basic View
+                    accesoprevio = false;
                     break;
                 case 2://Basic No Autorization
                     accesoprevio = false;
@@ -3550,6 +3590,7 @@ namespace JAGUAR_APP
                     break;
                 case 4://Depth With Delta
                 case 5://Depth Without Delta
+                    accesoprevio = true;
                     frmNumeracionFiscal frm = new frmNumeracionFiscal(UsuarioLogeado);
                     frm.MdiParent = this.MdiParent;
                     frm.Show();

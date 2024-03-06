@@ -100,6 +100,7 @@
             this.memoDescripcion.Size = new System.Drawing.Size(614, 91);
             this.memoDescripcion.TabIndex = 0;
             this.memoDescripcion.Enter += new System.EventHandler(this.memoDescripcion_Enter);
+            this.memoDescripcion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.memoDescripcion_KeyDown);
             // 
             // btnAtras
             // 
@@ -109,9 +110,9 @@
             this.btnAtras.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnAtras.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.ImageOptions.Image")));
             this.btnAtras.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAtras.Location = new System.Drawing.Point(427, 25);
+            this.btnAtras.Location = new System.Drawing.Point(427, 43);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(199, 71);
+            this.btnAtras.Size = new System.Drawing.Size(199, 53);
             this.btnAtras.TabIndex = 4;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -123,9 +124,9 @@
             this.btnGuardar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuardar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.ImageOptions.Image")));
             this.btnGuardar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(12, 25);
+            this.btnGuardar.Location = new System.Drawing.Point(12, 43);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(199, 71);
+            this.btnGuardar.Size = new System.Drawing.Size(199, 53);
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -135,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(638, 560);
+            this.ClientSize = new System.Drawing.Size(638, 317);
             this.Controls.Add(this.memoDescripcion);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.chkEnable);
@@ -143,10 +144,8 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtDescripcionCorta);
             this.Controls.Add(this.btnAtras);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBodegaCRUD";
-            this.Text = "frmBodegaCRUD";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Gestion de Bodega";
             this.Load += new System.EventHandler(this.frmBodegaCRUD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcionCorta.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEnable.Properties)).EndInit();
