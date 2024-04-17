@@ -500,7 +500,7 @@ namespace JAGUAR_APP.JaguarProduccion
                         command.ExecuteNonQuery();
 
                         //Update Pedidos H
-                        foreach(dsPedidosPRD.lista_pedidosRow rowx in dsPedidosPRD1.lista_pedidos)
+                        foreach (dsPedidosPRD.lista_pedidosRow rowx in dsPedidosPRD1.lista_pedidos)
                         {
                             if (rowx.id_estado == 4)
                             {

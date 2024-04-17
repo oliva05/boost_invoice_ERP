@@ -38,7 +38,7 @@ namespace JAGUAR_APP.LogisticaJaguar
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_select_pv));
             this.grd_data = new DevExpress.XtraGrid.GridControl();
             this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsRecepcionMP = new JAGUAR_APP.LogisticaJaguar.dsRecepcionMP();
+            this.dsRecepcionMP = new LogisticaJaguar.dsRecepcionMPx();
             this.grdv_data = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colcarcode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcardname = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -189,7 +189,7 @@ namespace JAGUAR_APP.LogisticaJaguar
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSeleccionar;
         private DevExpress.XtraEditors.SimpleButton btnAtras;
         private System.Windows.Forms.BindingSource proveedoresBindingSource;
-        private dsRecepcionMP dsRecepcionMP;
+        private LogisticaJaguar.dsRecepcionMPx dsRecepcionMP;
         private DevExpress.XtraGrid.Columns.GridColumn colcarcode;
         private DevExpress.XtraGrid.Columns.GridColumn colcardname;
         private DevExpress.XtraGrid.Columns.GridColumn seleccionar;

@@ -1,42 +1,4 @@
-﻿namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
-
-namespace LOSA.RecepcionMP
-{
-}
+﻿
 namespace JAGUAR_APP.LogisticaJaguar
 {
 
@@ -47,9 +9,9 @@ namespace JAGUAR_APP.LogisticaJaguar
         {
         }
 
-        partial class proveedoresDataTable
-        {
-        }
+        //partial class proveedoresDataTable
+        //{
+        //}
 
         partial class lote_activo_granelDataTable
         {

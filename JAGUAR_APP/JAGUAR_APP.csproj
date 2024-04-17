@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>JAGUAR_APP</RootNamespace>
     <AssemblyName>Ovejita</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -36,6 +36,7 @@
     <UseApplicationTrust>true</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -765,7 +766,7 @@
     <Compile Include="Despachos\ds_despachos.cs">
       <DependentUpon>ds_despachos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Despachos\ds_despachos.Designer.cs">
+    <Compile Include="Despachos\ds_despachos1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_despachos.xsd</DependentUpon>
@@ -1533,15 +1534,7 @@
     <Compile Include="LogisticaJaguar\Despacho\xfrmSelectPT.Designer.cs">
       <DependentUpon>xfrmSelectPT.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogisticaJaguar\dsLogisticaJaguarBK.cs">
-      <DependentUpon>dsLogisticaJaguarBK.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogisticaJaguar\dsLogisticaJaguarBK.Designer.cs">
-      <DependentUpon>dsLogisticaJaguarBK.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="LogisticaJaguar\dsLogisticaJaguar.Designer.cs">
+    <Compile Include="LogisticaJaguar\dsLogisticaJaguar1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsLogisticaJaguar.xsd</DependentUpon>
@@ -1578,9 +1571,6 @@
     <Compile Include="LogisticaJaguar\Models\OrdenFabriacion_H.cs" />
     <Compile Include="LogisticaJaguar\Models\PT_Selection.cs" />
     <Compile Include="LogisticaJaguar\Models\RecepcionFacturasProveedor.cs" />
-    <Compile Include="LogisticaJaguar\Pedidos\dsPedidosPRD.cs">
-      <DependentUpon>dsPedidosPRD.xsd</DependentUpon>
-    </Compile>
     <Compile Include="LogisticaJaguar\Pedidos\dsPedidosPRD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2232,24 +2222,13 @@
     <None Include="LogisticaJaguar\Despacho\dsDespacho.xss">
       <DependentUpon>dsDespacho.xsd</DependentUpon>
     </None>
-    <None Include="LogisticaJaguar\dsLogisticaJaguarBK.xsc">
-      <DependentUpon>dsLogisticaJaguarBK.xsd</DependentUpon>
-    </None>
-    <None Include="LogisticaJaguar\dsLogisticaJaguarBK.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsLogisticaJaguarBK.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogisticaJaguar\dsLogisticaJaguarBK.xss">
-      <DependentUpon>dsLogisticaJaguarBK.xsd</DependentUpon>
-    </None>
     <None Include="LogisticaJaguar\dsLogisticaJaguar.xsc">
       <DependentUpon>dsLogisticaJaguar.xsd</DependentUpon>
     </None>
     <None Include="LogisticaJaguar\dsLogisticaJaguar.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsLogisticaJaguar.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsLogisticaJaguar1.Designer.cs</LastGenOutput>
     </None>
     <None Include="LogisticaJaguar\dsLogisticaJaguar.xss">
       <DependentUpon>dsLogisticaJaguar.xsd</DependentUpon>
@@ -2388,14 +2367,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReportesInventario.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\dsReportesInventarioBAK.cs">
-      <DependentUpon>dsReportesInventarioBAK.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\dsReportesInventarioBAK.Designer.cs">
-      <DependentUpon>dsReportesInventarioBAK.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Reportes\dsReportesInventario.cs">
       <DependentUpon>dsReportesInventario.xsd</DependentUpon>
@@ -3599,7 +3570,7 @@
     <None Include="Despachos\ds_despachos.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ds_despachos.Designer.cs</LastGenOutput>
+      <LastGenOutput>ds_despachos1.Designer.cs</LastGenOutput>
     </None>
     <None Include="Despachos\ds_despachos.xss">
       <DependentUpon>ds_despachos.xsd</DependentUpon>
@@ -3678,17 +3649,6 @@
     </None>
     <None Include="Reportes\dsReportes.xss">
       <DependentUpon>dsReportes.xsd</DependentUpon>
-    </None>
-    <None Include="Reportes\dsReportesInventarioBAK.xsc">
-      <DependentUpon>dsReportesInventarioBAK.xsd</DependentUpon>
-    </None>
-    <None Include="Reportes\dsReportesInventarioBAK.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsReportesInventarioBAK.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Reportes\dsReportesInventarioBAK.xss">
-      <DependentUpon>dsReportesInventarioBAK.xsd</DependentUpon>
     </None>
     <None Include="Reportes\dsReportesInventario.xsc">
       <DependentUpon>dsReportesInventario.xsd</DependentUpon>

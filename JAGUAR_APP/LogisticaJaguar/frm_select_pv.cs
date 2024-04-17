@@ -58,7 +58,8 @@ namespace JAGUAR_APP.LogisticaJaguar
             try
             {
                 var gridView = (GridView)grd_data.FocusedView;
-                var row = (dsRecepcionMP.proveedoresRow)gridView.GetFocusedDataRow();
+                var row = (dsRecepcionMPx.proveedoresRow)gridView.GetFocusedDataRow();
+                
                 pv = row.cardname;
                 Cardcode = row.carcode;
                 this.DialogResult = DialogResult.OK;
@@ -77,7 +78,7 @@ namespace JAGUAR_APP.LogisticaJaguar
             try
             {
                 var gridView = (GridView)grd_data.FocusedView;
-                var row = (dsRecepcionMP.proveedoresRow)gridView.GetFocusedDataRow();
+                var row = (dsRecepcionMPx.proveedoresRow)gridView.GetFocusedDataRow();
                 pv = row.cardname;
                 Cardcode = row.carcode;
                 this.DialogResult = DialogResult.OK;
