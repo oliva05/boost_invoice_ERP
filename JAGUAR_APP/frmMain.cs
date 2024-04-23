@@ -31,13 +31,68 @@ namespace JAGUAR_APP
     {
         private UserLogin user1;
         //int IdUser;
+        private MyTextBox textBox1;
         public frmMain()
         {
             InitializeComponent();
             //TouchKeyboardSupport.EnableTouchKeyboard = true ;
             //TouchKeyboardSupport.CheckEnableTouchSupport(this);
 
+            //textBox1 = new MyTextBox
+            //{
+            //    Location = new Point(140, 30),
+            //    Size = new Size(300, 70)
+            //};
 
+            //Controls.Add(textBox1);
+
+            //// Sample text  
+            //textBox1.Text = "You can clear this field with 'x' button on it.";
+
+        }
+
+        public class MyTextBox : TextBox
+        {
+            private readonly Button lblTheClose;
+
+            public bool ButtonTextClear { get; set; } = true;
+
+            public MyTextBox()
+            {
+                Resize += PositionX;
+
+                TextChanged += ShowHideX;
+
+                //lblTheClose = new Label()
+                //{
+                //    Location = new Point(100, 0),
+                //    AutoSize = true,
+                //    Text = "x",
+                //    ForeColor = Color.Gray,
+                //    Visible = false,
+                //    Font = new Font("Tahoma", 9.25F),
+                //    Cursor = Cursors.Arrow
+                //};
+                lblTheClose = new Button()
+                {
+                    AutoSize = false,
+                    Size = new Size(20,16),
+                    //Location = new Point(-10, 0),
+                    Text = "x",
+                    ForeColor = Color.Gray,
+                    Visible = false,
+                    Font = new Font("Tahoma", 9.25F),
+                    Cursor = Cursors.Arrow
+                };
+
+                Controls.Add(lblTheClose);
+                //lblTheClose.Click += (ss, ee) => { ((Label)ss).Visible = false; Text = string.Empty; };
+                lblTheClose.Click += (ss, ee) => { ((Button)ss).Visible = false; Text = string.Empty; };
+                lblTheClose.BringToFront();
+            }
+
+            private void ShowHideX(object sender, EventArgs e) => lblTheClose.Visible = ButtonTextClear && !string.IsNullOrEmpty(Text);
+            private void PositionX(object sender, EventArgs e) => lblTheClose.Location = new Point(Width - 25, ((Height - lblTheClose.Height) / 2) - 3);
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -424,6 +479,15 @@ namespace JAGUAR_APP
             txtUsuario.Text = "danys.oliva";
             txtClave.Text = "Tempo1234";
             ValidateUserInfo();
+        }
+
+        private void chkVerClave_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chkVerClave.Checked)
+                txtClave.Properties.UseSystemPasswordChar = false;
+            else
+                txtClave.Properties.UseSystemPasswordChar = true;
+            
         }
     }
 }

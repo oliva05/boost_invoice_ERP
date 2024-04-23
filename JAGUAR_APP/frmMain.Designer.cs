@@ -43,6 +43,7 @@ namespace JAGUAR_APP
             this.cmdAbrirTeclado = new DevExpress.XtraEditors.SimpleButton();
             this.cmdIngresarAdmin = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.chkVerClave = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtClave.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,11 +85,12 @@ namespace JAGUAR_APP
             // txtClave
             // 
             this.txtClave.EditValue = "";
-            this.txtClave.Location = new System.Drawing.Point(189, 165);
+            this.txtClave.Location = new System.Drawing.Point(196, 159);
             this.txtClave.Name = "txtClave";
             this.txtClave.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtClave.Properties.Appearance.Options.UseFont = true;
             this.txtClave.Properties.ContextImageOptions.Image = global::JAGUAR_APP.Properties.Resources.key;
+            this.txtClave.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
             this.txtClave.Properties.UseSystemPasswordChar = true;
             this.txtClave.Size = new System.Drawing.Size(222, 30);
             this.txtClave.TabIndex = 1;
@@ -98,7 +100,7 @@ namespace JAGUAR_APP
             // txtUsuario
             // 
             this.txtUsuario.EditValue = "";
-            this.txtUsuario.Location = new System.Drawing.Point(189, 107);
+            this.txtUsuario.Location = new System.Drawing.Point(196, 101);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
@@ -114,7 +116,7 @@ namespace JAGUAR_APP
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(119, 110);
+            this.labelControl1.Location = new System.Drawing.Point(126, 104);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(64, 24);
             this.labelControl1.TabIndex = 8;
@@ -125,7 +127,7 @@ namespace JAGUAR_APP
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(122, 168);
+            this.labelControl2.Location = new System.Drawing.Point(129, 162);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(47, 24);
             this.labelControl2.TabIndex = 9;
@@ -161,7 +163,7 @@ namespace JAGUAR_APP
             // pictureBox1
             // 
             this.pictureBox1.Image = global::JAGUAR_APP.Properties.Resources.Users_Group_icon64px;
-            this.pictureBox1.Location = new System.Drawing.Point(425, 101);
+            this.pictureBox1.Location = new System.Drawing.Point(424, 95);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(99, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -176,7 +178,7 @@ namespace JAGUAR_APP
             this.cmdAbrirTeclado.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdAbrirTeclado.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
             this.cmdAbrirTeclado.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdAbrirTeclado.ImageOptions.SvgImage")));
-            this.cmdAbrirTeclado.Location = new System.Drawing.Point(530, 160);
+            this.cmdAbrirTeclado.Location = new System.Drawing.Point(529, 154);
             this.cmdAbrirTeclado.Name = "cmdAbrirTeclado";
             this.cmdAbrirTeclado.Size = new System.Drawing.Size(54, 35);
             this.cmdAbrirTeclado.TabIndex = 19;
@@ -208,6 +210,17 @@ namespace JAGUAR_APP
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
+            // chkVerClave
+            // 
+            this.chkVerClave.AutoSize = true;
+            this.chkVerClave.Location = new System.Drawing.Point(196, 196);
+            this.chkVerClave.Name = "chkVerClave";
+            this.chkVerClave.Size = new System.Drawing.Size(72, 17);
+            this.chkVerClave.TabIndex = 22;
+            this.chkVerClave.Text = "Ver Clave";
+            this.chkVerClave.UseVisualStyleBackColor = true;
+            this.chkVerClave.CheckedChanged += new System.EventHandler(this.chkVerClave_CheckedChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +228,7 @@ namespace JAGUAR_APP
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(638, 376);
             this.ControlBox = false;
+            this.Controls.Add(this.chkVerClave);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.cmdIngresarAdmin);
             this.Controls.Add(this.cmdAbrirTeclado);
@@ -255,6 +269,7 @@ namespace JAGUAR_APP
         private SimpleButton cmdAbrirTeclado;
         private SimpleButton cmdIngresarAdmin;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.CheckBox chkVerClave;
     }
 }
 

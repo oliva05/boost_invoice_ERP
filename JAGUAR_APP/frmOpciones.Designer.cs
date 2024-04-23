@@ -781,6 +781,7 @@
             this.navBarItem14.Caption = "Inventario Kardex MP";
             this.navBarItem14.ImageOptions.SmallImage = global::JAGUAR_APP.Properties.Resources.in_stock32px;
             this.navBarItem14.Name = "navBarItem14";
+            this.navBarItem14.Visible = false;
             this.navBarItem14.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem14_LinkClicked);
             // 
             // navBarItemKardexPT
