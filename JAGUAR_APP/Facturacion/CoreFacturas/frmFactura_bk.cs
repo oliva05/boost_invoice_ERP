@@ -441,6 +441,21 @@ namespace Eatery.Ventas
                 return;
             }
 
+            //if(ClienteFactura.Recuperado)
+            ////Vamos a verificar que el cliente tenga RTN
+            //{
+            //    //if (dp.ValidateStringIsNullOrEmpty(txtRTN.Text))
+            //    //{
+            //    //    SetErrorBarra("Se ha seleccionado un cliente, pero se dejo vacio el campo RTN!");
+            //    //    return;
+            //    //}
+            //    //if (dp.ValidateStringIsNullOrEmpty(txtNombreCliente.Text))
+            //    //{
+            //    //    SetErrorBarra("Se ha seleccionado un cliente, pero se dejo vacio el Nombre de cliente de forma manual, es un campo obligatorio!");
+            //    //    return;
+            //    //}
+            //}
+
             if (dp.ValidateNumberDecimal(txtTotal.Text)<=0)
             {
                 SetErrorBarra("No se permite generar facturas con valor total cero(0)!");
@@ -491,7 +506,7 @@ namespace Eatery.Ventas
                     factura.NumOrdenCompra = "";
                     factura.IdTerminoPago = IdTerminoPago;
                     int correlativoSiguiente = 0;
-                    //int id_numeracion = 0;
+                    int id_numeracion = 0;
 
                     factura.descuentoTotalFactura = factura.subtotalFactura = 
                     factura.ISV1 = factura.ISV2 = 0;
@@ -504,49 +519,50 @@ namespace Eatery.Ventas
                         factura.ISV2 += dp.ValidateNumberDecimal(row.isv2);
                     }
 
-                    ////Generacion de numero de documento fiscal para la factura
-                    //NumeracionFiscal NumDocumentoFiscal = new NumeracionFiscal();
-                    //if (PuntoDeVentaActual.EmiteFacturaFiscal)
-                    //{
-                    //if (NumDocumentoFiscal.GetIdNumeracionFiscalFromPuntoVentaId(this.PuntoDeVentaActual.ID, NumeracionFiscal.TipoDocumentoFiscal.Factura))
-                    //    {
-                    //        id_numeracion = NumDocumentoFiscal.ID;
-                    //        correlativoSiguiente = NumDocumentoFiscal.Correlative;
+                    //Generacion de numero de documento fiscal para la factura
+                    NumeracionFiscal NumDocumentoFiscal = new NumeracionFiscal();
 
-                    //        if (NumDocumentoFiscal.RecuperarRegistro(id_numeracion))
-                    //        {
-                    //            string sCorrelativo = correlativoSiguiente.ToString();
+                    if (PuntoDeVentaActual.EmiteFacturaFiscal)
+                    {
+                        if (NumDocumentoFiscal.GetIdNumeracionFiscalFromPuntoVentaId(this.PuntoDeVentaActual.ID, NumeracionFiscal.TipoDocumentoFiscal.Factura))
+                        {
+                            id_numeracion = NumDocumentoFiscal.ID;
+                            correlativoSiguiente = NumDocumentoFiscal.Correlative;
 
-                    //            //Rellenar ceros a la izquierda
-                    //            while (sCorrelativo.Length < 8)
-                    //            {
-                    //                sCorrelativo = "0" + sCorrelativo;
-                    //            }
+                            if (NumDocumentoFiscal.RecuperarRegistro(id_numeracion))
+                            {
+                                string sCorrelativo = correlativoSiguiente.ToString();
 
-                    //            factura.NumeroDocumento = NumDocumentoFiscal.Leyenda + sCorrelativo;
+                                //Rellenar ceros a la izquierda
+                                while (sCorrelativo.Length < 8)
+                                {
+                                    sCorrelativo = "0" + sCorrelativo;
+                                }
 
-                    //            //Guardamos el id del cual se genero el numero fiscal, por un tema de reporteria
-                    //            factura.IdNumeracionFiscal = id_numeracion;
-                    //        }
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    //Haremos un recibo de entrega 
-                    //    string NumRecibo = PuntoDeVentaActual.CorrelativoRecibo.ToString();
-                    //    while( NumRecibo.Length < 4)
-                    //    {
-                    //        NumRecibo = "0" + NumRecibo;
-                    //    }
+                                factura.NumeroDocumento = NumDocumentoFiscal.Leyenda + sCorrelativo;
+                                
+                                //Guardamos el id del cual se genero el numero fiscal, por un tema de reporteria
+                                factura.IdNumeracionFiscal = id_numeracion;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        //Haremos un recibo de entrega 
+                        string NumRecibo = PuntoDeVentaActual.CorrelativoRecibo.ToString();
+                        while( NumRecibo.Length < 4)
+                        {
+                            NumRecibo = "0" + NumRecibo;
+                        }
 
-                    //    NumRecibo = this.PuntoDeVentaActual.Codigo + "_" + NumRecibo;
-                    //    factura.NumeroDocumento = NumRecibo;
+                        NumRecibo = this.PuntoDeVentaActual.Codigo + "_" + NumRecibo;
+                        factura.NumeroDocumento = NumRecibo;
+                        
+                        //Guardamos el id del cual se genero el numero fiscal, por un tema de reporteria
+                        factura.IdNumeracionFiscal = 0;
+                    }
 
-                    //    //Guardamos el id del cual se genero el numero fiscal, por un tema de reporteria
-                    //    factura.IdNumeracionFiscal = 0;
-                    //}
-
-
+                    
 
                     //Vamos por el detalle de lineas para la factura y la transaccion
                     using (SqlConnection connection = new SqlConnection(dp.ConnectionStringJAGUAR_DB))
@@ -567,18 +583,17 @@ namespace Eatery.Ventas
                         try
                         {
                             //Guardamos el Header de la factura 
-                            //command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v4]";
-                            command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v5]";
+                            command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v4]";
                             command.CommandType = CommandType.StoredProcedure;
-                            //command.Parameters.AddWithValue("@numero_documento", factura.NumeroDocumento);
+                            command.Parameters.AddWithValue("@numero_documento", factura.NumeroDocumento);
                             command.Parameters.AddWithValue("@enable", 1);
                             command.Parameters.AddWithValue("@id_estado", factura.IdEstado);
                             command.Parameters.AddWithValue("@cant_print", factura.CantidadImpresionesFactura);
                             command.Parameters.AddWithValue("@id_user", factura.IdUser);
                             command.Parameters.AddWithValue("@fecha_row", factura.FechaDocumento);
                             command.Parameters.AddWithValue("@fecha_documento", factura.FechaDocumento);
-
-                            if (factura.IdCliente == 0)
+                            
+                            if(factura.IdCliente==0)
                                 command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
                             else
                                 command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
@@ -586,33 +601,33 @@ namespace Eatery.Ventas
                             command.Parameters.AddWithValue("@RTN", factura.RTN);
                             command.Parameters.AddWithValue("@num_orden_compra", factura.NumOrdenCompra);
                             command.Parameters.AddWithValue("@id_punto_venta", this.PuntoDeVentaActual.ID);
-
-                            //if(factura.IdNumeracionFiscal == 0)
-                            //    command.Parameters.AddWithValue("@id_numeracion_fiscal", DBNull.Value);
-                            //else
-                            //    command.Parameters.AddWithValue("@id_numeracion_fiscal", id_numeracion);
+                            
+                            if(factura.IdNumeracionFiscal == 0)
+                                command.Parameters.AddWithValue("@id_numeracion_fiscal", DBNull.Value);
+                            else
+                                command.Parameters.AddWithValue("@id_numeracion_fiscal", id_numeracion);
 
                             command.Parameters.AddWithValue("@cliente_nombre", factura.ClienteNombre);
                             command.Parameters.AddWithValue("@id_tipo_pago", DBNull.Value);
 
-                            //if (factura.IdNumeracionFiscal == 0)
-                            //    command.Parameters.AddWithValue("@CAI", "N/D");
-                            //else
-                            //    command.Parameters.AddWithValue("@CAI", NumDocumentoFiscal.CAI);
+                            if (factura.IdNumeracionFiscal == 0)
+                                command.Parameters.AddWithValue("@CAI", "N/D");
+                            else
+                                command.Parameters.AddWithValue("@CAI", NumDocumentoFiscal.CAI);
 
-                            //string FechaLimite = null;
-                            //if (factura.IdNumeracionFiscal == 0)
-                            //    FechaLimite = string.Format("{0:dd/MM/yyyy}", factura.FechaDocumento);
-                            //else
-                            //    FechaLimite = string.Format("{0:dd/MM/yyyy}", NumDocumentoFiscal.FechaVence);
+                            string FechaLimite = null;
+                            if (factura.IdNumeracionFiscal == 0)
+                                FechaLimite = string.Format("{0:dd/MM/yyyy}", factura.FechaDocumento);
+                            else
+                                FechaLimite = string.Format("{0:dd/MM/yyyy}", NumDocumentoFiscal.FechaVence);
 
-                            //command.Parameters.AddWithValue("@fecha_limite", FechaLimite);
+                            command.Parameters.AddWithValue("@fecha_limite", FechaLimite);
 
-                            //if (factura.IdNumeracionFiscal == 0)
-                            //    command.Parameters.AddWithValue("@rango_autorizado", "N/D");
-                            //else
-                            //command.Parameters.AddWithValue("@rango_autorizado", "desde: " + NumDocumentoFiscal.Numeracion_Inicial
-                            //                                                  + " hasta: " + NumDocumentoFiscal.Numeracion_Final);
+                            if (factura.IdNumeracionFiscal == 0)
+                                command.Parameters.AddWithValue("@rango_autorizado", "N/D");
+                            else
+                                command.Parameters.AddWithValue("@rango_autorizado", "desde: " + NumDocumentoFiscal.Numeracion_Inicial
+                                                                                  + " hasta: " + NumDocumentoFiscal.Numeracion_Final);
 
                             command.Parameters.AddWithValue("@direccion_cliente", factura.direccion_cliente);
                             command.Parameters.AddWithValue("@subtotal", factura.subtotalFactura);
@@ -627,7 +642,7 @@ namespace Eatery.Ventas
                             factura.Id = IdFacturaH;
 
                             //Posteamos lineas de factura y Transaccion en Kardex
-                            foreach (dsVentas.detalle_factura_transactionRow row in dsVentas1.detalle_factura_transaction)
+                            foreach(dsVentas.detalle_factura_transactionRow row in dsVentas1.detalle_factura_transaction)
                             {
                                 command.CommandText = "dbo.sp_set_insert_factura__lineas__punto_venta_dos_pasos";
                                 command.Parameters.Clear();
@@ -647,7 +662,7 @@ namespace Eatery.Ventas
                                 command.Parameters.AddWithValue("@fecha_hora_row", factura.FechaDocumento);
                                 command.Parameters.AddWithValue("@id_user", this.UsuarioLogeado.Id);
 
-                                if (row.id_isv_aplicable > 0)
+                                if(row.id_isv_aplicable>0)
                                     command.Parameters.AddWithValue("@id_isv_aplicado", row.id_isv_aplicable);
                                 else
                                     command.Parameters.AddWithValue("@id_isv_aplicado", DBNull.Value);
@@ -658,15 +673,14 @@ namespace Eatery.Ventas
                             //Vamos a postear transaccion en estado de cuenta de cliente
                             if (factura.IdCliente > 0)
                             {
-                                command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v4]";
+                                command.CommandText = "dbo.sp_set_insert_estado_cuenta_cliente";
                                 command.CommandType = CommandType.StoredProcedure;
                                 command.Parameters.Clear();
-                                //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
-                                command.Parameters.AddWithValue("@id_facturaH", IdFacturaH);
+                                command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
                                 command.Parameters.AddWithValue("@enable", 1);
                                 command.Parameters.AddWithValue("@credito", 0);//Abonos
                                 command.Parameters.AddWithValue("@debito", TotalFactura);//cargos
-                                command.Parameters.AddWithValue("@concepto", string.Concat("Por Factura #", factura.NumeroDocumento));
+                                command.Parameters.AddWithValue("@concepto",string.Concat("Por Factura #",factura.NumeroDocumento));
                                 command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
                                 command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
                                 command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
@@ -706,7 +720,10 @@ namespace Eatery.Ventas
             else
             {
 
+
+
                 //PRIMERO EL PAGO LUEGO LA FACTURA
+
 
                 //Sino, significa que primero el pago y despues la factura.
                 frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentas1.detalle_factura_transaction);
@@ -742,48 +759,50 @@ namespace Eatery.Ventas
                         factura.NumOrdenCompra = "";
                         factura.idFormatoFactura = this.PuntoDeVentaActual.IdFormatoFactura;
 
-                        //int correlativoSiguiente = 0;
-                        //int id_numeracion = 0;
-                        ////Generacion de numero de documento fiscal para la factura
-                        //NumeracionFiscal NumDocumentoFiscal = new NumeracionFiscal();
-                        //if (PuntoDeVentaActual.EmiteFacturaFiscal)
-                        //{
-                        //    if (NumDocumentoFiscal.GetIdNumeracionFiscalFromPuntoVentaId(this.PuntoDeVentaActual.ID, NumeracionFiscal.TipoDocumentoFiscal.Factura))
-                        //    {
-                        //        id_numeracion = NumDocumentoFiscal.ID;
-                        //        correlativoSiguiente = NumDocumentoFiscal.Correlative;
+                        int correlativoSiguiente = 0;
+                        int id_numeracion = 0;
 
-                        //        if (NumDocumentoFiscal.RecuperarRegistro(id_numeracion))
-                        //        {
-                        //            string sCorrelativo = correlativoSiguiente.ToString();
+                        //Generacion de numero de documento fiscal para la factura
+                        NumeracionFiscal NumDocumentoFiscal = new NumeracionFiscal();
 
-                        //            //Rellenar ceros a la izquierda
-                        //            while (sCorrelativo.Length < 8)
-                        //            {
-                        //                sCorrelativo = "0" + sCorrelativo;
-                        //            }
+                        if (PuntoDeVentaActual.EmiteFacturaFiscal)
+                        {
+                            if (NumDocumentoFiscal.GetIdNumeracionFiscalFromPuntoVentaId(this.PuntoDeVentaActual.ID, NumeracionFiscal.TipoDocumentoFiscal.Factura))
+                            {
+                                id_numeracion = NumDocumentoFiscal.ID;
+                                correlativoSiguiente = NumDocumentoFiscal.Correlative;
 
-                        //            factura.NumeroDocumento = NumDocumentoFiscal.Leyenda + sCorrelativo;
-                        //            //Guardamos el id del cual se genero el numero fiscal, por un tema de reporteria
-                        //            factura.IdNumeracionFiscal = id_numeracion;
-                        //        }
-                        //    }
-                        //}
-                        //else
-                        //{
-                        //    //Haremos un recibo de entrega 
-                        //    string NumRecibo = PuntoDeVentaActual.CorrelativoRecibo.ToString();
-                        //    while (NumRecibo.Length < 4)
-                        //    {
-                        //        NumRecibo = "0" + NumRecibo;
-                        //    }
+                                if (NumDocumentoFiscal.RecuperarRegistro(id_numeracion))
+                                {
+                                    string sCorrelativo = correlativoSiguiente.ToString();
 
-                        //    NumRecibo = this.PuntoDeVentaActual.Codigo + "_" + NumRecibo;
-                        //    factura.NumeroDocumento = NumRecibo;
+                                    //Rellenar ceros a la izquierda
+                                    while (sCorrelativo.Length < 8)
+                                    {
+                                        sCorrelativo = "0" + sCorrelativo;
+                                    }
 
-                        //    //Guardamos el id del cual se genero el numero fiscal, por un tema de reporteria
-                        //    factura.IdNumeracionFiscal = 0;
-                        //}
+                                    factura.NumeroDocumento = NumDocumentoFiscal.Leyenda + sCorrelativo;
+                                    //Guardamos el id del cual se genero el numero fiscal, por un tema de reporteria
+                                    factura.IdNumeracionFiscal = id_numeracion;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            //Haremos un recibo de entrega 
+                            string NumRecibo = PuntoDeVentaActual.CorrelativoRecibo.ToString();
+                            while (NumRecibo.Length < 4)
+                            {
+                                NumRecibo = "0" + NumRecibo;
+                            }
+
+                            NumRecibo = this.PuntoDeVentaActual.Codigo + "_" + NumRecibo;
+                            factura.NumeroDocumento = NumRecibo;
+
+                            //Guardamos el id del cual se genero el numero fiscal, por un tema de reporteria
+                            factura.IdNumeracionFiscal = 0;
+                        }
 
                         factura.descuentoTotalFactura = factura.subtotalFactura =
                         factura.ISV1 = factura.ISV2 = 0;
@@ -816,10 +835,9 @@ namespace Eatery.Ventas
                             try
                             {
                                 //Guardamos el Header de la factura 
-                                //command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v2]";
-                                command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v6]";
+                                command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v2]";
                                 command.CommandType = CommandType.StoredProcedure;
-                                //command.Parameters.AddWithValue("@numero_documento", factura.NumeroDocumento);
+                                command.Parameters.AddWithValue("@numero_documento", factura.NumeroDocumento);
                                 command.Parameters.AddWithValue("@enable", 1);
                                 command.Parameters.AddWithValue("@id_estado", factura.IdEstado);
                                 command.Parameters.AddWithValue("@cant_print", factura.CantidadImpresionesFactura);
@@ -836,35 +854,35 @@ namespace Eatery.Ventas
                                 command.Parameters.AddWithValue("@num_orden_compra", factura.NumOrdenCompra);
                                 command.Parameters.AddWithValue("@id_punto_venta", this.PuntoDeVentaActual.ID);
 
-                                //if (factura.IdNumeracionFiscal == 0)
-                                //    command.Parameters.AddWithValue("@id_numeracion_fiscal", DBNull.Value);
-                                //else
-                                //    command.Parameters.AddWithValue("@id_numeracion_fiscal", id_numeracion);
+                                if (factura.IdNumeracionFiscal == 0)
+                                    command.Parameters.AddWithValue("@id_numeracion_fiscal", DBNull.Value);
+                                else
+                                    command.Parameters.AddWithValue("@id_numeracion_fiscal", id_numeracion);
 
                                 command.Parameters.AddWithValue("@cliente_nombre", factura.ClienteNombre);
                                 command.Parameters.AddWithValue("@id_tipo_pago", (int)frm.TipoPagoSeleccionadoActual);
 
                                 //command.Parameters.AddWithValue("@CAI", NumDocumentoFiscal.CAI);
-                                //if (factura.IdNumeracionFiscal == 0)
-                                //    command.Parameters.AddWithValue("@CAI", "N/D");
-                                //else
-                                //    command.Parameters.AddWithValue("@CAI", NumDocumentoFiscal.CAI);  
+                                if (factura.IdNumeracionFiscal == 0)
+                                    command.Parameters.AddWithValue("@CAI", "N/D");
+                                else
+                                    command.Parameters.AddWithValue("@CAI", NumDocumentoFiscal.CAI);
 
                                 //string FechaLimite = string.Format("{0:dd/MM/yyyy}", NumDocumentoFiscal.FechaVence);
-                                //string FechaLimite = null;
-                                //if (factura.IdNumeracionFiscal == 0)
-                                //    FechaLimite = string.Format("{0:dd/MM/yyyy}", factura.FechaDocumento);
-                                //else
-                                //    FechaLimite = string.Format("{0:dd/MM/yyyy}", NumDocumentoFiscal.FechaVence);
+                                string FechaLimite = null;
+                                if (factura.IdNumeracionFiscal == 0)
+                                    FechaLimite = string.Format("{0:dd/MM/yyyy}", factura.FechaDocumento);
+                                else
+                                    FechaLimite = string.Format("{0:dd/MM/yyyy}", NumDocumentoFiscal.FechaVence);
 
-                                //command.Parameters.AddWithValue("@fecha_limite", FechaLimite);
+                                command.Parameters.AddWithValue("@fecha_limite", FechaLimite);
                                 //command.Parameters.AddWithValue("@rango_autorizado", "desde: " + NumDocumentoFiscal.Numeracion_Inicial
                                 //                                                  + " hasta: " + NumDocumentoFiscal.Numeracion_Final);
-                                //if (factura.IdNumeracionFiscal == 0)
-                                //    command.Parameters.AddWithValue("@rango_autorizado", "N/D");
-                                //else
-                                //    command.Parameters.AddWithValue("@rango_autorizado", "desde: " + NumDocumentoFiscal.Numeracion_Inicial
-                                //                                                      + " hasta: " + NumDocumentoFiscal.Numeracion_Final);
+                                if (factura.IdNumeracionFiscal == 0)
+                                    command.Parameters.AddWithValue("@rango_autorizado", "N/D");
+                                else
+                                    command.Parameters.AddWithValue("@rango_autorizado", "desde: " + NumDocumentoFiscal.Numeracion_Inicial
+                                                                                      + " hasta: " + NumDocumentoFiscal.Numeracion_Final);
 
                                 command.Parameters.AddWithValue("@direccion_cliente", factura.direccion_cliente);
                                 command.Parameters.AddWithValue("@subtotal", factura.subtotalFactura);
@@ -912,11 +930,10 @@ namespace Eatery.Ventas
                                 //if (factura.IdCliente > 0)
                                 //{
                                 //El cargo por la factura
-                                command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v5]";
+                                command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v2]";
                                 command.CommandType = CommandType.StoredProcedure;
                                 command.Parameters.Clear();
-                                //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
-                                command.Parameters.AddWithValue("@id_facturaH", IdFacturaH);
+                                command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
                                 command.Parameters.AddWithValue("@enable", 1);
                                 command.Parameters.AddWithValue("@credito", 0);//Abonos
                                 command.Parameters.AddWithValue("@debito", TotalFactura);//cargos
@@ -998,11 +1015,10 @@ namespace Eatery.Ventas
                                 //postearemos varias lineas por si el pago se combina entre si
                                 foreach (RegistroPago registroPago in frm.ListaDetallePago)
                                 {
-                                    command.CommandText = "dbo.[sp_set_insert_recibo_pago_detalle_v3]";
+                                    command.CommandText = "dbo.[sp_set_insert_recibo_pago_detalle_v2]";
                                     command.CommandType = CommandType.StoredProcedure;
                                     command.Parameters.Clear();
-                                    command.Parameters.AddWithValue("@id_facturaH", IdFacturaH);
-                                    //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                                    command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
                                     //command.Parameters.AddWithValue("@valor", frm.varPago);
                                     command.Parameters.AddWithValue("@valor", registroPago.Valor);
                                     command.Parameters.AddWithValue("@date_created", dp.NowSetDateTime());
@@ -1074,36 +1090,33 @@ namespace Eatery.Ventas
                 //rptFactura
                 if (facturaGenerada != null)
                 {
-                    if (facturaGenerada.RecuperarRegistro(facturaGenerada.Id))
+                    if (!string.IsNullOrEmpty(facturaGenerada.NumeroDocumento))
                     {
-                        if (!string.IsNullOrEmpty(facturaGenerada.NumeroDocumento))
+                        if (facturaGenerada.Id > 0)
                         {
-                            if (facturaGenerada.Id > 0)
+                            if (facturaGenerada.RecuperarRegistro(facturaGenerada.Id))
                             {
-                                if (facturaGenerada.RecuperarRegistro(facturaGenerada.Id))
+                                switch (PuntoDeVentaActual.IdFormatoFactura)
                                 {
-                                    switch (PuntoDeVentaActual.IdFormatoFactura)
-                                    {
-                                        case 1://3.5 pulg. cinta
-                                            rptFactura report = new rptFactura(facturaGenerada, rptFactura.TipoCopia.Blanco) { ShowPrintMarginsWarning = false };
-                                            report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
-                                            ReportPrintTool printReport = new ReportPrintTool(report);
-                                            //printReport.ShowPreviewDialog();
-                                            printReport.PrinterSettings.Copies = Convert.ToInt16(PuntoDeVentaActual.Cantidad_copiasFactura);
-                                            printReport.Print();
-                                            facturaGenerada.UpdatePrintCount(facturaGenerada.Id);
-                                            break;
-                                        case 2://8x11.5 pulg. Carta
-                                        default:
-                                            rptFacturaLetterSize reportLetter = new rptFacturaLetterSize(facturaGenerada, rptFacturaLetterSize.TipoCopia.Blanco) { ShowPrintMarginsWarning = false };
-                                            reportLetter.PrintingSystem.Document.AutoFitToPagesWidth = 1;
-                                            ReportPrintTool printReportLetter = new ReportPrintTool(reportLetter);
-                                            //printReport.ShowPreviewDialog();
-                                            printReportLetter.PrinterSettings.Copies = Convert.ToInt16(PuntoDeVentaActual.Cantidad_copiasFactura);
-                                            printReportLetter.Print();
-                                            facturaGenerada.UpdatePrintCount(facturaGenerada.Id);
-                                            break;
-                                    }
+                                    case 1://3.5 pulg. cinta
+                                        rptFactura report = new rptFactura(facturaGenerada, rptFactura.TipoCopia.Blanco) { ShowPrintMarginsWarning = false };
+                                        report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
+                                        ReportPrintTool printReport = new ReportPrintTool(report);
+                                        //printReport.ShowPreviewDialog();
+                                        printReport.PrinterSettings.Copies = Convert.ToInt16(PuntoDeVentaActual.Cantidad_copiasFactura);
+                                        printReport.Print();
+                                        facturaGenerada.UpdatePrintCount(facturaGenerada.Id);
+                                        break;
+                                    case 2://8x11.5 pulg. Carta
+                                    default:
+                                        rptFacturaLetterSize reportLetter = new rptFacturaLetterSize(facturaGenerada, rptFacturaLetterSize.TipoCopia.Blanco) { ShowPrintMarginsWarning = false };
+                                        reportLetter.PrintingSystem.Document.AutoFitToPagesWidth = 1;
+                                        ReportPrintTool printReportLetter = new ReportPrintTool(reportLetter);
+                                        //printReport.ShowPreviewDialog();
+                                        printReportLetter.PrinterSettings.Copies = Convert.ToInt16(PuntoDeVentaActual.Cantidad_copiasFactura);
+                                        printReportLetter.Print();
+                                        facturaGenerada.UpdatePrintCount(facturaGenerada.Id);
+                                        break;
                                 }
                             }
                         }
@@ -1344,6 +1357,7 @@ namespace Eatery.Ventas
                 }
                 else
                 {
+                    //row["total_fila"] = (Convert.ToDecimal(row["cantidad"]) * Convert.ToDecimal(row["precio"]));
                     row["total_fila"] = ((Convert.ToDecimal(row["cantidad"]) * Convert.ToDecimal(row["precio"])) - Convert.ToDecimal(row["descuento"]) + Convert.ToDecimal(row["isv1"]));
                 }
                 
@@ -1799,7 +1813,7 @@ namespace Eatery.Ventas
                     rowF.total_linea = (rowF.cantidad * rowF.precio) - rowF.descuento + rowF.isv1 + rowF.isv2 + rowF.isv3;
                     AgregarNuevo = false;
                 }
-                valor_total += (rowF.total_linea);
+                valor_total += (rowF.total_linea + rowF.isv1);
                 txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
             }
 
@@ -1844,7 +1858,7 @@ namespace Eatery.Ventas
                 
                 //dsCompras.oc_d_normal.Addoc_d_normalRow(row1);
                 dsVentas1.detalle_factura_transaction.Adddetalle_factura_transactionRow(row1);
-                valor_total += (row1.total_linea );
+                valor_total += (row1.total_linea + row1.isv1);
                 txtTotal.Text= string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
             }
         }
@@ -1873,11 +1887,10 @@ namespace Eatery.Ventas
                             rowF.cantidad = rowF.cantidad + 1;
                             rowF.isv1 = rowF.isv2 = rowF.isv3 = 0;
                             rowF.isv1 = ((rowF.cantidad * rowF.precio) - rowF.descuento) * rowF.tasa_isv;
-                            rowF.total_linea = (rowF.cantidad * rowF.precio) - rowF.descuento + rowF.isv1 + rowF.isv2 + rowF.isv3;
+                            rowF.total_linea = ((rowF.cantidad * rowF.precio) - rowF.descuento) + rowF.isv1 + rowF.isv2 + rowF.isv3;
                             AgregarNuevo = false;
                         }
-                        //valor_total += (rowF.total_linea + rowF.isv1);
-                        valor_total += rowF.total_linea;
+                        valor_total += (rowF.total_linea);
                         txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
                     }
 
@@ -1930,7 +1943,6 @@ namespace Eatery.Ventas
                         if (row1.precio == 0)
                         {
                             SetErrorBarra("Este producto no tiene definido un precio. Por favor valide Lista de Precios!");
-                            return;
                         }
 
                         
@@ -1958,12 +1970,13 @@ namespace Eatery.Ventas
                             row1.precio = (row1.precio - row1.descuento);
                         }
 
-                        row1.total_linea = (row1.cantidad * row1.precio) + (row1.cantidad * row1.isv1) + (row1.cantidad * row1.isv2) + (row1.cantidad * row1.isv3);
+                        row1.total_linea = ((row1.cantidad * row1.precio) - row1.descuento) + (row1.cantidad * row1.isv1) + (row1.cantidad * row1.isv2) + (row1.cantidad * row1.isv3);
 
 
                         //dsCompras.oc_d_normal.Addoc_d_normalRow(row1);
                         dsVentas1.detalle_factura_transaction.Adddetalle_factura_transactionRow(row1);
-                        valor_total += (row1.total_linea);// + row1.isv1);
+                        //valor_total += (row1.total_linea + row1.isv1);
+                        valor_total += row1.total_linea;
                         txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
 
                         if(dsVentas1.detalle_factura_transaction.Count>0)
@@ -2022,26 +2035,6 @@ namespace Eatery.Ventas
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            switch (e.Column.FieldName)
-            {
-                case "cantidad":
-                    var gridView = (GridView)gridControl1.FocusedView;
-                    var row = (dsVentas.detalle_factura_transactionRow)gridView.GetFocusedDataRow();
-                    if (row.cantidad > 0)
-                    {
-                        //No permitiremos facturar mas que lo que hay en inventario
-                        if(row.cantidad > row.inventario)
-                        {
-                            //row.cantidad = dp.ValidateNumberDecimal(e.OldValue);
-                            row.SetColumnError("cantidad", "No se puede facturar una cantidad mayor al inventario actual!");
-                        }
-                        else
-                        {
-                            row.ClearErrors();
-                        }
-                    }
-                    break;
-            }
             CalcularTotalFactura();
         }
 
@@ -2050,9 +2043,8 @@ namespace Eatery.Ventas
             decimal total = 0;  
             foreach(dsVentas.detalle_factura_transactionRow row in dsVentas1.detalle_factura_transaction)
             {
-                row.total_linea = (row.cantidad * row.precio) - row.descuento;
-                row.total_linea = row.total_linea + (row.cantidad * row.isv1) + (row.cantidad * row.isv2) + (row.cantidad * row.isv3);
-               total += row.total_linea;    
+                row.total_linea = (row.cantidad * row.precio) + (row.cantidad * row.isv1) + (row.cantidad * row.isv2) + (row.cantidad * row.isv3);
+                total += row.total_linea;    
             }
 
             txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(total,2));
@@ -2081,7 +2073,7 @@ namespace Eatery.Ventas
                         rowF.total_linea = (rowF.cantidad * rowF.precio) - rowF.descuento + rowF.isv1 + rowF.isv2 + rowF.isv3;
                         AgregarNuevo = false;
                     }
-                    valor_total += (rowF.total_linea);// + rowF.isv1);
+                    valor_total += (rowF.total_linea + rowF.isv1);
                     txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total, 2));
                 }
 
