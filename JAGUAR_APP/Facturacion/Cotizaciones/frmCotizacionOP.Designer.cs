@@ -29,12 +29,12 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCotizacionOP));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dsFactCotizacion1 = new JAGUAR_APP.Facturacion.Cotizaciones.dsFactCotizacion();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -237,9 +237,9 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // reposDelete
             // 
             this.reposDelete.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.reposDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposDelete.Name = "reposDelete";
             this.reposDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.reposDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposDelete_ButtonClick);
@@ -363,40 +363,42 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label4.Location = new System.Drawing.Point(962, 595);
+            this.label4.Location = new System.Drawing.Point(1008, 595);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 48;
-            this.label4.Text = "Sub-Total Bruto:";
+            this.label4.Text = "Sub-Total:";
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label5.Location = new System.Drawing.Point(962, 627);
+            this.label5.Location = new System.Drawing.Point(702, 626);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 49;
             this.label5.Text = "Descuento:";
+            this.label5.Visible = false;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label6.Location = new System.Drawing.Point(962, 659);
+            this.label6.Location = new System.Drawing.Point(702, 598);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 20);
             this.label6.TabIndex = 50;
             this.label6.Text = "Sub-Total Neto:";
+            this.label6.Visible = false;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label7.Location = new System.Drawing.Point(962, 691);
+            this.label7.Location = new System.Drawing.Point(1008, 627);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 20);
             this.label7.TabIndex = 51;
@@ -407,7 +409,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label8.Location = new System.Drawing.Point(962, 724);
+            this.label8.Location = new System.Drawing.Point(1008, 660);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 52;
@@ -454,17 +456,17 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label10.Location = new System.Drawing.Point(655, 111);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 20);
+            this.label10.Size = new System.Drawing.Size(149, 20);
             this.label10.TabIndex = 60;
-            this.label10.Text = "E-mail";
+            this.label10.Text = "Correo Electronico";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(739, 108);
+            this.txtEmail.Location = new System.Drawing.Point(810, 108);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
-            this.txtEmail.Properties.NullValuePrompt = "E-Mail Cliente";
+            this.txtEmail.Properties.NullValuePrompt = "sucorreo@ejemplo.com";
             this.txtEmail.Size = new System.Drawing.Size(220, 26);
             this.txtEmail.TabIndex = 61;
             // 
@@ -480,11 +482,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(739, 76);
+            this.txtTelefono.Location = new System.Drawing.Point(810, 76);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
             this.txtTelefono.Properties.Appearance.Options.UseFont = true;
-            this.txtTelefono.Properties.NullValuePrompt = "Telefono";
+            this.txtTelefono.Properties.NullValuePrompt = "0000-0000";
             this.txtTelefono.Size = new System.Drawing.Size(220, 26);
             this.txtTelefono.TabIndex = 63;
             // 
@@ -511,7 +513,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.txtISV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtISV.EditValue = "0.00";
             this.txtISV.Enabled = false;
-            this.txtISV.Location = new System.Drawing.Point(1100, 688);
+            this.txtISV.Location = new System.Drawing.Point(1100, 624);
             this.txtISV.Name = "txtISV";
             this.txtISV.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtISV.Properties.Appearance.Options.UseFont = true;
@@ -529,7 +531,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTotal.EditValue = "0.00";
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(1100, 721);
+            this.txtTotal.Location = new System.Drawing.Point(1100, 657);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtTotal.Properties.Appearance.Options.UseFont = true;
@@ -546,7 +548,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             this.txtDescuento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescuento.EditValue = "0.00";
-            this.txtDescuento.Location = new System.Drawing.Point(1100, 624);
+            this.txtDescuento.Location = new System.Drawing.Point(840, 623);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtDescuento.Properties.Appearance.Options.UseFont = true;
@@ -558,15 +560,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.txtDescuento.Properties.UseMaskAsDisplayFormat = true;
             this.txtDescuento.Size = new System.Drawing.Size(119, 26);
             this.txtDescuento.TabIndex = 83;
-            this.txtDescuento.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.txtDescuento_EditValueChanging);
-            this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
+            this.txtDescuento.Visible = false;
             // 
             // txtSubTotalNeto
             // 
             this.txtSubTotalNeto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSubTotalNeto.EditValue = "0.00";
             this.txtSubTotalNeto.Enabled = false;
-            this.txtSubTotalNeto.Location = new System.Drawing.Point(1100, 656);
+            this.txtSubTotalNeto.Location = new System.Drawing.Point(840, 592);
             this.txtSubTotalNeto.Name = "txtSubTotalNeto";
             this.txtSubTotalNeto.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtSubTotalNeto.Properties.Appearance.Options.UseFont = true;
@@ -578,12 +579,13 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.txtSubTotalNeto.Properties.UseMaskAsDisplayFormat = true;
             this.txtSubTotalNeto.Size = new System.Drawing.Size(119, 26);
             this.txtSubTotalNeto.TabIndex = 84;
+            this.txtSubTotalNeto.Visible = false;
             // 
             // dtFechaRegistro
             // 
             this.dtFechaRegistro.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
             this.dtFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaRegistro.Location = new System.Drawing.Point(739, 11);
+            this.dtFechaRegistro.Location = new System.Drawing.Point(810, 12);
             this.dtFechaRegistro.Name = "dtFechaRegistro";
             this.dtFechaRegistro.Size = new System.Drawing.Size(189, 27);
             this.dtFechaRegistro.TabIndex = 85;
@@ -595,9 +597,9 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label12.Location = new System.Drawing.Point(655, 17);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 20);
+            this.label12.Size = new System.Drawing.Size(120, 20);
             this.label12.TabIndex = 86;
-            this.label12.Text = "Fecha ";
+            this.label12.Text = "Fecha Emision";
             // 
             // label13
             // 
@@ -605,22 +607,22 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label13.Location = new System.Drawing.Point(655, 49);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 20);
+            this.label13.Size = new System.Drawing.Size(152, 20);
             this.label13.TabIndex = 88;
-            this.label13.Text = "Fecha ";
+            this.label13.Text = "Fecha Vencimiento";
             // 
             // dtFechaVencimiento
             // 
             this.dtFechaVencimiento.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
             this.dtFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaVencimiento.Location = new System.Drawing.Point(739, 43);
+            this.dtFechaVencimiento.Location = new System.Drawing.Point(810, 43);
             this.dtFechaVencimiento.Name = "dtFechaVencimiento";
             this.dtFechaVencimiento.Size = new System.Drawing.Size(189, 27);
             this.dtFechaVencimiento.TabIndex = 87;
             // 
             // txtContacto
             // 
-            this.txtContacto.Location = new System.Drawing.Point(739, 140);
+            this.txtContacto.Location = new System.Drawing.Point(810, 140);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
             this.txtContacto.Properties.Appearance.Options.UseFont = true;

@@ -64,14 +64,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                     txtNumCoti.Text = coti.NumCotizacion;
                     IdEstadoOrdenCompra = coti.IdEstado;
 
-
+                    txtISV.EditValue = coti.ISV;
+                    txtSubTotalBruto.EditValue = coti.SubTotal;
                     txtTotal.EditValue = coti.Total;
-                    txtSubTotalNeto.EditValue = coti.SubTotal;
-                    txtDescuento.EditValue = coti.Descuento;
-                    txtSubTotalBruto.EditValue = coti.SubTotal + coti.Descuento;
 
-
-                    CargarDetalle();
+                    CargarDetalle(IdCotizacion);
 
                     break;
                 default:
@@ -80,11 +77,19 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
         }
 
-        private void CargarDetalle()
+        private void CargarDetalle(int pidh)
         {
             try
             {
-                
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_get_cotizacion_detalle", conn);
+                cmd.CommandType = CommandType.StoredProcedure;;
+                cmd.Parameters.AddWithValue("@id_h", pidh);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsFactCotizacion1.detalle_cotizacion.Clear();
+                adat.Fill(dsFactCotizacion1.detalle_cotizacion);
+                conn.Close();
             }
             catch (Exception ex)
             {
@@ -161,6 +166,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         row1.isv = 0;
                         row1.total = 0;
                         row1.id_pt = frm.ItemSeleccionado.id;
+                        row1.id = 0;
+                        row1.id_h = 0;
                         #region Calculo del precio base mas ISV
                         //if (row1.precio == 0)
                         //{
@@ -295,11 +302,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             txtISV.Text = string.Format("{0:##,###,##0.##}", ISV);
 
             txtTotal.Text = string.Format("{0:##,###,##0.##}", Convert.ToDecimal(txtSubTotalNeto.EditValue) + Convert.ToDecimal(txtISV.EditValue));
-        }
-
-        private void txtDescuento_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
-        {
-            
         }
 
         private void cmdSalir_Click(object sender, EventArgs e)
@@ -546,138 +548,98 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                     {
                         CajaDialogo.Information("Cotizacion Creada!");
                         LimpiarControles();
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
                     }
 
 
                     break;
                 case TipoOperacion.Update:
 
-                    //SqlTransaction transactionUpdate = null;
+                    SqlTransaction transactionUpdate = null;
 
-                    //SqlConnection connUpdate = new SqlConnection(dp.ConnectionStringLOSA);
-                    //bool GuardarUpdate = false;
+                    SqlConnection connUpdate = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+                    bool GuardarUpdate = false;
 
-                    //try
-                    //{
-                    //    connUpdate.Open();
-                    //    transactionUpdate = connUpdate.BeginTransaction("Transaction Order");
-                    //    SqlCommand cmdUpdate = connUpdate.CreateCommand();
-                    //    cmdUpdate.CommandText = "[sp_CM_update_ordencompra_hV2]";
-                    //    cmdUpdate.Connection = connUpdate;
-                    //    cmdUpdate.Transaction = transactionUpdate;
-                    //    cmdUpdate.CommandType = CommandType.StoredProcedure;
-                    //    cmdUpdate.Parameters.AddWithValue("@idOrdenCompraH", IdOrdenCompraActual);
-                    //    cmdUpdate.Parameters.AddWithValue("@CardCode", txtCodProv.Text.Trim());
-                    //    cmdUpdate.Parameters.AddWithValue("@CardName", txtProveedor.Text);
-                    //    cmdUpdate.Parameters.AddWithValue("@Address", direccion);
-                    //    if (string.IsNullOrEmpty(txtNumAtCard.Text))
-                    //        cmdUpdate.Parameters.AddWithValue("@NumAtCard", "N/D");
-                    //    else
-                    //        cmdUpdate.Parameters.AddWithValue("@NumAtCard", txtNumAtCard.Text);
+                    try
+                    {
+                        connUpdate.Open();
+                        transactionUpdate = connUpdate.BeginTransaction("Transaction Order");
+                        SqlCommand cmdUpdate = connUpdate.CreateCommand();
+                        cmdUpdate.CommandText = "[sp_cotizacion_update_header]";
+                        cmdUpdate.Connection = connUpdate;
+                        cmdUpdate.Transaction = transactionUpdate;
+                        cmdUpdate.CommandType = CommandType.StoredProcedure;
+                        cmdUpdate.Parameters.AddWithValue("@id_h", IdCotizacion);
+                        cmdUpdate.Parameters.AddWithValue("@cliente", txtNombreCliente.Text.Trim());
+                        cmdUpdate.Parameters.AddWithValue("@rtn", txtRTN.Text);
+                        cmdUpdate.Parameters.AddWithValue("@direccion", txtDireccion.Text);
+                        if (string.IsNullOrEmpty(txtContacto.Text))
+                            cmdUpdate.Parameters.AddWithValue("@contacto", "N/D");
+                        else
+                            cmdUpdate.Parameters.AddWithValue("@contacto", txtContacto.Text);
 
-                    //    cmdUpdate.Parameters.AddWithValue("@DocDate", dtFechaRegistro.Value);
-                    //    cmdUpdate.Parameters.AddWithValue("@DocDueDate", dtFechaContabilizacion.DateTime.AddDays(15));
-                    //    cmdUpdate.Parameters.AddWithValue("@TaxDate", dtFechaContabilizacion.EditValue);
-                    //    cmdUpdate.Parameters.AddWithValue("@U_TipoOrden", grdTipoOrden.EditValue);
-                    //    cmdUpdate.Parameters.AddWithValue("@U_AquaExoneracion", txtExoneracion.Text);
-                    //    cmdUpdate.Parameters.AddWithValue("@U_FechaExoneracion", dtFechaRegistro.Value);
-                    //    cmdUpdate.Parameters.AddWithValue("@Comments", txtComentarios.Text);
-                    //    cmdUpdate.Parameters.AddWithValue("@ISV", Convert.ToDecimal(txtImpuesto.EditValue));
-                    //    cmdUpdate.Parameters.AddWithValue("@DocTotal", Convert.ToDecimal(txtTotal.EditValue));
-                    //    cmdUpdate.Parameters.AddWithValue("@CurSource", CurSource);//C=BP Currency, L=Local Currency, S=System Currency
-                    //    cmdUpdate.Parameters.AddWithValue("@DocCur", txtMoneda.Text.Trim());
-                    //    cmdUpdate.Parameters.AddWithValue("@DocRate", TasaCambio);
-                    //    if (IdSolicitud == 0)
-                    //        cmdUpdate.Parameters.AddWithValue("@DocNumSolicitud", DBNull.Value);
-                    //    else
-                    //        cmdUpdate.Parameters.AddWithValue("@DocNumSolicitud", IdSolicitud);
-                    //    cmdUpdate.Parameters.AddWithValue("@ContactCode", ContactCode);
-                    //    cmdUpdate.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
-                    //    cmdUpdate.Parameters.AddWithValue("@id_ruta", glRutaAprobacionOC.EditValue);
-                    //    if (string.IsNullOrEmpty(comboBoxIntercom.Text))
-                    //        cmdUpdate.Parameters.AddWithValue("@U_incoterm", DBNull.Value);
-                    //    else
-                    //        cmdUpdate.Parameters.AddWithValue("@U_incoterm", comboBoxIntercom.Text.Trim());
-                    //    cmdUpdate.Parameters.AddWithValue("@idEstadoCompra", IdEstadoOrdenCompra);
+                        if (string.IsNullOrEmpty(txtEmail.Text))
+                            cmdUpdate.Parameters.AddWithValue("@email", "N/D");
+                        else
+                            cmdUpdate.Parameters.AddWithValue("@email", txtEmail.Text); 
+                        
+                        if (string.IsNullOrEmpty(txtTelefono.Text))
+                            cmdUpdate.Parameters.AddWithValue("@telefono", "N/D");
+                        else
+                            cmdUpdate.Parameters.AddWithValue("@telefono", txtTelefono.Text);
 
-                    //    cmdUpdate.ExecuteNonQuery();
+                        cmdUpdate.Parameters.AddWithValue("@fecha_emision", dtFechaRegistro.Value);
+                        cmdUpdate.Parameters.AddWithValue("@fecha_vencimiento", dtFechaVencimiento.Value);
+                        cmdUpdate.Parameters.AddWithValue("@user_id", UsuarioLogeado.Id);
+                        cmdUpdate.Parameters.AddWithValue("@sub_total",Convert.ToDecimal(txtSubTotalBruto.EditValue));
+                        cmdUpdate.Parameters.AddWithValue("@isv", Convert.ToDecimal(txtISV.EditValue));
+                        cmdUpdate.Parameters.AddWithValue("@descuento", Convert.ToDecimal(txtDescuento.EditValue));
+                        cmdUpdate.Parameters.AddWithValue("@total", Convert.ToDecimal(txtTotal.EditValue));
 
-                    //    foreach (dsCompras.oc_detalle_exoneradaRow row in dsCompras1.oc_detalle_exonerada.Rows)
-                    //    {
-                    //        cmdUpdate.Parameters.Clear();
-                    //        cmdUpdate.CommandText = "sp_compras_ordenes_detalle_update_insert";
-                    //        cmdUpdate.Connection = connUpdate;
-                    //        cmdUpdate.Transaction = transactionUpdate;
-                    //        cmdUpdate.CommandType = CommandType.StoredProcedure;
-                    //        cmdUpdate.Parameters.AddWithValue("@id_detalle", row.id_d_orden);
-                    //        cmdUpdate.Parameters.AddWithValue("@id_orden_h", IdOrdenCompraActual);
-                    //        cmdUpdate.Parameters.AddWithValue("@ItemCode", row.itemcode);
-                    //        cmdUpdate.Parameters.AddWithValue("@Description", row.descripcion_articulo);
-                    //        if (string.IsNullOrWhiteSpace(row.capitulo))
-                    //            cmdUpdate.Parameters.AddWithValue("@Capitulo_Codigo", DBNull.Value);
-                    //        else
-                    //            cmdUpdate.Parameters.AddWithValue("@Capitulo_Codigo", row.capitulo);
-                    //        if (string.IsNullOrWhiteSpace(row.partida_arancelaria))
-                    //            cmdUpdate.Parameters.AddWithValue("@Partida_Arancelaria", DBNull.Value);
-                    //        else
-                    //            cmdUpdate.Parameters.AddWithValue("@Partida_Arancelaria", row.partida_arancelaria);
-                    //        cmdUpdate.Parameters.AddWithValue("@Quantity", row.cantidad);
-                    //        cmdUpdate.Parameters.AddWithValue("@Unite_Price", row.precio_por_unidad);
-                    //        cmdUpdate.Parameters.AddWithValue("@Currency", txtMoneda.Text.Trim());
-                    //        cmdUpdate.Parameters.AddWithValue("@DiscPrcnt", 0);
-                    //        cmdUpdate.Parameters.AddWithValue("@TaxCode", row.indicador_impuesto);
-                    //        cmdUpdate.Parameters.AddWithValue("@WhsCode", row.bodega.Trim());
-                    //        cmdUpdate.Parameters.AddWithValue("@isv", row.isv);
-                    //        cmdUpdate.Parameters.AddWithValue("@base_ref", row.referencia_base);
-                    //        cmdUpdate.Parameters.AddWithValue("@num_linea_solicitud_d", row.num_linea_solicitud_d);
-                    //        cmdUpdate.Parameters.AddWithValue("@user_id", UsuarioLogueado.Id);
-                    //        //cmdUpdate.Parameters.AddWithValue("@idEstadoCompra", IdEstadoOrdenCompra);
-                    //        cmdUpdate.ExecuteNonQuery();
-                    //    }
+                        cmdUpdate.ExecuteNonQuery();
 
-                    //    string file_name;
-                    //    //Seccion para agregar los archivos
-                    //    foreach (var row in dsCompras1.ordenes_compras_archivos)
-                    //    {
-                    //        string ext = Path.GetExtension(row.file_name);
-                    //        file_name = DateTime.Now.ToString("ddMMyyyyhhmmss") + ext;
-                    //        //Luego de subir el archivo al FTP, que se guarde el registro
-                    //        if (Upload(row.path, file_name, row.id))
-                    //        {
-                    //            cmdUpdate.Parameters.Clear();
-                    //            cmdUpdate.CommandText = "usp_UploadFileFromOrdenesCompras";
-                    //            cmdUpdate.Connection = connUpdate;
-                    //            cmdUpdate.Transaction = transactionUpdate;
-                    //            cmdUpdate.CommandType = CommandType.StoredProcedure;
-                    //            cmdUpdate.Parameters.AddWithValue("@id_orden_compra_h", IdOrdenCompraActual);
-                    //            cmdUpdate.Parameters.AddWithValue("@path", dp.FTP_Tickets_LOSA_Compras + file_name);
-                    //            cmdUpdate.Parameters.AddWithValue("@file_name", row.file_name);
-                    //            cmdUpdate.Parameters.AddWithValue("@id_user", UsuarioLogueado.Id);
-                    //            cmdUpdate.Parameters.AddWithValue("@id", row.id);
-                    //            cmdUpdate.ExecuteNonQuery();
-                    //        }
+                        foreach (dsFactCotizacion.detalle_cotizacionRow row in dsFactCotizacion1.detalle_cotizacion.Rows)
+                        {
+                            cmdUpdate.Parameters.Clear();
+                            cmdUpdate.CommandText = "[sp_cotizacion_update_detalle]";
+                            cmdUpdate.Connection = connUpdate;
+                            cmdUpdate.Transaction = transactionUpdate;
+                            cmdUpdate.CommandType = CommandType.StoredProcedure;
+                            cmdUpdate.Parameters.AddWithValue("@id_detalle", row.id);
+                            cmdUpdate.Parameters.AddWithValue("@id_h", IdCotizacion);
+                            cmdUpdate.Parameters.AddWithValue("@cantidad", row.cantidad);
+                            cmdUpdate.Parameters.AddWithValue("@descripcion", row.descripcion);
+                            cmdUpdate.Parameters.AddWithValue("@precio_original", row.precio_original);
+                            cmdUpdate.Parameters.AddWithValue("@isv", row.isv);
+                            cmdUpdate.Parameters.AddWithValue("@fecha_creacion", dp.Now());
+                            cmdUpdate.Parameters.AddWithValue("@id_pt", row.id_pt);
+                            cmdUpdate.Parameters.AddWithValue("@codigo", row.codigo);
+                            //cmdUpdate.Parameters.AddWithValue("@idEstadoCompra", IdEstadoOrdenCompra);
+                            cmdUpdate.ExecuteNonQuery();
+                        }
 
-                    //    }
+                        transactionUpdate.Commit();
+                        GuardarUpdate = true;
 
-                    //    transactionUpdate.Commit();
-                    //    GuardarUpdate = true;
+                    }
+                    catch (Exception ec)
+                    {
+                        CajaDialogo.Error(ec.Message);
+                        GuardarUpdate = false;
+                    }
 
-                    //}
-                    //catch (Exception ec)
-                    //{
-                    //    CajaDialogo.Error(ec.Message);
-                    //    GuardarUpdate = false;
-                    //}
-
-                    //if (GuardarUpdate)
-                    //{
-                    //    CajaDialogo.Information("Orden de Compra Modificada!");
-                    //    LimpiarControles();
-                    //}
+                    if (GuardarUpdate)
+                    {
+                        CajaDialogo.Information("Cotizacion actualizada!");
+                        LimpiarControles();
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
 
                     break;
                 default:
-                    CajaDialogo.Error("No se pudo definir una Operacion de Tipo(INSERT-UPDATE)\nContacte al Dpto. IT");
+                    CajaDialogo.Error("No se pudo definir una Operacion de Tipo(INSERT-UPDATE)\nContacte su Proveedor de Sistemas");
                     break;
             }
         }

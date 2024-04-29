@@ -13,6 +13,7 @@ using JAGUAR_APP.Clases;
 using System.Data.SqlClient;
 using ACS.Classes;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
 
 namespace JAGUAR_APP.Facturacion.Cotizaciones
 {
@@ -146,7 +147,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             var grdvDetalle = (GridView)grdCotizaciones.FocusedView;
             var row = (dsFactCotizacion.ListaCotizacionesRow)grdvDetalle.GetFocusedDataRow();
 
-
+            if(row.id > 0)
+            {
+                xrptCotizacion report = new xrptCotizacion(row.id);
+                report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
+                ReportPrintTool reportPrint = new ReportPrintTool(report);
+                reportPrint.ShowPreview();
+            }
+            
         }
     }
 }

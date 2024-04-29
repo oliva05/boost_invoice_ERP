@@ -1204,6 +1204,12 @@
     <Compile Include="Facturacion\Cotizaciones\frmCotizacionOP.Designer.cs">
       <DependentUpon>frmCotizacionOP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\Cotizaciones\xrptCotizacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\xrptCotizacion.Designer.cs">
+      <DependentUpon>xrptCotizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3079,6 +3085,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Cotizaciones\frmCotizacionOP.resx">
       <DependentUpon>frmCotizacionOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Cotizaciones\xrptCotizacion.resx">
+      <DependentUpon>xrptCotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.resx">
       <DependentUpon>frmAddEquipoPuntoVenta.cs</DependentUpon>

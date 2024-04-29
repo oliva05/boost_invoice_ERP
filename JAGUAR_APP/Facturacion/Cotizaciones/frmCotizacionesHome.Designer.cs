@@ -320,7 +320,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.cmdSalir.Appearance.Options.UseFont = true;
             this.cmdSalir.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdSalir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdSalir.ImageOptions.Image")));
-            this.cmdSalir.Location = new System.Drawing.Point(1212, 41);
+            this.cmdSalir.Location = new System.Drawing.Point(1192, 41);
             this.cmdSalir.Name = "cmdSalir";
             this.cmdSalir.Size = new System.Drawing.Size(106, 39);
             this.cmdSalir.TabIndex = 16;
