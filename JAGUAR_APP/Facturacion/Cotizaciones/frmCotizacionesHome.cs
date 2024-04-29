@@ -64,7 +64,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         private void cmdNew_Click(object sender, EventArgs e)
         {
             frmCotizacionOP frm = new frmCotizacionOP(frmCotizacionOP.TipoOperacion.Insert, UsuarioLogeado, PuntoVentaActual, 0);
-            frm.ShowDialog();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
         }
 
         private void cmdRefreshDisponibles_Click(object sender, EventArgs e)
