@@ -272,6 +272,7 @@
             this.navBarItem56 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem57 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem58 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarCotizaciones = new DevExpress.XtraNavBar.NavBarItem();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.rd_OdooMenu = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -3596,7 +3597,8 @@
             this.navBarItem56,
             this.navBarItem57,
             this.nbKardexFacturacion,
-            this.navBarItem58});
+            this.navBarItem58,
+            this.navBarCotizaciones});
             this.navBarControl3.Location = new System.Drawing.Point(2, 2);
             this.navBarControl3.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl3.Name = "navBarControl3";
@@ -3649,7 +3651,8 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.nB_PagoMultiple),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem56),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem57),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem58)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem58),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarCotizaciones)});
             this.navBarGroup10.Name = "navBarGroup10";
             // 
             // navBarFacturaMain
@@ -3828,6 +3831,13 @@
             this.navBarItem58.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem58.ImageOptions.SvgImage")));
             this.navBarItem58.Name = "navBarItem58";
             this.navBarItem58.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem58_LinkClicked);
+            // 
+            // navBarCotizaciones
+            // 
+            this.navBarCotizaciones.Caption = "Cotizaciones";
+            this.navBarCotizaciones.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarCotizaciones.ImageOptions.SmallImage")));
+            this.navBarCotizaciones.Name = "navBarCotizaciones";
+            this.navBarCotizaciones.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarCotizaciones_LinkClicked);
             // 
             // labelControl3
             // 
@@ -4176,5 +4186,6 @@ private DevExpress.XtraNavBar.NavBarItem navBarItemKardexPT;
         private DevExpress.XtraEditors.TextEdit txtEquipoLogeadoActual;
         private DevExpress.XtraNavBar.NavBarItem navBarItem59;
         private DevExpress.XtraNavBar.NavBarItem nBarRecepcionFactPuntoVenta;
+        private DevExpress.XtraNavBar.NavBarItem navBarCotizaciones;
     }
 }

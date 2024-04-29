@@ -1183,6 +1183,27 @@
     <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.Designer.cs">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\Cotizaciones\Cotizacion.cs" />
+    <Compile Include="Facturacion\Cotizaciones\dsCotizaciones.cs">
+      <DependentUpon>dsCotizaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\dsFactCotizacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFactCotizacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\frmCotizacionesHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\frmCotizacionesHome.Designer.cs">
+      <DependentUpon>frmCotizacionesHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\frmCotizacionOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\frmCotizacionOP.Designer.cs">
+      <DependentUpon>frmCotizacionOP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2154,6 +2175,28 @@
     <None Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas.xss">
       <DependentUpon>dsBusquedas.xsd</DependentUpon>
     </None>
+    <None Include="Facturacion\Cotizaciones\dsCotizaciones.xsc">
+      <DependentUpon>dsCotizaciones.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Cotizaciones\dsCotizaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCotizaciones1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Facturacion\Cotizaciones\dsCotizaciones.xss">
+      <DependentUpon>dsCotizaciones.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Cotizaciones\dsFactCotizacion.xsc">
+      <DependentUpon>dsFactCotizacion.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Cotizaciones\dsFactCotizacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFactCotizacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Facturacion\Cotizaciones\dsFactCotizacion.xss">
+      <DependentUpon>dsFactCotizacion.xsd</DependentUpon>
+    </None>
     <None Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.xsc">
       <DependentUpon>dsCRUDS_Facturacion.xsd</DependentUpon>
     </None>
@@ -3030,6 +3073,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmSelectCliente.resx">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Cotizaciones\frmCotizacionesHome.resx">
+      <DependentUpon>frmCotizacionesHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Cotizaciones\frmCotizacionOP.resx">
+      <DependentUpon>frmCotizacionOP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.resx">
       <DependentUpon>frmAddEquipoPuntoVenta.cs</DependentUpon>
