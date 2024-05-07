@@ -22,11 +22,13 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         UserLogin UsuarioLogeado;
         PDV PuntoVentaActual;
         public int IdCotizacion = 0;
+        DataOperations dp;
         public frmSearchCotizaciones(UserLogin pUserLog, PDV pPuntoVenta)
         {
             InitializeComponent();
             UsuarioLogeado = pUserLog;
             PuntoVentaActual = pPuntoVenta;
+            dp  = new DataOperations();
             dtFechaDesdeDisponibles.DateTime = dp.dNow().AddDays(-30);
             dtFechaHastaDisponibles.DateTime = dp.dNow().AddDays(1);
 
