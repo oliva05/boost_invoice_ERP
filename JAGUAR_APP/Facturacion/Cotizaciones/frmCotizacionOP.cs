@@ -424,7 +424,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
             if (string.IsNullOrEmpty(txtNombreCliente.Text))
             {
-                CajaDialogo.Error("Debe seleccionar/escribir el Cliente que aprobará la orden de compra!");
+                CajaDialogo.Error("Debe seleccionar el Cliente!");
                 return;
             }
 
