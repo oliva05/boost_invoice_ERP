@@ -483,7 +483,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         cmd.Transaction = transaction;
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@cliente", txtNombreCliente.Text.Trim());
-                        cmd.Parameters.AddWithValue("@rtn", txtRTN.Text);
+                       
+                        if(string.IsNullOrEmpty(txtRTN.Text))
+                            cmd.Parameters.AddWithValue("@rtn", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@rtn", txtRTN.Text);
 
                         if (string.IsNullOrWhiteSpace(txtDireccion.Text))
                             cmd.Parameters.AddWithValue("@direccion", "N/D");
@@ -508,10 +512,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         cmd.Parameters.AddWithValue("@fecha_vencimiento", dtFechaVencimiento.Value);
                         cmd.Parameters.AddWithValue("@user_id", UsuarioLogeado.Id);
                         cmd.Parameters.AddWithValue("@id_estado", 1);
-                        cmd.Parameters.AddWithValue("@sub_total", txtSubTotalNeto.EditValue);
-                        cmd.Parameters.AddWithValue("@descuento", txtDescuento.EditValue);
-                        cmd.Parameters.AddWithValue("@isv", txtISV.EditValue);
-                        cmd.Parameters.AddWithValue("@total", txtTotal.EditValue);
+                        cmd.Parameters.AddWithValue("@sub_total", dp.ValidateNumberDecimal( txtSubTotalNeto.EditValue));
+                        cmd.Parameters.AddWithValue("@descuento", dp.ValidateNumberDecimal(txtDescuento.EditValue));
+                        cmd.Parameters.AddWithValue("@isv", dp.ValidateNumberDecimal(txtISV.EditValue));
+                        cmd.Parameters.AddWithValue("@total", dp.ValidateNumberDecimal(txtTotal.EditValue));
                         cmd.Parameters.AddWithValue("@punto_venta", PuntoVentaActual.ID);
 
                         int id_header = Convert.ToInt32(cmd.ExecuteScalar());
