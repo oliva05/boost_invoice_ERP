@@ -20,7 +20,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
     public partial class frmSearchCotizaciones : DevExpress.XtraEditors.XtraForm
     {
         UserLogin UsuarioLogeado;
-        DataOperations dp = new DataOperations();
         PDV PuntoVentaActual;
         public int IdCotizacion = 0;
         DataOperations dp;
