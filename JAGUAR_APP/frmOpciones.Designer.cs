@@ -3830,10 +3830,19 @@
             this.navBarItem58.Caption = "Facturacion para Punto de Venta";
             this.navBarItem58.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem58.ImageOptions.SvgImage")));
             this.navBarItem58.Name = "navBarItem58";
+            this.navBarItem58.Visible = false;
             this.navBarItem58.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem58_LinkClicked);
             // 
             // navBarCotizaciones
             // 
+            this.navBarCotizaciones.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarCotizaciones.Appearance.Options.UseFont = true;
+            this.navBarCotizaciones.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarCotizaciones.AppearanceDisabled.Options.UseFont = true;
+            this.navBarCotizaciones.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarCotizaciones.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarCotizaciones.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarCotizaciones.AppearancePressed.Options.UseFont = true;
             this.navBarCotizaciones.Caption = "Cotizaciones";
             this.navBarCotizaciones.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarCotizaciones.ImageOptions.SmallImage")));
             this.navBarCotizaciones.Name = "navBarCotizaciones";
