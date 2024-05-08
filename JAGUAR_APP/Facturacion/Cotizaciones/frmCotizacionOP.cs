@@ -48,7 +48,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             switch (tipoOP)
             {
                 case TipoOperacion.Insert:
-                    txtNumCoti.Visible = false;
+                    txtNumCoti.Visible = false; 
+                    dtFechaVencimiento.Value = dp.Now().AddDays(15);
 
                     break;
                 case TipoOperacion.Update:
@@ -60,8 +61,12 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                     txtNombreCliente.Text = coti.Cliente;
                     txtRTN.Text = coti.RTN;
                     txtDireccion.Text = coti.Direccion;
+                    txtTelefono.Text = coti.Telefono;
                     txtEmail.Text = coti.Email;
                     txtNumCoti.Text = coti.NumCotizacion;
+                    txtContacto.Text = coti.Contacto;
+                    dtFechaRegistro.Value = coti.FechaEmision;
+                    dtFechaVencimiento.Value = coti.FechaVencimiento;
                     IdEstadoOrdenCompra = coti.IdEstado;
 
                     txtISV.EditValue = coti.ISV;
@@ -138,6 +143,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                 if (pt1.Recuperar_producto(frm.ItemSeleccionado.id))
                 {
                     decimal valor_total = 0;
+                    decimal valor_isv = 0;
 
                     bool AgregarNuevo = true;
                     foreach (dsFactCotizacion.detalle_cotizacionRow rowF in dsFactCotizacion1.detalle_cotizacion)
@@ -146,12 +152,16 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         {
                             //Sumar cantidad nada mas
                             rowF.cantidad = rowF.cantidad + 1;
-                            rowF.precio_original = rowF.precio_original + rowF.precio_original;
+                            rowF.total = rowF.cantidad * rowF.precio_original;
+                            rowF.isv = (rowF.cantidad * rowF.precio_original) * Convert.ToDecimal(0.15);
                             AgregarNuevo = false;
                         }
                         //valor_total += (rowF.total_linea + rowF.isv1);
                         valor_total += rowF.total;
-                        txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total, 2));
+                        valor_isv += rowF.isv;
+                        txtSubTotalBruto.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total, 2));
+                        txtISV.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_isv, 2));
+                        txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total + valor_isv, 2));
                     }
 
                     if (AgregarNuevo)
@@ -414,7 +424,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
             if (string.IsNullOrEmpty(txtNombreCliente.Text))
             {
-                CajaDialogo.Error("Debe seleccionar/escribir el Cliente que aprobará la orden de compra!");
+                CajaDialogo.Error("Debe seleccionar el Cliente!");
                 return;
             }
 
@@ -650,7 +660,18 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
         private void dtFechaRegistro_ValueChanged(object sender, EventArgs e)
         {
-            //dtFechaVencimiento.Value = dp.Now().AddDays(15);
+            //switch (tipoOP)
+            //{
+            //    case TipoOperacion.Insert:
+            //        dtFechaVencimiento.Value = dp.Now().AddDays(15);
+
+            //        break;
+            //    case TipoOperacion.Update:
+            //        break;
+            //    default:
+            //        break;
+            //}
+            
         }
 
         private void txtDescuento_TextChanged(object sender, EventArgs e)
