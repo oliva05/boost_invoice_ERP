@@ -3616,6 +3616,7 @@
             this.navBarGroup11.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbKardexFacturacion)});
             this.navBarGroup11.Name = "navBarGroup11";
+            this.navBarGroup11.Visible = false;
             // 
             // nbKardexFacturacion
             // 
