@@ -106,6 +106,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.lblEmailPDV2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblTelefonoPDV2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrSubReportCotiz = new DevExpress.XtraReports.UI.XRSubreport();
             this.IdCotizacion = new DevExpress.XtraReports.Parameters.Parameter();
             this.lblUsuario = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
@@ -116,7 +117,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.lblSub = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.dsFactCotizacion1 = new JAGUAR_APP.Facturacion.Cotizaciones.dsFactCotizacion();
-            this.xrSubReportCotiz = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsFactCotizacion1)).BeginInit();
@@ -593,6 +593,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(1.999919F, 85.37499F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(700F, 26.70838F);
+            this.xrLine1.Visible = false;
             // 
             // xrLabel34
             // 
@@ -940,6 +941,15 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.lblTelefonoPDV2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.lblTelefonoPDV2.Visible = false;
             // 
+            // xrSubReportCotiz
+            // 
+            this.xrSubReportCotiz.LocationFloat = new DevExpress.Utils.PointFloat(0F, 323.9583F);
+            this.xrSubReportCotiz.Name = "xrSubReportCotiz";
+            this.xrSubReportCotiz.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("SubIdCotizacion", this.IdCotizacion));
+            this.xrSubReportCotiz.ReportSource = new JAGUAR_APP.Facturacion.Cotizaciones.subRptCotiz();
+            this.xrSubReportCotiz.SizeF = new System.Drawing.SizeF(701.9999F, 56.33334F);
+            this.xrSubReportCotiz.Visible = false;
+            // 
             // IdCotizacion
             // 
             this.IdCotizacion.AllowNull = true;
@@ -1050,15 +1060,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             this.dsFactCotizacion1.DataSetName = "dsFactCotizacion";
             this.dsFactCotizacion1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // xrSubReportCotiz
-            // 
-            this.xrSubReportCotiz.LocationFloat = new DevExpress.Utils.PointFloat(0F, 323.9583F);
-            this.xrSubReportCotiz.Name = "xrSubReportCotiz";
-            this.xrSubReportCotiz.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("SubIdCotizacion", this.IdCotizacion));
-            this.xrSubReportCotiz.ReportSource = new JAGUAR_APP.Facturacion.Cotizaciones.subRptCotiz();
-            this.xrSubReportCotiz.SizeF = new System.Drawing.SizeF(701.9999F, 56.33334F);
-            this.xrSubReportCotiz.Visible = false;
             // 
             // xrptCotizacion
             // 
