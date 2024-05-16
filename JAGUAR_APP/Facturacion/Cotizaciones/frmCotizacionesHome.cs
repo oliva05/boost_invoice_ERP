@@ -14,6 +14,8 @@ using System.Data.SqlClient;
 using ACS.Classes;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
+using DevExpress.DataAccess.ObjectBinding;
+using DevExpress.DashboardCommon;
 
 namespace JAGUAR_APP.Facturacion.Cotizaciones
 {
@@ -152,7 +154,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
             if(row.id > 0)
             {
+
                 xrptCotizacion report = new xrptCotizacion(row.id);
+                subRptCotiz subRpt = new subRptCotiz();
+                subRpt.Parameters["SubIdCotizacion"].Value = row.id;
                 report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
                 ReportPrintTool reportPrint = new ReportPrintTool(report);
                 reportPrint.ShowPreview();

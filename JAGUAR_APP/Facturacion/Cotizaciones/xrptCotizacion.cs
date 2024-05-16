@@ -13,33 +13,35 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
     public partial class xrptCotizacion : DevExpress.XtraReports.UI.XtraReport
     {
         DataOperations dp = new DataOperations();
+
         public xrptCotizacion(int pid)
         {
             InitializeComponent();
+
+            IdCotizacion.Value = pid;
+
             Cotizacion coti = new Cotizacion();
             coti.RecuperarRegistro(pid);
-            lblcliente.Text = coti.Cliente;
-            lblRTN.Text = coti.RTN;
-            lblTelefono.Text = coti.Telefono;
-            lblEmail.Text = coti.Email;
-            lblContacto.Text = coti.Contacto;
-            lblFecha.Text = string.Format("{0:d}", coti.FechaEmision);
-            lblFechaVenc.Text = string.Format("{0:d}", coti.FechaVencimiento);
-            lblNumCoti.Text = "N#: 000" + coti.NumCotizacion.ToString();
-            lblUsuario.Text = coti.Usuario;
+            lblcliente.Text = lblcliente2.Text = coti.Cliente;
+            lblRTN.Text = lblRTN2.Text = coti.RTN;
+            lblTelefono.Text = lblTelefono2.Text = coti.Telefono;
+            lblEmail.Text = lblEmail2.Text = coti.Email;
+            lblContacto.Text = lblContacto2.Text = coti.Contacto;
+            lblFecha.Text = lblFecha2.Text = string.Format("{0:d}", coti.FechaEmision);
+            lblFechaVenc.Text = lblFechaVenc2.Text = string.Format("{0:d}", coti.FechaVencimiento);
+            lblNumCoti.Text  = lblNumCoti2.Text = "N#: 000" + coti.NumCotizacion.ToString();
+            lblUsuario.Text = lblUsuario2.Text = coti.Usuario;
 
-            lblSub.Text = string.Format("{0:#,###,##0.00}", coti.SubTotal);
-            lblIsv15.Text = string.Format("{0:#,###,##0.00}", coti.ISV);
-            lblTotal.Text = string.Format("{0:#,###,##0.00}", coti.Total);
+            lblSub.Text = lblSub2.Text = string.Format("{0:#,###,##0.00}", coti.SubTotal);
+            lblIsv15.Text = lblIsv152.Text = string.Format("{0:#,###,##0.00}", coti.ISV);
+            lblTotal.Text = lblTotal2.Text = string.Format("{0:#,###,##0.00}", coti.Total);
 
             //PuntoVenta
             PDV pdv = new PDV();
             pdv.RecuperaRegistro(coti.PuntoVentaId);
-            lblDireccionPuntoVenta.Text = pdv.Direccion;
-            lblEmailPDV.Text = pdv.Correo;
-            lblTelefonoPDV.Text = pdv.RTN + " " + pdv.Telefono;
-
-
+            lblDireccionPuntoVenta.Text  = lblDireccionPuntoVenta2.Text = pdv.Direccion;
+            lblEmailPDV.Text = lblEmail2.Text = pdv.Correo;
+            lblTelefonoPDV.Text = lblTelefonoPDV2.Text = pdv.RTN + " " + pdv.Telefono;
 
             CargarDetalle(pid);
         }
