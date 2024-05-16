@@ -1591,6 +1591,7 @@
             this.btnME.Size = new System.Drawing.Size(227, 58);
             this.btnME.TabIndex = 33;
             this.btnME.Text = "Master Material de Empaque";
+            this.btnME.Visible = false;
             this.btnME.Click += new System.EventHandler(this.btnME_Click);
             // 
             // btnClientes
@@ -1620,6 +1621,7 @@
             this.cmdPanaderos.Size = new System.Drawing.Size(227, 58);
             this.cmdPanaderos.TabIndex = 31;
             this.cmdPanaderos.Text = "Master de Productores";
+            this.cmdPanaderos.Visible = false;
             this.cmdPanaderos.Click += new System.EventHandler(this.cmdPanaderos_Click_1);
             // 
             // simpleButton78
@@ -1628,11 +1630,12 @@
             this.simpleButton78.Appearance.Options.UseFont = true;
             this.simpleButton78.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.simpleButton78.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.dimension32px;
-            this.simpleButton78.Location = new System.Drawing.Point(235, 62);
+            this.simpleButton78.Location = new System.Drawing.Point(468, 308);
             this.simpleButton78.Name = "simpleButton78";
             this.simpleButton78.Size = new System.Drawing.Size(227, 58);
             this.simpleButton78.TabIndex = 30;
             this.simpleButton78.Text = "Conversiones \r\nTipos Presentación";
+            this.simpleButton78.Visible = false;
             this.simpleButton78.Click += new System.EventHandler(this.simpleButton78_Click);
             // 
             // cmdFacturas
@@ -1643,7 +1646,7 @@
             this.cmdFacturas.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.cmdFacturas.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdFacturas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdFacturas.ImageOptions.SvgImage")));
-            this.cmdFacturas.Location = new System.Drawing.Point(235, 362);
+            this.cmdFacturas.Location = new System.Drawing.Point(235, 122);
             this.cmdFacturas.Name = "cmdFacturas";
             this.cmdFacturas.Size = new System.Drawing.Size(227, 58);
             this.cmdFacturas.TabIndex = 29;
@@ -1658,7 +1661,7 @@
             this.simpleButton77.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.simpleButton77.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.simpleButton77.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton77.ImageOptions.Image")));
-            this.simpleButton77.Location = new System.Drawing.Point(235, 302);
+            this.simpleButton77.Location = new System.Drawing.Point(235, 62);
             this.simpleButton77.Name = "simpleButton77";
             this.simpleButton77.Size = new System.Drawing.Size(227, 58);
             this.simpleButton77.TabIndex = 28;
@@ -1673,7 +1676,7 @@
             this.cmdProveedores.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.cmdProveedores.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdProveedores.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.usergroup_32x32;
-            this.cmdProveedores.Location = new System.Drawing.Point(2, 362);
+            this.cmdProveedores.Location = new System.Drawing.Point(2, 186);
             this.cmdProveedores.Name = "cmdProveedores";
             this.cmdProveedores.Size = new System.Drawing.Size(227, 58);
             this.cmdProveedores.TabIndex = 27;
@@ -1687,7 +1690,7 @@
             this.btnKardexTiposTransacciones.Appearance.Options.UseTextOptions = true;
             this.btnKardexTiposTransacciones.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.btnKardexTiposTransacciones.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnKardexTiposTransacciones.Location = new System.Drawing.Point(235, 122);
+            this.btnKardexTiposTransacciones.Location = new System.Drawing.Point(235, 2);
             this.btnKardexTiposTransacciones.Name = "btnKardexTiposTransacciones";
             this.btnKardexTiposTransacciones.Size = new System.Drawing.Size(227, 58);
             this.btnKardexTiposTransacciones.TabIndex = 10;
@@ -1700,11 +1703,12 @@
             this.cmdFML_Tipo.Appearance.Options.UseFont = true;
             this.cmdFML_Tipo.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdFML_Tipo.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.recipe32px;
-            this.cmdFML_Tipo.Location = new System.Drawing.Point(235, 242);
+            this.cmdFML_Tipo.Location = new System.Drawing.Point(468, 182);
             this.cmdFML_Tipo.Name = "cmdFML_Tipo";
             this.cmdFML_Tipo.Size = new System.Drawing.Size(227, 58);
             this.cmdFML_Tipo.TabIndex = 0;
             this.cmdFML_Tipo.Text = "Tipos de Receta";
+            this.cmdFML_Tipo.Visible = false;
             this.cmdFML_Tipo.Click += new System.EventHandler(this.cmdFML_Tipo_Click_1);
             // 
             // btnBodegas
@@ -1727,11 +1731,12 @@
             this.cmdTiposMP.Appearance.Options.UseTextOptions = true;
             this.cmdTiposMP.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.cmdTiposMP.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdTiposMP.Location = new System.Drawing.Point(2, 242);
+            this.cmdTiposMP.Location = new System.Drawing.Point(236, 372);
             this.cmdTiposMP.Name = "cmdTiposMP";
             this.cmdTiposMP.Size = new System.Drawing.Size(227, 58);
             this.cmdTiposMP.TabIndex = 23;
             this.cmdTiposMP.Text = "Tipos de Materia Primas";
+            this.cmdTiposMP.Visible = false;
             this.cmdTiposMP.Click += new System.EventHandler(this.cmdTiposMP_Click);
             // 
             // btnTiposPresentaciones
@@ -1754,11 +1759,12 @@
             this.cmdEstados.Appearance.Options.UseTextOptions = true;
             this.cmdEstados.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.cmdEstados.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdEstados.Location = new System.Drawing.Point(2, 302);
+            this.cmdEstados.Location = new System.Drawing.Point(236, 244);
             this.cmdEstados.Name = "cmdEstados";
             this.cmdEstados.Size = new System.Drawing.Size(227, 58);
             this.cmdEstados.TabIndex = 22;
             this.cmdEstados.Text = "Estados de Materia Primas";
+            this.cmdEstados.Visible = false;
             this.cmdEstados.Click += new System.EventHandler(this.cmdEstados_Click);
             // 
             // cmd_estadosFML
@@ -1767,11 +1773,12 @@
             this.cmd_estadosFML.Appearance.Options.UseFont = true;
             this.cmd_estadosFML.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmd_estadosFML.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.tipos_recetas32px;
-            this.cmd_estadosFML.Location = new System.Drawing.Point(235, 182);
+            this.cmd_estadosFML.Location = new System.Drawing.Point(468, 244);
             this.cmd_estadosFML.Name = "cmd_estadosFML";
             this.cmd_estadosFML.Size = new System.Drawing.Size(227, 58);
             this.cmd_estadosFML.TabIndex = 24;
             this.cmd_estadosFML.Text = "Estados Recetas";
+            this.cmd_estadosFML.Visible = false;
             this.cmd_estadosFML.Click += new System.EventHandler(this.cmd_estadosFML_Click_1);
             // 
             // btnEstadosRequisiciones
@@ -1781,11 +1788,12 @@
             this.btnEstadosRequisiciones.Appearance.Options.UseTextOptions = true;
             this.btnEstadosRequisiciones.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.btnEstadosRequisiciones.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnEstadosRequisiciones.Location = new System.Drawing.Point(235, 2);
+            this.btnEstadosRequisiciones.Location = new System.Drawing.Point(468, 372);
             this.btnEstadosRequisiciones.Name = "btnEstadosRequisiciones";
             this.btnEstadosRequisiciones.Size = new System.Drawing.Size(227, 58);
             this.btnEstadosRequisiciones.TabIndex = 11;
             this.btnEstadosRequisiciones.Text = "Estados de Requisiciones";
+            this.btnEstadosRequisiciones.Visible = false;
             this.btnEstadosRequisiciones.Click += new System.EventHandler(this.BtnEstadosRequisiciones_Click);
             // 
             // btnMP
@@ -1796,11 +1804,12 @@
             this.btnMP.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.btnMP.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnMP.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.material32px;
-            this.btnMP.Location = new System.Drawing.Point(2, 182);
+            this.btnMP.Location = new System.Drawing.Point(236, 308);
             this.btnMP.Name = "btnMP";
             this.btnMP.Size = new System.Drawing.Size(227, 58);
             this.btnMP.TabIndex = 19;
             this.btnMP.Text = "Master Materia Primas";
+            this.btnMP.Visible = false;
             this.btnMP.Click += new System.EventHandler(this.btnMP_Click);
             // 
             // simpleButton74
@@ -1843,6 +1852,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(203, 48);
             this.simpleButton2.TabIndex = 22;
             this.simpleButton2.Text = "Turnos";
+            this.simpleButton2.Visible = false;
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_3);
             // 
             // cmdUsuarios
@@ -1967,6 +1977,7 @@
             this.simpleButton3.Size = new System.Drawing.Size(188, 58);
             this.simpleButton3.TabIndex = 35;
             this.simpleButton3.Text = "Despacho";
+            this.simpleButton3.Visible = false;
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click_1);
             // 
             // btnListaPrecios
