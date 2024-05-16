@@ -153,7 +153,8 @@ namespace JAGUAR_APP
 
                             //Mantenimientos de Facturacion
                             xtraTabControl2.TabPages[2].PageVisible = true;
-                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            //NBI_Despachos.Visible = 
+                            NBI_ListaPrecios.Visible =
                             NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
                             NBI_Cliente.Visible = true;
 
@@ -166,7 +167,8 @@ namespace JAGUAR_APP
                             tabPageFacturacion.PageVisible = true;
                             //Mantenimientos de Facturacion
                             xtraTabControl2.TabPages[2].PageVisible = true;
-                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            //NBI_Despachos.Visible = 
+                            NBI_ListaPrecios.Visible =
                             NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
                             NBI_Cliente.Visible = true;
                             break;
@@ -370,20 +372,23 @@ namespace JAGUAR_APP
                         case 3://Medium Autorization
                             tabOpciones.TabPages[1].PageVisible = true; //Logistica
                             xtraTabControl2.TabPages[2].PageVisible = true;
-                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            //NBI_Despachos.Visible = 
+                            NBI_ListaPrecios.Visible =
                             NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
                             NBI_Cliente.Visible = true;
                             break;
                         case 4://Depth With Delta
                             tabOpciones.TabPages[1].PageVisible = true; //Logistica
                             xtraTabControl2.TabPages[2].PageVisible = true;
-                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            //NBI_Despachos.Visible = 
+                            NBI_ListaPrecios.Visible =
                             NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
                             NBI_Cliente.Visible = true;
                             break;
                         case 5://Depth Without Delta
                             xtraTabControl2.TabPages[2].PageVisible = true;
-                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            //NBI_Despachos.Visible = 
+                            NBI_ListaPrecios.Visible =
                             NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
                             NBI_Cliente.Visible = true;
                             break;
@@ -405,19 +410,22 @@ namespace JAGUAR_APP
                             break;
                         case 3://Medium Autorization
                             xtraTabControl2.TabPages[2].PageVisible = true;
-                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible = 
+                            //NBI_Despachos.Visible = 
+                            NBI_ListaPrecios.Visible = 
                             NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible = 
                             NBI_Cliente.Visible = true;
                             break;
                         case 4://Depth With Delta
                             xtraTabControl2.TabPages[2].PageVisible = true;
-                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            //NBI_Despachos.Visible =
+                            NBI_ListaPrecios.Visible =
                             NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
                             NBI_Cliente.Visible = true;
                             break;
                         case 5://Depth Without Delta
                             xtraTabControl2.TabPages[2].PageVisible = true;
-                            NBI_Despachos.Visible = NBI_ListaPrecios.Visible =
+                            //NBI_Despachos.Visible = 
+                            NBI_ListaPrecios.Visible =
                             NBI_PuntoVenta.Visible = NBI_NumeracionFiscal.Visible =
                             NBI_Cliente.Visible = true;
                             break;
