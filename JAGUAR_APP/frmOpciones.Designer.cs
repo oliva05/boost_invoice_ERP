@@ -61,7 +61,6 @@
             this.navBarItemKardexPT = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup9 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem59 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
@@ -546,8 +545,7 @@
             this.navBarItem15,
             this.navBarItem21,
             this.navBarItem23,
-            this.navBarItem24,
-            this.navBarItem59});
+            this.navBarItem24});
             this.navBarControl2.Location = new System.Drawing.Point(0, 0);
             this.navBarControl2.Name = "navBarControl2";
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 338;
@@ -641,6 +639,7 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem23),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24)});
             this.navBarGroup6.Name = "navBarGroup6";
+            this.navBarGroup6.Visible = false;
             // 
             // navBarItemOrdenFabricacion
             // 
@@ -743,6 +742,7 @@
             this.navBarGroup7.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11)});
             this.navBarGroup7.Name = "navBarGroup7";
+            this.navBarGroup7.Visible = false;
             // 
             // navBarItem11
             // 
@@ -806,8 +806,7 @@
             this.navBarGroup9.Appearance.Options.UseFont = true;
             this.navBarGroup9.Caption = "Reporte";
             this.navBarGroup9.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem59)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21)});
             this.navBarGroup9.Name = "navBarGroup9";
             // 
             // navBarItem21
@@ -824,13 +823,6 @@
             this.navBarItem21.ImageOptions.SmallImage = global::JAGUAR_APP.Properties.Resources.box32px;
             this.navBarItem21.Name = "navBarItem21";
             this.navBarItem21.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem21_LinkClicked);
-            // 
-            // navBarItem59
-            // 
-            this.navBarItem59.Caption = "Consumo de MP ";
-            this.navBarItem59.Name = "navBarItem59";
-            this.navBarItem59.Visible = false;
-            this.navBarItem59.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem59_LinkClicked);
             // 
             // navBarItem25
             // 
@@ -4205,7 +4197,6 @@ private DevExpress.XtraNavBar.NavBarItem navBarItemKardexPT;
         private DevExpress.XtraNavBar.NavBarItem navBarItem58;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txtEquipoLogeadoActual;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem59;
         private DevExpress.XtraNavBar.NavBarItem nBarRecepcionFactPuntoVenta;
         private DevExpress.XtraNavBar.NavBarItem navBarCotizaciones;
     }
