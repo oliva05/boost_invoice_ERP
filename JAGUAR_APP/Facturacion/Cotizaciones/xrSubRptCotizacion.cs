@@ -6,10 +6,9 @@ using System.Drawing;
 
 namespace JAGUAR_APP.Facturacion.Cotizaciones
 {
-    public partial class subRptCotiz : DevExpress.XtraReports.UI.XtraReport
+    public partial class xrSubRptCotizacion : DevExpress.XtraReports.UI.XtraReport
     {
-        int IDcotizcion = 0;
-        public subRptCotiz()
+        public xrSubRptCotizacion()
         {
             InitializeComponent();
         }

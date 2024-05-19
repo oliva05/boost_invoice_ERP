@@ -1216,17 +1216,17 @@
     <Compile Include="Facturacion\Cotizaciones\subRptCotiz.Designer.cs">
       <DependentUpon>subRptCotiz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Cotizaciones\subRptCotizacion.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Facturacion\Cotizaciones\subRptCotizacion.Designer.cs">
-      <DependentUpon>subRptCotizacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Facturacion\Cotizaciones\xrptCotizacion.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Facturacion\Cotizaciones\xrptCotizacion.Designer.cs">
       <DependentUpon>xrptCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\xrSubRptCotizacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\xrSubRptCotizacion.Designer.cs">
+      <DependentUpon>xrSubRptCotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -3110,11 +3110,11 @@
     <EmbeddedResource Include="Facturacion\Cotizaciones\subRptCotiz.resx">
       <DependentUpon>subRptCotiz.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Facturacion\Cotizaciones\subRptCotizacion.resx">
-      <DependentUpon>subRptCotizacion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Cotizaciones\xrptCotizacion.resx">
       <DependentUpon>xrptCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Cotizaciones\xrSubRptCotizacion.resx">
+      <DependentUpon>xrSubRptCotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.resx">
       <DependentUpon>frmAddEquipoPuntoVenta.cs</DependentUpon>

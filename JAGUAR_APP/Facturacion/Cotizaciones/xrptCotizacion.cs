@@ -18,7 +18,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         {
             InitializeComponent();
 
-            IdCotizacion.Value = pid;
+            Id_cotizacion.Value = pid;
 
             Cotizacion coti = new Cotizacion();
             coti.RecuperarRegistro(pid);
@@ -32,10 +32,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             lblNumCoti.Text  = lblNumCoti2.Text = "N#: 000" + coti.NumCotizacion.ToString();
             lblUsuario.Text = lblUsuario2.Text = coti.Usuario;
 
-            lblSub.Text = lblSub2.Text = string.Format("{0:#,###,##0.00}", coti.SubTotal);
-            lblIsv15.Text = lblIsv152.Text = string.Format("{0:#,###,##0.00}", coti.ISV);
-            lblTotal.Text = lblTotal2.Text = string.Format("{0:#,###,##0.00}", coti.Total);
-
+            lblSub.Text = lblSub2.Text = string.Format("{0:L#,###,##0.00}", coti.SubTotal);
+            lblIsv15.Text = lblIsv152.Text = string.Format("{0:L#,###,##0.00}", coti.ISV);
+            lblTotal.Text = lblTotal2.Text = string.Format("{0:L#,###,##0.00}", coti.Total);
+            //string.Format("{0:L###,##0.00}", liqu.salario_base);
             //PuntoVenta
             PDV pdv = new PDV();
             pdv.RecuperaRegistro(coti.PuntoVentaId);

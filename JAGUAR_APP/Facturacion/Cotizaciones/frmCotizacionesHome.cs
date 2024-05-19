@@ -156,8 +156,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             {
 
                 xrptCotizacion report = new xrptCotizacion(row.id);
-                subRptCotiz subRpt = new subRptCotiz();
-                subRpt.Parameters["SubIdCotizacion"].Value = row.id;
+                //subRptCotiz subRpt = new subRptCotiz();
+                //subRpt.Parameters["Id_cotizacion"].Value = row.id;
                 report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
                 ReportPrintTool reportPrint = new ReportPrintTool(report);
                 reportPrint.ShowPreview();
