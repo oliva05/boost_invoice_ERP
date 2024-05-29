@@ -30,6 +30,7 @@ using static DevExpress.Data.Filtering.Helpers.SubExprHelper.ThreadHoppingFilter
 using static DevExpress.DataProcessing.InMemoryDataProcessor.AddSurrogateOperationAlgorithm;
 using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
 using static JAGUAR_APP.Clases.BinGranel;
+using JAGUAR_APP.Facturacion.Cotizaciones;
 
 
 namespace Eatery.Ventas
@@ -42,7 +43,7 @@ namespace Eatery.Ventas
         int ProIdCliente;
         ClienteFacturacion ClienteFactura;
         int IdTerminoPago;
-
+        int IdCotizacion = 0;
         UserLogin UsuarioLogeado;
         public enum Busqueda
         {
@@ -621,6 +622,7 @@ namespace Eatery.Ventas
                             command.Parameters.AddWithValue("@isv2", factura.ISV2);
                             command.Parameters.AddWithValue("@id_formato_impresion", PuntoDeVentaActual.IdFormatoFactura);
                             command.Parameters.AddWithValue("@id_termino_pago", IdTerminoPago);
+                            command.Parameters.AddWithValue("@idCotizacion", IdCotizacion);
 
                             Int64 IdFacturaH = Convert.ToInt64(command.ExecuteScalar());
                             decimal TotalFactura = 0;
@@ -686,6 +688,7 @@ namespace Eatery.Ventas
                             dsVentas1.detalle_factura_transaction.Clear();
                             ClienteFactura = new ClienteFacturacion();
                             cmdConsumidorFinal_Click(sender, e);
+                            IdCotizacion = 0;
                         }
                         catch (Exception ex)
                         {
@@ -2164,6 +2167,106 @@ namespace Eatery.Ventas
                 rdContado.Checked = false;
                 IdTerminoPago = 2;
                 rdContado.CheckedChanged += new EventHandler(rdContado_CheckedChanged);
+            }
+        }
+
+        private void bntCopiarCotiz_Click(object sender, EventArgs e)
+        {
+            frmSearchCotizaciones frm = new frmSearchCotizaciones(UsuarioLogeado, PuntoDeVentaActual);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                Cotizacion coti = new Cotizacion();
+                coti.RecuperarRegistro(frm.IdCotizacion);
+                IdCotizacion = frm.IdCotizacion;
+                ProIdCliente = coti.IdCliente;
+                if (ClienteFactura == null)
+                    ClienteFactura = new ClienteFacturacion();
+
+                if (ClienteFactura.RecuperarRegistro(coti.IdCliente))
+                {
+                    ClienteEmpresa clienteEmpresa1 = new ClienteEmpresa();
+                    if (clienteEmpresa1.RecuperarEmpresaRTNCliente(ClienteFactura.Id, coti.RTN))
+                    {
+                        txtNombreCliente.Text = clienteEmpresa1.NombreLargo;
+                        txtRTN.Text = clienteEmpresa1.RTN;
+                        txtDireccion.Text = clienteEmpresa1.Direccion;
+
+                    }
+                    else
+                    {
+                        txtNombreCliente.Text = ClienteFactura.NombreCliente;
+                        txtDireccion.Text = ClienteFactura.Direccion;
+                        txtRTN.Text = "";
+                    }
+
+                    CargarDetaleCotizacion(frm.IdCotizacion);
+
+                    if (dsVentas1.detalle_factura_transaction.Count > 0)
+                    {
+                        decimal AcumuladoTotalFactura = 0;
+                        foreach (dsVentas.detalle_factura_transactionRow row1 in dsVentas1.detalle_factura_transaction)
+                        {
+                            ProductoTerminado pt1 = new ProductoTerminado();
+                            if (pt1.Recuperar_producto(row1.id_pt))
+                            {
+                                row1.precio = PuntoDeVentaActual.RecuperarPrecioItem(row1.id_pt, PuntoDeVentaActual.ID, this.ClienteFactura.Id);
+
+                                if (row1.precio == 0)
+                                {
+                                    SetErrorBarra("Este producto no tiene definido un precio. Por favor valide Lista de Precios!");
+                                }
+
+                                row1.descuento = 0;
+                                row1.inventario = pt1.Recuperar_Cant_Inv_Actual_PT_for_facturacion(pt1.Id, this.PuntoDeVentaActual.ID);
+
+                                row1.isv1 = row1.isv2 = row1.isv3 = 0;
+                                Impuesto impuesto = new Impuesto();
+                                decimal tasaISV = 0;
+
+                                if (impuesto.RecuperarRegistro(pt1.Id_isv_aplicable))
+                                {
+                                    tasaISV = impuesto.Valor / 100;
+                                    row1.isv1 = ((row1.precio - row1.descuento) / 100) * impuesto.Valor;
+                                    row1.precio = (row1.precio - row1.descuento) - row1.isv1;
+
+                                    row1.tasa_isv = tasaISV;
+                                    row1.id_isv_aplicable = impuesto.Id;
+                                }
+                                else
+                                {
+                                    row1.tasa_isv = 0;
+                                    row1.id_isv_aplicable = 0;
+                                    row1.precio = (row1.precio - row1.descuento);
+                                }
+
+                                row1.total_linea = (row1.cantidad * row1.precio) + (row1.cantidad * row1.isv1) + (row1.cantidad * row1.isv2) + (row1.cantidad * row1.isv3);
+                                AcumuladoTotalFactura += row1.total_linea;
+                            }
+                        }
+                        txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(AcumuladoTotalFactura, 2));
+                    }
+
+                }
+            }
+        }
+
+        private void CargarDetaleCotizacion(int pIdCotizacion)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("[sp_get_cotizacion_detalle_for_factura]", conn);
+                cmd.CommandType = CommandType.StoredProcedure; ;
+                cmd.Parameters.AddWithValue("@id_h", pIdCotizacion);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsVentas1.detalle_factura_transaction.Clear();
+                adat.Fill(dsVentas1.detalle_factura_transaction);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
             }
         }
     }

@@ -27,6 +27,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         public decimal Descuento { get; set; }
         public decimal ISV { get; set; }
         public decimal Total { get; set; }
+        public int IdCliente { get; set; }
         public int PuntoVentaId { get; set; }
         public string NumCotizacion { get; set; }
         public bool RecuperarRegistro(int id)
@@ -63,6 +64,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                     Total = dr.GetDecimal(16);
                     NumCotizacion = dr.GetString(17);
                     PuntoVentaId = dr.GetInt32(18);
+                    IdCliente = dr.GetInt32(19);
                     Recuperado = true;
                     
                 }
