@@ -68,7 +68,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                     dtFechaRegistro.Value = coti.FechaEmision;
                     dtFechaVencimiento.Value = coti.FechaVencimiento;
                     IdEstadoOrdenCompra = coti.IdEstado;
-
+                    ProIdCliente = coti.IdCliente;
                     txtISV.EditValue = coti.ISV;
                     txtSubTotalBruto.EditValue = coti.SubTotal;
                     txtTotal.EditValue = coti.Total;
@@ -332,7 +332,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             txtDireccion.Clear();
             txtTelefono.Clear();
             txtEmail.Clear();
-
+            ProIdCliente = 0;
             dsFactCotizacion1.detalle_cotizacion.Clear();
 
             txtSubTotalBruto.EditValue = 0.00;
@@ -488,7 +488,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         transaction = conn.BeginTransaction("Transaction Order");
 
                         SqlCommand cmd = conn.CreateCommand();
-                        cmd.CommandText = "sp_cotizacion_insert_header";
+                        cmd.CommandText = "[sp_cotizacion_insert_headerV2]";
                         cmd.Connection = conn;
                         cmd.Transaction = transaction;
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -527,6 +527,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         cmd.Parameters.AddWithValue("@isv", dp.ValidateNumberDecimal(txtISV.EditValue));
                         cmd.Parameters.AddWithValue("@total", dp.ValidateNumberDecimal(txtTotal.EditValue));
                         cmd.Parameters.AddWithValue("@punto_venta", PuntoVentaActual.ID);
+                        cmd.Parameters.AddWithValue("@IdCliente", ProIdCliente);
 
                         int id_header = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -610,7 +611,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         cmdUpdate.Parameters.AddWithValue("@isv", Convert.ToDecimal(txtISV.EditValue));
                         cmdUpdate.Parameters.AddWithValue("@descuento", Convert.ToDecimal(txtDescuento.EditValue));
                         cmdUpdate.Parameters.AddWithValue("@total", Convert.ToDecimal(txtTotal.EditValue));
-
+                        cmdUpdate.Parameters.AddWithValue("@IdCliente", ProIdCliente);
                         cmdUpdate.ExecuteNonQuery();
 
                         foreach (dsFactCotizacion.detalle_cotizacionRow row in dsFactCotizacion1.detalle_cotizacion.Rows)

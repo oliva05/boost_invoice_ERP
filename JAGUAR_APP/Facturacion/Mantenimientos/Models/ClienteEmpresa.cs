@@ -85,5 +85,37 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos.Models
 
             return Recuperado;
         }
+
+        public bool RecuperarEmpresaRTNCliente(int pIdCliente, string pRTN)
+        {
+            DataOperations dp = new DataOperations();
+            try
+            {
+                SqlConnection cnx = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+                cnx.Open();
+                SqlCommand cmd = new SqlCommand("[sp_get_empresas_rtn_cliente_class]", cnx);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_cliente", pIdCliente);
+                cmd.Parameters.AddWithValue("@rtn", pRTN);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    IdEmpresa = dr.GetInt32(0);
+                    Id = dr.GetInt32(1);
+                    NombreLargo = dr.GetString(2);
+                    NombreCorto = dr.GetString(3);
+                    Direccion = dr.GetString(4);
+                    RTN = dr.GetString(5);
+                    Recuperado = true;
+                }
+                cnx.Close();
+                return Recuperado;
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+                return false;
+            }
+        }
     }
 }

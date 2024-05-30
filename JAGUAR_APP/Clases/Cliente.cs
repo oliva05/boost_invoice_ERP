@@ -26,6 +26,7 @@ namespace JAGUAR_APP.Clases
         public string RTN { get; set; }
         public bool Recuperado { get; set; }
 
+
         public bool RecuperarRegistro(int pIdCliente)
         {
             try
@@ -69,6 +70,7 @@ namespace JAGUAR_APP.Clases
             }
         }
 
+       
 
 
 
