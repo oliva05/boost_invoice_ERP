@@ -7,7 +7,7 @@
     <ProjectGuid>{75B418DD-359E-4A3F-9068-271A65F31D37}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>JAGUAR_APP</RootNamespace>
-    <AssemblyName>Ovejita</AssemblyName>
+    <AssemblyName>Boost Invoice</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -1185,6 +1185,11 @@
     </Compile>
     <Compile Include="Facturacion\Cotizaciones\Cotizacion.cs" />
     <Compile Include="Facturacion\Cotizaciones\dsCotizaciones.cs">
+      <DependentUpon>dsCotizaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Cotizaciones\dsCotizaciones1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>dsCotizaciones.xsd</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Cotizaciones\dsFactCotizacion.Designer.cs">

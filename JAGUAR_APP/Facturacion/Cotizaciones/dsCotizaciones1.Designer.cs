@@ -20,19 +20,19 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsFactCotizacion")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsCotizaciones")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsFactCotizacion : global::System.Data.DataSet {
+    public partial class dsCotizaciones : global::System.Data.DataSet {
         
         private ListaCotizacionesDataTable tableListaCotizaciones;
         
-        private detalle_cotizacionDataTable tabledetalle_cotizacion;
+        private CotizacionDetalleDataTable tableCotizacionDetalle;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public dsFactCotizacion() {
+        public dsCotizaciones() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +43,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected dsFactCotizacion(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsCotizaciones(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -59,8 +59,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 if ((ds.Tables["ListaCotizaciones"] != null)) {
                     base.Tables.Add(new ListaCotizacionesDataTable(ds.Tables["ListaCotizaciones"]));
                 }
-                if ((ds.Tables["detalle_cotizacion"] != null)) {
-                    base.Tables.Add(new detalle_cotizacionDataTable(ds.Tables["detalle_cotizacion"]));
+                if ((ds.Tables["CotizacionDetalle"] != null)) {
+                    base.Tables.Add(new CotizacionDetalleDataTable(ds.Tables["CotizacionDetalle"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +94,9 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public detalle_cotizacionDataTable detalle_cotizacion {
+        public CotizacionDetalleDataTable CotizacionDetalle {
             get {
-                return this.tabledetalle_cotizacion;
+                return this.tableCotizacionDetalle;
             }
         }
         
@@ -142,7 +142,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsFactCotizacion cln = ((dsFactCotizacion)(base.Clone()));
+            dsCotizaciones cln = ((dsCotizaciones)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -170,8 +170,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 if ((ds.Tables["ListaCotizaciones"] != null)) {
                     base.Tables.Add(new ListaCotizacionesDataTable(ds.Tables["ListaCotizaciones"]));
                 }
-                if ((ds.Tables["detalle_cotizacion"] != null)) {
-                    base.Tables.Add(new detalle_cotizacionDataTable(ds.Tables["detalle_cotizacion"]));
+                if ((ds.Tables["CotizacionDetalle"] != null)) {
+                    base.Tables.Add(new CotizacionDetalleDataTable(ds.Tables["CotizacionDetalle"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,10 +212,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                     this.tableListaCotizaciones.InitVars();
                 }
             }
-            this.tabledetalle_cotizacion = ((detalle_cotizacionDataTable)(base.Tables["detalle_cotizacion"]));
+            this.tableCotizacionDetalle = ((CotizacionDetalleDataTable)(base.Tables["CotizacionDetalle"]));
             if ((initTable == true)) {
-                if ((this.tabledetalle_cotizacion != null)) {
-                    this.tabledetalle_cotizacion.InitVars();
+                if ((this.tableCotizacionDetalle != null)) {
+                    this.tableCotizacionDetalle.InitVars();
                 }
             }
         }
@@ -223,15 +223,15 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsFactCotizacion";
+            this.DataSetName = "dsCotizaciones";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsFactCotizacion.xsd";
+            this.Namespace = "http://tempuri.org/dsCotizaciones.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableListaCotizaciones = new ListaCotizacionesDataTable();
             base.Tables.Add(this.tableListaCotizaciones);
-            this.tabledetalle_cotizacion = new detalle_cotizacionDataTable();
-            base.Tables.Add(this.tabledetalle_cotizacion);
+            this.tableCotizacionDetalle = new CotizacionDetalleDataTable();
+            base.Tables.Add(this.tableCotizacionDetalle);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +242,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializedetalle_cotizacion() {
+        private bool ShouldSerializeCotizacionDetalle() {
             return false;
         }
         
@@ -257,7 +257,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsFactCotizacion ds = new dsFactCotizacion();
+            dsCotizaciones ds = new dsCotizaciones();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -305,7 +305,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         public delegate void ListaCotizacionesRowChangeEventHandler(object sender, ListaCotizacionesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void detalle_cotizacionRowChangeEventHandler(object sender, detalle_cotizacionRowChangeEvent e);
+        public delegate void CotizacionDetalleRowChangeEventHandler(object sender, CotizacionDetalleRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -335,8 +335,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             private global::System.Data.DataColumn columntotal;
             
             private global::System.Data.DataColumn columnnum_cotizacion;
-            
-            private global::System.Data.DataColumn columnid_estado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -461,14 +459,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_estadoColumn {
-                get {
-                    return this.columnid_estado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -504,7 +494,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ListaCotizacionesRow AddListaCotizacionesRow(int id, string cliente, string rtn, string contacto, string telefono, System.DateTime fecha_emision, System.DateTime fecha_vencimiento, string user_creador, string estado, string total, string num_cotizacion, int id_estado) {
+            public ListaCotizacionesRow AddListaCotizacionesRow(int id, string cliente, string rtn, string contacto, string telefono, System.DateTime fecha_emision, System.DateTime fecha_vencimiento, string user_creador, string estado, string total, int num_cotizacion) {
                 ListaCotizacionesRow rowListaCotizacionesRow = ((ListaCotizacionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -517,8 +507,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                         user_creador,
                         estado,
                         total,
-                        num_cotizacion,
-                        id_estado};
+                        num_cotizacion};
                 rowListaCotizacionesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowListaCotizacionesRow);
                 return rowListaCotizacionesRow;
@@ -552,7 +541,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 this.columnestado = base.Columns["estado"];
                 this.columntotal = base.Columns["total"];
                 this.columnnum_cotizacion = base.Columns["num_cotizacion"];
-                this.columnid_estado = base.Columns["id_estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -578,10 +566,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 base.Columns.Add(this.columnestado);
                 this.columntotal = new global::System.Data.DataColumn("total", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntotal);
-                this.columnnum_cotizacion = new global::System.Data.DataColumn("num_cotizacion", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnnum_cotizacion = new global::System.Data.DataColumn("num_cotizacion", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnum_cotizacion);
-                this.columnid_estado = new global::System.Data.DataColumn("id_estado", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_estado);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -649,7 +635,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsFactCotizacion ds = new dsFactCotizacion();
+                dsCotizaciones ds = new dsCotizaciones();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -713,7 +699,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class detalle_cotizacionDataTable : global::System.Data.TypedTableBase<detalle_cotizacionRow> {
+        public partial class CotizacionDetalleDataTable : global::System.Data.TypedTableBase<CotizacionDetalleRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -733,12 +719,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             
             private global::System.Data.DataColumn columntotal;
             
-            private global::System.Data.DataColumn columnid_pt;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public detalle_cotizacionDataTable() {
-                this.TableName = "detalle_cotizacion";
+            public CotizacionDetalleDataTable() {
+                this.TableName = "CotizacionDetalle";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -746,7 +730,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal detalle_cotizacionDataTable(global::System.Data.DataTable table) {
+            internal CotizacionDetalleDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -763,7 +747,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected detalle_cotizacionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CotizacionDetalleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -842,14 +826,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_ptColumn {
-                get {
-                    return this.columnid_pt;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -859,34 +835,34 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public detalle_cotizacionRow this[int index] {
+            public CotizacionDetalleRow this[int index] {
                 get {
-                    return ((detalle_cotizacionRow)(this.Rows[index]));
+                    return ((CotizacionDetalleRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event detalle_cotizacionRowChangeEventHandler detalle_cotizacionRowChanging;
+            public event CotizacionDetalleRowChangeEventHandler CotizacionDetalleRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event detalle_cotizacionRowChangeEventHandler detalle_cotizacionRowChanged;
+            public event CotizacionDetalleRowChangeEventHandler CotizacionDetalleRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event detalle_cotizacionRowChangeEventHandler detalle_cotizacionRowDeleting;
+            public event CotizacionDetalleRowChangeEventHandler CotizacionDetalleRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event detalle_cotizacionRowChangeEventHandler detalle_cotizacionRowDeleted;
+            public event CotizacionDetalleRowChangeEventHandler CotizacionDetalleRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Adddetalle_cotizacionRow(detalle_cotizacionRow row) {
+            public void AddCotizacionDetalleRow(CotizacionDetalleRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public detalle_cotizacionRow Adddetalle_cotizacionRow(int id, int id_h, string codigo, string descripcion, int cantidad, decimal precio_original, decimal descuento_unitario, decimal isv, decimal total, int id_pt) {
-                detalle_cotizacionRow rowdetalle_cotizacionRow = ((detalle_cotizacionRow)(this.NewRow()));
+            public CotizacionDetalleRow AddCotizacionDetalleRow(int id, int id_h, int codigo, string descripcion, int cantidad, decimal precio_original, decimal descuento_unitario, decimal isv, decimal total) {
+                CotizacionDetalleRow rowCotizacionDetalleRow = ((CotizacionDetalleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         id_h,
@@ -896,17 +872,16 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                         precio_original,
                         descuento_unitario,
                         isv,
-                        total,
-                        id_pt};
-                rowdetalle_cotizacionRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdetalle_cotizacionRow);
-                return rowdetalle_cotizacionRow;
+                        total};
+                rowCotizacionDetalleRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCotizacionDetalleRow);
+                return rowCotizacionDetalleRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                detalle_cotizacionDataTable cln = ((detalle_cotizacionDataTable)(base.Clone()));
+                CotizacionDetalleDataTable cln = ((CotizacionDetalleDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -914,7 +889,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new detalle_cotizacionDataTable();
+                return new CotizacionDetalleDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -929,7 +904,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 this.columndescuento_unitario = base.Columns["descuento_unitario"];
                 this.columnisv = base.Columns["isv"];
                 this.columntotal = base.Columns["total"];
-                this.columnid_pt = base.Columns["id_pt"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -939,7 +913,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 base.Columns.Add(this.columnid);
                 this.columnid_h = new global::System.Data.DataColumn("id_h", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_h);
-                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo);
                 this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion);
@@ -953,34 +927,32 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 base.Columns.Add(this.columnisv);
                 this.columntotal = new global::System.Data.DataColumn("total", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntotal);
-                this.columnid_pt = new global::System.Data.DataColumn("id_pt", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_pt);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public detalle_cotizacionRow Newdetalle_cotizacionRow() {
-                return ((detalle_cotizacionRow)(this.NewRow()));
+            public CotizacionDetalleRow NewCotizacionDetalleRow() {
+                return ((CotizacionDetalleRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new detalle_cotizacionRow(builder);
+                return new CotizacionDetalleRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(detalle_cotizacionRow);
+                return typeof(CotizacionDetalleRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.detalle_cotizacionRowChanged != null)) {
-                    this.detalle_cotizacionRowChanged(this, new detalle_cotizacionRowChangeEvent(((detalle_cotizacionRow)(e.Row)), e.Action));
+                if ((this.CotizacionDetalleRowChanged != null)) {
+                    this.CotizacionDetalleRowChanged(this, new CotizacionDetalleRowChangeEvent(((CotizacionDetalleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -988,8 +960,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.detalle_cotizacionRowChanging != null)) {
-                    this.detalle_cotizacionRowChanging(this, new detalle_cotizacionRowChangeEvent(((detalle_cotizacionRow)(e.Row)), e.Action));
+                if ((this.CotizacionDetalleRowChanging != null)) {
+                    this.CotizacionDetalleRowChanging(this, new CotizacionDetalleRowChangeEvent(((CotizacionDetalleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -997,8 +969,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.detalle_cotizacionRowDeleted != null)) {
-                    this.detalle_cotizacionRowDeleted(this, new detalle_cotizacionRowChangeEvent(((detalle_cotizacionRow)(e.Row)), e.Action));
+                if ((this.CotizacionDetalleRowDeleted != null)) {
+                    this.CotizacionDetalleRowDeleted(this, new CotizacionDetalleRowChangeEvent(((CotizacionDetalleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1006,14 +978,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.detalle_cotizacionRowDeleting != null)) {
-                    this.detalle_cotizacionRowDeleting(this, new detalle_cotizacionRowChangeEvent(((detalle_cotizacionRow)(e.Row)), e.Action));
+                if ((this.CotizacionDetalleRowDeleting != null)) {
+                    this.CotizacionDetalleRowDeleting(this, new CotizacionDetalleRowChangeEvent(((CotizacionDetalleRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Removedetalle_cotizacionRow(detalle_cotizacionRow row) {
+            public void RemoveCotizacionDetalleRow(CotizacionDetalleRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1022,7 +994,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsFactCotizacion ds = new dsFactCotizacion();
+                dsCotizaciones ds = new dsCotizaciones();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1040,7 +1012,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "detalle_cotizacionDataTable";
+                attribute2.FixedValue = "CotizacionDetalleDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1259,10 +1231,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string num_cotizacion {
+            public int num_cotizacion {
                 get {
                     try {
-                        return ((string)(this[this.tableListaCotizaciones.num_cotizacionColumn]));
+                        return ((int)(this[this.tableListaCotizaciones.num_cotizacionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'num_cotizacion\' de la tabla \'ListaCotizaciones\' es DBNull" +
@@ -1271,22 +1243,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
                 }
                 set {
                     this[this.tableListaCotizaciones.num_cotizacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id_estado {
-                get {
-                    try {
-                        return ((int)(this[this.tableListaCotizaciones.id_estadoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_estado\' de la tabla \'ListaCotizaciones\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableListaCotizaciones.id_estadoColumn] = value;
                 }
             }
             
@@ -1421,32 +1377,20 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public void Setnum_cotizacionNull() {
                 this[this.tableListaCotizaciones.num_cotizacionColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isid_estadoNull() {
-                return this.IsNull(this.tableListaCotizaciones.id_estadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setid_estadoNull() {
-                this[this.tableListaCotizaciones.id_estadoColumn] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class detalle_cotizacionRow : global::System.Data.DataRow {
+        public partial class CotizacionDetalleRow : global::System.Data.DataRow {
             
-            private detalle_cotizacionDataTable tabledetalle_cotizacion;
+            private CotizacionDetalleDataTable tableCotizacionDetalle;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal detalle_cotizacionRow(global::System.Data.DataRowBuilder rb) : 
+            internal CotizacionDetalleRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledetalle_cotizacion = ((detalle_cotizacionDataTable)(this.Table));
+                this.tableCotizacionDetalle = ((CotizacionDetalleDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1454,14 +1398,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public int id {
                 get {
                     try {
-                        return ((int)(this[this.tabledetalle_cotizacion.idColumn]));
+                        return ((int)(this[this.tableCotizacionDetalle.idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id\' de la tabla \'detalle_cotizacion\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id\' de la tabla \'CotizacionDetalle\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.idColumn] = value;
+                    this[this.tableCotizacionDetalle.idColumn] = value;
                 }
             }
             
@@ -1470,30 +1414,30 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public int id_h {
                 get {
                     try {
-                        return ((int)(this[this.tabledetalle_cotizacion.id_hColumn]));
+                        return ((int)(this[this.tableCotizacionDetalle.id_hColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_h\' de la tabla \'detalle_cotizacion\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_h\' de la tabla \'CotizacionDetalle\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.id_hColumn] = value;
+                    this[this.tableCotizacionDetalle.id_hColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string codigo {
+            public int codigo {
                 get {
                     try {
-                        return ((string)(this[this.tabledetalle_cotizacion.codigoColumn]));
+                        return ((int)(this[this.tableCotizacionDetalle.codigoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigo\' de la tabla \'detalle_cotizacion\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigo\' de la tabla \'CotizacionDetalle\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.codigoColumn] = value;
+                    this[this.tableCotizacionDetalle.codigoColumn] = value;
                 }
             }
             
@@ -1502,14 +1446,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public string descripcion {
                 get {
                     try {
-                        return ((string)(this[this.tabledetalle_cotizacion.descripcionColumn]));
+                        return ((string)(this[this.tableCotizacionDetalle.descripcionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'detalle_cotizacion\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'CotizacionDetalle\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.descripcionColumn] = value;
+                    this[this.tableCotizacionDetalle.descripcionColumn] = value;
                 }
             }
             
@@ -1518,14 +1462,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public int cantidad {
                 get {
                     try {
-                        return ((int)(this[this.tabledetalle_cotizacion.cantidadColumn]));
+                        return ((int)(this[this.tableCotizacionDetalle.cantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'detalle_cotizacion\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'CotizacionDetalle\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.cantidadColumn] = value;
+                    this[this.tableCotizacionDetalle.cantidadColumn] = value;
                 }
             }
             
@@ -1534,15 +1478,15 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public decimal precio_original {
                 get {
                     try {
-                        return ((decimal)(this[this.tabledetalle_cotizacion.precio_originalColumn]));
+                        return ((decimal)(this[this.tableCotizacionDetalle.precio_originalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'precio_original\' de la tabla \'detalle_cotizacion\' es DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'precio_original\' de la tabla \'CotizacionDetalle\' es DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.precio_originalColumn] = value;
+                    this[this.tableCotizacionDetalle.precio_originalColumn] = value;
                 }
             }
             
@@ -1551,15 +1495,15 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public decimal descuento_unitario {
                 get {
                     try {
-                        return ((decimal)(this[this.tabledetalle_cotizacion.descuento_unitarioColumn]));
+                        return ((decimal)(this[this.tableCotizacionDetalle.descuento_unitarioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descuento_unitario\' de la tabla \'detalle_cotizacion\' es D" +
-                                "BNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descuento_unitario\' de la tabla \'CotizacionDetalle\' es DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.descuento_unitarioColumn] = value;
+                    this[this.tableCotizacionDetalle.descuento_unitarioColumn] = value;
                 }
             }
             
@@ -1568,14 +1512,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public decimal isv {
                 get {
                     try {
-                        return ((decimal)(this[this.tabledetalle_cotizacion.isvColumn]));
+                        return ((decimal)(this[this.tableCotizacionDetalle.isvColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'isv\' de la tabla \'detalle_cotizacion\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'isv\' de la tabla \'CotizacionDetalle\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.isvColumn] = value;
+                    this[this.tableCotizacionDetalle.isvColumn] = value;
                 }
             }
             
@@ -1584,151 +1528,123 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
             public decimal total {
                 get {
                     try {
-                        return ((decimal)(this[this.tabledetalle_cotizacion.totalColumn]));
+                        return ((decimal)(this[this.tableCotizacionDetalle.totalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'total\' de la tabla \'detalle_cotizacion\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'total\' de la tabla \'CotizacionDetalle\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_cotizacion.totalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id_pt {
-                get {
-                    try {
-                        return ((int)(this[this.tabledetalle_cotizacion.id_ptColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_pt\' de la tabla \'detalle_cotizacion\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledetalle_cotizacion.id_ptColumn] = value;
+                    this[this.tableCotizacionDetalle.totalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.idColumn);
+                return this.IsNull(this.tableCotizacionDetalle.idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetidNull() {
-                this[this.tabledetalle_cotizacion.idColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isid_hNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.id_hColumn);
+                return this.IsNull(this.tableCotizacionDetalle.id_hColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setid_hNull() {
-                this[this.tabledetalle_cotizacion.id_hColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.id_hColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IscodigoNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.codigoColumn);
+                return this.IsNull(this.tableCotizacionDetalle.codigoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcodigoNull() {
-                this[this.tabledetalle_cotizacion.codigoColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.codigoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsdescripcionNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.descripcionColumn);
+                return this.IsNull(this.tableCotizacionDetalle.descripcionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetdescripcionNull() {
-                this[this.tabledetalle_cotizacion.descripcionColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.descripcionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IscantidadNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.cantidadColumn);
+                return this.IsNull(this.tableCotizacionDetalle.cantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcantidadNull() {
-                this[this.tabledetalle_cotizacion.cantidadColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.cantidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isprecio_originalNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.precio_originalColumn);
+                return this.IsNull(this.tableCotizacionDetalle.precio_originalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setprecio_originalNull() {
-                this[this.tabledetalle_cotizacion.precio_originalColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.precio_originalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isdescuento_unitarioNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.descuento_unitarioColumn);
+                return this.IsNull(this.tableCotizacionDetalle.descuento_unitarioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setdescuento_unitarioNull() {
-                this[this.tabledetalle_cotizacion.descuento_unitarioColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.descuento_unitarioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsisvNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.isvColumn);
+                return this.IsNull(this.tableCotizacionDetalle.isvColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetisvNull() {
-                this[this.tabledetalle_cotizacion.isvColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.isvColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IstotalNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.totalColumn);
+                return this.IsNull(this.tableCotizacionDetalle.totalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SettotalNull() {
-                this[this.tabledetalle_cotizacion.totalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isid_ptNull() {
-                return this.IsNull(this.tabledetalle_cotizacion.id_ptColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setid_ptNull() {
-                this[this.tabledetalle_cotizacion.id_ptColumn] = global::System.Convert.DBNull;
+                this[this.tableCotizacionDetalle.totalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1770,22 +1686,22 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class detalle_cotizacionRowChangeEvent : global::System.EventArgs {
+        public class CotizacionDetalleRowChangeEvent : global::System.EventArgs {
             
-            private detalle_cotizacionRow eventRow;
+            private CotizacionDetalleRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public detalle_cotizacionRowChangeEvent(detalle_cotizacionRow row, global::System.Data.DataRowAction action) {
+            public CotizacionDetalleRowChangeEvent(CotizacionDetalleRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public detalle_cotizacionRow Row {
+            public CotizacionDetalleRow Row {
                 get {
                     return this.eventRow;
                 }
