@@ -544,7 +544,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                             cmd.Parameters.AddWithValue("@cantidad", row.cantidad);
                             cmd.Parameters.AddWithValue("@precio_original", row.precio_original);
                             cmd.Parameters.AddWithValue("@isv", row.isv);//Referencia de Solicitud de Compra
-                            cmd.Parameters.AddWithValue("@fecha_creacion", dp.Now());
+                            cmd.Parameters.AddWithValue("@fecha_creacion", dp.NowSetDateTime());
                             cmd.Parameters.AddWithValue("@id_pt", row.id_pt);
                             cmd.Parameters.AddWithValue("@punto_venta", PuntoVentaActual.ID);
                             cmd.Parameters.AddWithValue("@user_id", UsuarioLogeado.Id);
