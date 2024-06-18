@@ -196,7 +196,7 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(104, 25);
             this.labelControl2.TabIndex = 38;
-            this.labelControl2.Text = "Ver Activos";
+            this.labelControl2.Text = "Activo";
             // 
             // tsActivo
             // 
