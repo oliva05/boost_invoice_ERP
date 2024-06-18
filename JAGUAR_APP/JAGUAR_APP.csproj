@@ -758,6 +758,7 @@
     <Compile Include="Clases\Ubicaciones.cs" />
     <Compile Include="Clases\Ubicacion_Tarima.cs" />
     <Compile Include="Clases\UserLogin.cs" />
+    <Compile Include="Clases\Vendedores.cs" />
     <Compile Include="Despachos\dsTransaccionesDespacho.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1238,6 +1239,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCRUDS_Facturacion.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\Mantenimientos\dsMantenimientosFacturacion.cs">
+      <DependentUpon>dsMantenimientosFacturacion.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\Mantenimientos\dsMantenimientosFacturacion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1269,6 +1273,18 @@
     </Compile>
     <Compile Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.Designer.cs">
       <DependentUpon>xfrmFacturacion_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmVendedoresMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmVendedoresMain.Designer.cs">
+      <DependentUpon>xfrmVendedoresMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmVendedoresOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmVendedoresOP.Designer.cs">
+      <DependentUpon>xfrmVendedoresOP.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Mantenimientos\xfrm_PDV.cs">
       <SubType>Form</SubType>
@@ -3132,6 +3148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.resx">
       <DependentUpon>xfrmFacturacion_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Mantenimientos\xfrmVendedoresMain.resx">
+      <DependentUpon>xfrmVendedoresMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Mantenimientos\xfrmVendedoresOP.resx">
+      <DependentUpon>xfrmVendedoresOP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Mantenimientos\xfrm_PDV.resx">
       <DependentUpon>xfrm_PDV.cs</DependentUpon>

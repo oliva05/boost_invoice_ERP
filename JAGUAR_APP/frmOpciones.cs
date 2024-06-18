@@ -4311,5 +4311,48 @@ namespace JAGUAR_APP
                     break;
             }
         }
+
+        private void navBarItem59_LinkClicked_1(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.UserId, 11);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar
+            {
+                case 1://Basic View
+                    accesoprevio = false;
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    xfrmVendedoresMain frm = new xfrmVendedoresMain(UsuarioLogeado);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                    break;
+                default:
+                    break;
+            }
+
+            //if (!accesoprevio)
+            //{
+            //    if (UsuarioLogeado.ValidarNivelPermisos(16))
+            //    {
+
+            //        frmNumeracionFiscal frm = new frmNumeracionFiscal(UsuarioLogeado);
+            //        frm.MdiParent = this.MdiParent;
+            //        frm.Show();
+
+            //    }
+            //    else
+            //    {
+            //        CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #16 (Configuraciones de Facturacion)");
+            //    }
+            //}
+        }
     }
 }

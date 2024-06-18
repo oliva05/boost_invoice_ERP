@@ -114,6 +114,21 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Vendedores" msprop:Generator_TableClassName="VendedoresDataTable" msprop:Generator_TableVarName="tableVendedores" msprop:Generator_RowChangedName="VendedoresRowChanged" msprop:Generator_TablePropName="Vendedores" msprop:Generator_RowDeletingName="VendedoresRowDeleting" msprop:Generator_RowChangingName="VendedoresRowChanging" msprop:Generator_RowEvHandlerName="VendedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="VendedoresRowDeleted" msprop:Generator_RowClassName="VendedoresRow" msprop:Generator_UserTableName="Vendedores" msprop:Generator_RowEvArgName="VendedoresRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" type="xs:string" minOccurs="0" />
+              <xs:element name="comision_porcentaje" msprop:Generator_ColumnVarNameInTable="columncomision_porcentaje" msprop:Generator_ColumnPropNameInRow="comision_porcentaje" msprop:Generator_ColumnPropNameInTable="comision_porcentajeColumn" msprop:Generator_UserColumnName="comision_porcentaje" type="xs:decimal" minOccurs="0" />
+              <xs:element name="usuario_creador" msprop:Generator_ColumnVarNameInTable="columnusuario_creador" msprop:Generator_ColumnPropNameInRow="usuario_creador" msprop:Generator_ColumnPropNameInTable="usuario_creadorColumn" msprop:Generator_UserColumnName="usuario_creador" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_creacion" msprop:Generator_ColumnVarNameInTable="columnfecha_creacion" msprop:Generator_ColumnPropNameInRow="fecha_creacion" msprop:Generator_ColumnPropNameInTable="fecha_creacionColumn" msprop:Generator_UserColumnName="fecha_creacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="usuario_modi" msprop:Generator_ColumnVarNameInTable="columnusuario_modi" msprop:Generator_ColumnPropNameInRow="usuario_modi" msprop:Generator_ColumnPropNameInTable="usuario_modiColumn" msprop:Generator_UserColumnName="usuario_modi" type="xs:string" minOccurs="0" />
+              <xs:element name="RTN" msprop:Generator_ColumnVarNameInTable="columnRTN" msprop:Generator_ColumnPropNameInRow="RTN" msprop:Generator_ColumnPropNameInTable="RTNColumn" msprop:Generator_UserColumnName="RTN" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

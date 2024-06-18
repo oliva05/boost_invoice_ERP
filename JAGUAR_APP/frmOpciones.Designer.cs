@@ -277,6 +277,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtEquipoLogeadoActual = new DevExpress.XtraEditors.TextEdit();
             this.nBarRecepcionFactPuntoVenta = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem59 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabOpciones)).BeginInit();
             this.tabOpciones.SuspendLayout();
             this.TabMontacarga.SuspendLayout();
@@ -3601,7 +3602,8 @@
             this.navBarItem57,
             this.nbKardexFacturacion,
             this.navBarItem58,
-            this.navBarCotizaciones});
+            this.navBarCotizaciones,
+            this.navBarItem59});
             this.navBarControl3.Location = new System.Drawing.Point(2, 2);
             this.navBarControl3.Margin = new System.Windows.Forms.Padding(2);
             this.navBarControl3.Name = "navBarControl3";
@@ -3656,7 +3658,8 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem56),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem57),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem58),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarCotizaciones)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarCotizaciones),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem59)});
             this.navBarGroup10.Name = "navBarGroup10";
             // 
             // navBarFacturaMain
@@ -3903,6 +3906,21 @@
             this.nBarRecepcionFactPuntoVenta.Caption = "Recepcion Factura Punto Venta";
             this.nBarRecepcionFactPuntoVenta.Name = "nBarRecepcionFactPuntoVenta";
             this.nBarRecepcionFactPuntoVenta.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nBarRecepcionFactPuntoVenta_LinkClicked);
+            // 
+            // navBarItem59
+            // 
+            this.navBarItem59.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarItem59.Appearance.Options.UseFont = true;
+            this.navBarItem59.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarItem59.AppearanceDisabled.Options.UseFont = true;
+            this.navBarItem59.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarItem59.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItem59.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarItem59.AppearancePressed.Options.UseFont = true;
+            this.navBarItem59.Caption = "Vendedores";
+            this.navBarItem59.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem59.ImageOptions.SvgImage")));
+            this.navBarItem59.Name = "navBarItem59";
+            this.navBarItem59.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem59_LinkClicked_1);
             // 
             // frmOpciones
             // 
@@ -4199,5 +4217,6 @@ private DevExpress.XtraNavBar.NavBarItem navBarItemKardexPT;
         private DevExpress.XtraEditors.TextEdit txtEquipoLogeadoActual;
         private DevExpress.XtraNavBar.NavBarItem nBarRecepcionFactPuntoVenta;
         private DevExpress.XtraNavBar.NavBarItem navBarCotizaciones;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem59;
     }
 }
