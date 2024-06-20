@@ -515,7 +515,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         transaction = conn.BeginTransaction("Transaction Order");
 
                         SqlCommand cmd = conn.CreateCommand();
-                        cmd.CommandText = "[sp_cotizacion_insert_headerV2]";
+                        cmd.CommandText = "[dbo].[sp_cotizacion_insert_headerV3]";
                         cmd.Connection = conn;
                         cmd.Transaction = transaction;
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -555,6 +555,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         cmd.Parameters.AddWithValue("@total", dp.ValidateNumberDecimal(txtTotal.EditValue));
                         cmd.Parameters.AddWithValue("@punto_venta", PuntoVentaActual.ID);
                         cmd.Parameters.AddWithValue("@IdCliente", ProIdCliente);
+                        //cmd.Parameters.AddWithValue("@id_vendedor", gleVendedor.EditValue);
+                        if (dp.ValidateNumberInt32(gleVendedor.EditValue) == 0)
+                            cmd.Parameters.AddWithValue("@id_vendedor", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@id_vendedor", gleVendedor.EditValue);
 
                         int id_header = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -611,7 +616,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         connUpdate.Open();
                         transactionUpdate = connUpdate.BeginTransaction("Transaction Order");
                         SqlCommand cmdUpdate = connUpdate.CreateCommand();
-                        cmdUpdate.CommandText = "[sp_cotizacion_update_header]";
+                        cmdUpdate.CommandText = "[dbo].[sp_cotizacion_update_header_v2]";
                         cmdUpdate.Connection = connUpdate;
                         cmdUpdate.Transaction = transactionUpdate;
                         cmdUpdate.CommandType = CommandType.StoredProcedure;
@@ -642,6 +647,12 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         cmdUpdate.Parameters.AddWithValue("@descuento", Convert.ToDecimal(txtDescuento.EditValue));
                         cmdUpdate.Parameters.AddWithValue("@total", Convert.ToDecimal(txtTotal.EditValue));
                         cmdUpdate.Parameters.AddWithValue("@IdCliente", ProIdCliente);
+
+                        if(dp.ValidateNumberInt32(gleVendedor.EditValue) ==0)
+                            cmdUpdate.Parameters.AddWithValue("@id_vendedor", DBNull.Value);
+                        else
+                            cmdUpdate.Parameters.AddWithValue("@id_vendedor", gleVendedor.EditValue);
+
                         cmdUpdate.ExecuteNonQuery();
 
                         foreach (dsFactCotizacion.detalle_cotizacionRow row in dsFactCotizacion1.detalle_cotizacion.Rows)
