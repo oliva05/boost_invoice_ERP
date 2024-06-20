@@ -44,6 +44,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             tipoOP = tipoOperacion;
             UsuarioLogeado = pUserLog;
             PuntoVentaActual = pPuntoVentaActual;
+            LoadVendedores();
 
             switch (tipoOP)
             {
@@ -80,6 +81,26 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                     break;
             }
 
+        }
+
+        private void LoadVendedores()
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_get_lista_vendedores", conn);
+                cmd.CommandType = CommandType.StoredProcedure; ;
+                //cmd.Parameters.AddWithValue("@id_h", pidh);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsFactCotizacion1.vendedores.Clear();
+                adat.Fill(dsFactCotizacion1.vendedores);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
         }
 
         private void CargarDetalle(int pidh)
@@ -471,6 +492,12 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             if (Convert.ToDecimal(txtTotal.EditValue) == 0)
             {
                 CajaDialogo.Error("El Total de la Cotizacion no puede ser 0!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(gleVendedor.Text))
+            {
+                CajaDialogo.Error("Debe indicar el vendedor para la cotización");
                 return;
             }
 

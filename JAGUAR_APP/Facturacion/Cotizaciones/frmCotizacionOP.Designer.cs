@@ -29,12 +29,13 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCotizacionOP));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dsFactCotizacion1 = new JAGUAR_APP.Facturacion.Cotizaciones.dsFactCotizacion();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -82,6 +83,12 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.dtFechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.txtContacto = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.gleVendedor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.bgVendedor = new System.Windows.Forms.BindingSource(this.components);
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsFactCotizacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -98,6 +105,9 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             ((System.ComponentModel.ISupportInitialize)(this.txtDescuento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotalNeto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContacto.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gleVendedor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bgVendedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -237,9 +247,9 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // reposDelete
             // 
             this.reposDelete.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.reposDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposDelete.Name = "reposDelete";
             this.reposDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.reposDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposDelete_ButtonClick);
@@ -454,41 +464,41 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label10.Location = new System.Drawing.Point(655, 111);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label10.Location = new System.Drawing.Point(655, 92);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(149, 20);
+            this.label10.Size = new System.Drawing.Size(134, 18);
             this.label10.TabIndex = 60;
             this.label10.Text = "Correo Electronico";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(810, 108);
+            this.txtEmail.Location = new System.Drawing.Point(810, 89);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
             this.txtEmail.Properties.NullValuePrompt = "sucorreo@ejemplo.com";
-            this.txtEmail.Size = new System.Drawing.Size(220, 26);
+            this.txtEmail.Size = new System.Drawing.Size(220, 24);
             this.txtEmail.TabIndex = 61;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label11.Location = new System.Drawing.Point(655, 79);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label11.Location = new System.Drawing.Point(654, 67);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 20);
+            this.label11.Size = new System.Drawing.Size(70, 18);
             this.label11.TabIndex = 62;
             this.label11.Text = "Telefono ";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(810, 76);
+            this.txtTelefono.Location = new System.Drawing.Point(810, 64);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
+            this.txtTelefono.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtTelefono.Properties.Appearance.Options.UseFont = true;
             this.txtTelefono.Properties.NullValuePrompt = "0000-0000";
-            this.txtTelefono.Size = new System.Drawing.Size(220, 26);
+            this.txtTelefono.Size = new System.Drawing.Size(220, 24);
             this.txtTelefono.TabIndex = 63;
             // 
             // txtSubTotalBruto
@@ -584,68 +594,127 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // dtFechaRegistro
             // 
-            this.dtFechaRegistro.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
+            this.dtFechaRegistro.CalendarFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.dtFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaRegistro.Location = new System.Drawing.Point(810, 12);
+            this.dtFechaRegistro.Location = new System.Drawing.Point(810, 14);
             this.dtFechaRegistro.Name = "dtFechaRegistro";
-            this.dtFechaRegistro.Size = new System.Drawing.Size(189, 27);
+            this.dtFechaRegistro.Size = new System.Drawing.Size(220, 24);
             this.dtFechaRegistro.TabIndex = 85;
             this.dtFechaRegistro.ValueChanged += new System.EventHandler(this.dtFechaRegistro_ValueChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label12.Location = new System.Drawing.Point(655, 17);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(655, 19);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 20);
+            this.label12.Size = new System.Drawing.Size(107, 18);
             this.label12.TabIndex = 86;
             this.label12.Text = "Fecha Emision";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label13.Location = new System.Drawing.Point(655, 49);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(654, 44);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(152, 20);
+            this.label13.Size = new System.Drawing.Size(134, 18);
             this.label13.TabIndex = 88;
             this.label13.Text = "Fecha Vencimiento";
             // 
             // dtFechaVencimiento
             // 
-            this.dtFechaVencimiento.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
+            this.dtFechaVencimiento.CalendarFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.dtFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaVencimiento.Location = new System.Drawing.Point(810, 43);
+            this.dtFechaVencimiento.Location = new System.Drawing.Point(810, 39);
             this.dtFechaVencimiento.Name = "dtFechaVencimiento";
-            this.dtFechaVencimiento.Size = new System.Drawing.Size(189, 27);
+            this.dtFechaVencimiento.Size = new System.Drawing.Size(220, 24);
             this.dtFechaVencimiento.TabIndex = 87;
             // 
             // txtContacto
             // 
-            this.txtContacto.Location = new System.Drawing.Point(810, 140);
+            this.txtContacto.Location = new System.Drawing.Point(810, 114);
             this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F, System.Drawing.FontStyle.Bold);
+            this.txtContacto.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtContacto.Properties.Appearance.Options.UseFont = true;
             this.txtContacto.Properties.NullValuePrompt = "E-Mail Cliente";
-            this.txtContacto.Size = new System.Drawing.Size(220, 26);
+            this.txtContacto.Size = new System.Drawing.Size(220, 24);
             this.txtContacto.TabIndex = 89;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label14.Location = new System.Drawing.Point(655, 143);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label14.Location = new System.Drawing.Point(655, 120);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 20);
+            this.label14.Size = new System.Drawing.Size(69, 18);
             this.label14.TabIndex = 90;
             this.label14.Text = "Contacto";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label15.Location = new System.Drawing.Point(655, 142);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 18);
+            this.label15.TabIndex = 92;
+            this.label15.Text = "Vendedor";
+            // 
+            // gleVendedor
+            // 
+            this.gleVendedor.Location = new System.Drawing.Point(810, 139);
+            this.gleVendedor.Name = "gleVendedor";
+            this.gleVendedor.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.gleVendedor.Properties.Appearance.Options.UseFont = true;
+            this.gleVendedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gleVendedor.Properties.DataSource = this.bgVendedor;
+            this.gleVendedor.Properties.DisplayMember = "nombre";
+            this.gleVendedor.Properties.NullText = "";
+            this.gleVendedor.Properties.PopupView = this.gridLookUpEdit1View;
+            this.gleVendedor.Properties.ValueMember = "id";
+            this.gleVendedor.Size = new System.Drawing.Size(220, 24);
+            this.gleVendedor.TabIndex = 93;
+            // 
+            // bgVendedor
+            // 
+            this.bgVendedor.DataMember = "vendedores";
+            this.bgVendedor.DataSource = this.dsFactCotizacion1;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid1,
+            this.colnombre});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsFilter.ShowInHeaderSearchTextMode = DevExpress.XtraGrid.Views.Grid.ShowInHeaderSearchTextMode.Text;
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid1
+            // 
+            this.colid1.FieldName = "id";
+            this.colid1.Name = "colid1";
+            // 
+            // colnombre
+            // 
+            this.colnombre.FieldName = "nombre";
+            this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.ReadOnly = true;
+            this.colnombre.Visible = true;
+            this.colnombre.VisibleIndex = 0;
             // 
             // frmCotizacionOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 777);
+            this.Controls.Add(this.gleVendedor);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtContacto);
             this.Controls.Add(this.label13);
@@ -697,6 +766,9 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             ((System.ComponentModel.ISupportInitialize)(this.txtDescuento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotalNeto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContacto.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gleVendedor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bgVendedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -751,5 +823,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         private System.Windows.Forms.DateTimePicker dtFechaVencimiento;
         private DevExpress.XtraEditors.TextEdit txtContacto;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private DevExpress.XtraEditors.GridLookUpEdit gleVendedor;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private System.Windows.Forms.BindingSource bgVendedor;
+        private DevExpress.XtraGrid.Columns.GridColumn colid1;
+        private DevExpress.XtraGrid.Columns.GridColumn colnombre;
     }
 }
