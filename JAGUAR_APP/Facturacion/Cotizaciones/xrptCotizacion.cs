@@ -39,9 +39,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             //PuntoVenta
             PDV pdv = new PDV();
             pdv.RecuperaRegistro(coti.PuntoVentaId);
+            lblTituloEmpresa.Text = lblTituloEmpresa2.Text = pdv.NombreLegal;
             lblDireccionPuntoVenta.Text  = lblDireccionPuntoVenta2.Text = pdv.Direccion;
-            lblEmailPDV.Text = lblEmail2.Text = pdv.Correo;
-            lblTelefonoPDV.Text = lblTelefonoPDV2.Text = pdv.RTN + " " + pdv.Telefono;
+            lblEmailPDV.Text = lblEmailPDV2.Text = pdv.Correo;
+            lblTelefonoPDV.Text = lblTelefonoPDV2.Text = "RTN: "+ pdv.RTN + " Tele: " + pdv.Telefono;
 
             CargarDetalle(pid);
         }

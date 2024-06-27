@@ -258,7 +258,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.gridColumn2.ColumnEdit = this.reposEliminar;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 11;
+            this.gridColumn2.VisibleIndex = 12;
             this.gridColumn2.Width = 98;
             // 
             // reposEliminar
@@ -277,7 +277,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.gridColumn3.ColumnEdit = this.reposPrint;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 12;
+            this.gridColumn3.VisibleIndex = 11;
             this.gridColumn3.Width = 142;
             // 
             // reposPrint
