@@ -118,8 +118,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.dsFactCotizacion1 = new JAGUAR_APP.Facturacion.Cotizaciones.dsFactCotizacion();
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.lblTituloEmpresa = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTituloEmpresa2 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsFactCotizacion1)).BeginInit();
@@ -223,21 +225,21 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblTelefonoPDV
             // 
-            this.lblTelefonoPDV.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 47.99997F);
+            this.lblTelefonoPDV.LocationFloat = new DevExpress.Utils.PointFloat(176.6286F, 52.99998F);
             this.lblTelefonoPDV.Multiline = true;
             this.lblTelefonoPDV.Name = "lblTelefonoPDV";
             this.lblTelefonoPDV.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTelefonoPDV.SizeF = new System.Drawing.SizeF(334.6184F, 18.99999F);
+            this.lblTelefonoPDV.SizeF = new System.Drawing.SizeF(334.62F, 14F);
             this.lblTelefonoPDV.StylePriority.UseTextAlignment = false;
             this.lblTelefonoPDV.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // lblEmailPDV
             // 
-            this.lblEmailPDV.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 28.99998F);
+            this.lblEmailPDV.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 38.99998F);
             this.lblEmailPDV.Multiline = true;
             this.lblEmailPDV.Name = "lblEmailPDV";
             this.lblEmailPDV.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblEmailPDV.SizeF = new System.Drawing.SizeF(334.6184F, 18.99999F);
+            this.lblEmailPDV.SizeF = new System.Drawing.SizeF(334.62F, 14F);
             this.lblEmailPDV.StylePriority.UseTextAlignment = false;
             this.lblEmailPDV.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -250,11 +252,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblDireccionPuntoVenta
             // 
-            this.lblDireccionPuntoVenta.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 9.99999F);
+            this.lblDireccionPuntoVenta.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 24.99998F);
             this.lblDireccionPuntoVenta.Multiline = true;
             this.lblDireccionPuntoVenta.Name = "lblDireccionPuntoVenta";
             this.lblDireccionPuntoVenta.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblDireccionPuntoVenta.SizeF = new System.Drawing.SizeF(334.6184F, 18.99999F);
+            this.lblDireccionPuntoVenta.SizeF = new System.Drawing.SizeF(334.62F, 14F);
             this.lblDireccionPuntoVenta.StylePriority.UseTextAlignment = false;
             this.lblDireccionPuntoVenta.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -339,7 +341,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblFechaVenc
             // 
-            this.lblFechaVenc.LocationFloat = new DevExpress.Utils.PointFloat(511.2472F, 124.2269F);
+            this.lblFechaVenc.LocationFloat = new DevExpress.Utils.PointFloat(511.2471F, 139.2916F);
             this.lblFechaVenc.Name = "lblFechaVenc";
             this.lblFechaVenc.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblFechaVenc.SizeF = new System.Drawing.SizeF(177.7528F, 17F);
@@ -349,7 +351,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblContacto
             // 
-            this.lblContacto.LocationFloat = new DevExpress.Utils.PointFloat(511.2472F, 90.22688F);
+            this.lblContacto.LocationFloat = new DevExpress.Utils.PointFloat(511.2471F, 105.2916F);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblContacto.SizeF = new System.Drawing.SizeF(177.7528F, 17F);
@@ -358,7 +360,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel11
             // 
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(397.7055F, 107.2269F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(397.7054F, 122.2916F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel11.SizeF = new System.Drawing.SizeF(113.5417F, 16.99998F);
@@ -369,7 +371,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel8
             // 
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(397.7055F, 124.227F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(397.7054F, 139.2917F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(113.5417F, 16.99998F);
@@ -380,7 +382,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblFecha
             // 
-            this.lblFecha.LocationFloat = new DevExpress.Utils.PointFloat(511.2472F, 107.2268F);
+            this.lblFecha.LocationFloat = new DevExpress.Utils.PointFloat(511.2471F, 122.2915F);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblFecha.SizeF = new System.Drawing.SizeF(177.7528F, 17F);
@@ -390,7 +392,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel6
             // 
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(397.7055F, 90.22688F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(397.7054F, 105.2916F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(113.5417F, 16.99998F);
@@ -401,7 +403,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblEmail
             // 
-            this.lblEmail.LocationFloat = new DevExpress.Utils.PointFloat(146.8751F, 158.2269F);
+            this.lblEmail.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 173.2917F);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblEmail.SizeF = new System.Drawing.SizeF(250.8305F, 17F);
@@ -410,7 +412,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblTelefono
             // 
-            this.lblTelefono.LocationFloat = new DevExpress.Utils.PointFloat(146.8751F, 141.2268F);
+            this.lblTelefono.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 156.2915F);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblTelefono.SizeF = new System.Drawing.SizeF(250.8305F, 17F);
@@ -419,7 +421,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblRTN
             // 
-            this.lblRTN.LocationFloat = new DevExpress.Utils.PointFloat(146.8751F, 124.2269F);
+            this.lblRTN.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 139.2916F);
             this.lblRTN.Name = "lblRTN";
             this.lblRTN.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblRTN.SizeF = new System.Drawing.SizeF(250.8305F, 17.00001F);
@@ -428,7 +430,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblDireccion
             // 
-            this.lblDireccion.LocationFloat = new DevExpress.Utils.PointFloat(146.8751F, 107.2268F);
+            this.lblDireccion.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 122.2915F);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblDireccion.SizeF = new System.Drawing.SizeF(250.8305F, 17F);
@@ -437,7 +439,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel5
             // 
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(14.5834F, 158.2269F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 173.2917F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -448,7 +450,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel4
             // 
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(14.5834F, 124.2269F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 139.2916F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -459,7 +461,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel3
             // 
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(14.5834F, 141.2268F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 156.2915F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -470,7 +472,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel2
             // 
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(14.5834F, 107.2268F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 122.2915F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -481,7 +483,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblNumCoti
             // 
-            this.lblNumCoti.LocationFloat = new DevExpress.Utils.PointFloat(534.8331F, 27.06021F);
+            this.lblNumCoti.LocationFloat = new DevExpress.Utils.PointFloat(534.8331F, 10F);
             this.lblNumCoti.Name = "lblNumCoti";
             this.lblNumCoti.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblNumCoti.SizeF = new System.Drawing.SizeF(139.5834F, 19F);
@@ -492,7 +494,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblcliente
             // 
-            this.lblcliente.LocationFloat = new DevExpress.Utils.PointFloat(146.8751F, 90.22688F);
+            this.lblcliente.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 105.2916F);
             this.lblcliente.Name = "lblcliente";
             this.lblcliente.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblcliente.SizeF = new System.Drawing.SizeF(250.8305F, 17F);
@@ -501,7 +503,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel9
             // 
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(14.5834F, 90.22688F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 105.2916F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -512,10 +514,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel1
             // 
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(213.5241F, 67.68527F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(213.5241F, 66.99998F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(237.5F, 19F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(237.5F, 14F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.Text = "COTIZACION ";
@@ -540,7 +542,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLine1.Name = "xrLine1";
-            this.xrLine1.SizeF = new System.Drawing.SizeF(700F, 26.70838F);
+            this.xrLine1.SizeF = new System.Drawing.SizeF(700F, 13.16668F);
             // 
             // xrLabel34
             // 
@@ -823,11 +825,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblDireccionPuntoVenta2
             // 
-            this.lblDireccionPuntoVenta2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 40.24989F);
+            this.lblDireccionPuntoVenta2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 55.93523F);
             this.lblDireccionPuntoVenta2.Multiline = true;
             this.lblDireccionPuntoVenta2.Name = "lblDireccionPuntoVenta2";
             this.lblDireccionPuntoVenta2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblDireccionPuntoVenta2.SizeF = new System.Drawing.SizeF(334.6184F, 18.99999F);
+            this.lblDireccionPuntoVenta2.SizeF = new System.Drawing.SizeF(334.62F, 14F);
             this.lblDireccionPuntoVenta2.StylePriority.UseTextAlignment = false;
             this.lblDireccionPuntoVenta2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -840,21 +842,21 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblEmailPDV2
             // 
-            this.lblEmailPDV2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 59.24994F);
+            this.lblEmailPDV2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 69.93523F);
             this.lblEmailPDV2.Multiline = true;
             this.lblEmailPDV2.Name = "lblEmailPDV2";
             this.lblEmailPDV2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblEmailPDV2.SizeF = new System.Drawing.SizeF(334.6184F, 18.99999F);
+            this.lblEmailPDV2.SizeF = new System.Drawing.SizeF(334.62F, 14F);
             this.lblEmailPDV2.StylePriority.UseTextAlignment = false;
             this.lblEmailPDV2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // lblTelefonoPDV2
             // 
-            this.lblTelefonoPDV2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 78.24993F);
+            this.lblTelefonoPDV2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 83.93523F);
             this.lblTelefonoPDV2.Multiline = true;
             this.lblTelefonoPDV2.Name = "lblTelefonoPDV2";
             this.lblTelefonoPDV2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTelefonoPDV2.SizeF = new System.Drawing.SizeF(334.6184F, 18.99999F);
+            this.lblTelefonoPDV2.SizeF = new System.Drawing.SizeF(334.62F, 14F);
             this.lblTelefonoPDV2.StylePriority.UseTextAlignment = false;
             this.lblTelefonoPDV2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -944,10 +946,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel32
             // 
-            this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(449.7391F, 0F);
+            this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(451.0241F, 0F);
             this.xrLabel32.Name = "xrLabel32";
             this.xrLabel32.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel32.SizeF = new System.Drawing.SizeF(129.9021F, 17F);
+            this.xrLabel32.SizeF = new System.Drawing.SizeF(128.6171F, 17F);
             this.xrLabel32.StylePriority.UseFont = false;
             this.xrLabel32.StylePriority.UseTextAlignment = false;
             this.xrLabel32.Text = "Sub Total:";
@@ -975,6 +977,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // PageFooter
             // 
             this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblTituloEmpresa2,
             this.xrSubreport1,
             this.lblTelefonoPDV2,
             this.xrLabel34,
@@ -1010,17 +1013,10 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.PageFooter.HeightF = 473.7492F;
             this.PageFooter.Name = "PageFooter";
             // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 217.3333F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Id_cotizacion", this.Id_cotizacion));
-            this.xrSubreport1.ReportSource = new JAGUAR_APP.Facturacion.Cotizaciones.xrSubRptCotizacion();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(698.9916F, 54.66656F);
-            // 
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblTituloEmpresa,
             this.lblTelefonoPDV,
             this.xrLabel1,
             this.xrPictureBox1,
@@ -1046,6 +1042,34 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.lblEmailPDV});
             this.PageHeader.HeightF = 214.5833F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 217.3333F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Id_cotizacion", this.Id_cotizacion));
+            this.xrSubreport1.ReportSource = new JAGUAR_APP.Facturacion.Cotizaciones.xrSubRptCotizacion();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(698.9916F, 54.66656F);
+            // 
+            // lblTituloEmpresa
+            // 
+            this.lblTituloEmpresa.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 9.99999F);
+            this.lblTituloEmpresa.Multiline = true;
+            this.lblTituloEmpresa.Name = "lblTituloEmpresa";
+            this.lblTituloEmpresa.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTituloEmpresa.SizeF = new System.Drawing.SizeF(334.62F, 14F);
+            this.lblTituloEmpresa.StylePriority.UseTextAlignment = false;
+            this.lblTituloEmpresa.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // lblTituloEmpresa2
+            // 
+            this.lblTituloEmpresa2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 41.93523F);
+            this.lblTituloEmpresa2.Multiline = true;
+            this.lblTituloEmpresa2.Name = "lblTituloEmpresa2";
+            this.lblTituloEmpresa2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTituloEmpresa2.SizeF = new System.Drawing.SizeF(334.62F, 14F);
+            this.lblTituloEmpresa2.StylePriority.UseTextAlignment = false;
+            this.lblTituloEmpresa2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrptCotizacion
             // 
@@ -1162,5 +1186,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRLabel lblTituloEmpresa2;
+        private DevExpress.XtraReports.UI.XRLabel lblTituloEmpresa;
     }
 }
