@@ -2401,6 +2401,11 @@
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RecuentoInventario\dsRecuento.cs">
       <DependentUpon>dsRecuento.xsd</DependentUpon>
     </Compile>
@@ -3481,14 +3486,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RecuentoInventario\frmAjusteINV_PorTarimas.resx">
       <DependentUpon>frmAjusteINV_PorTarimas.cs</DependentUpon>
     </EmbeddedResource>
@@ -3972,8 +3972,6 @@
     <None Include="Resources\material32px.png" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\marca-de-verificacion.png" />
-    <None Include="Resources\Logo_ImportadorVelasquez.jpeg" />
-    <None Include="Resources\Logo_ImportadorVelasquez1.jpeg" />
     <None Include="Resources\Logo_ImportadorVelasquez.jpg" />
     <Content Include="Resources\medal.png" />
     <None Include="Resources\pallet pallet solo.png" />

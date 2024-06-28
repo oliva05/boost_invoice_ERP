@@ -1703,26 +1703,6 @@ namespace JAGUAR_APP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logo_ImportadorVelasquez {
-            get {
-                object obj = ResourceManager.GetObject("Logo_ImportadorVelasquez", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Logo_ImportadorVelasquez1 {
-            get {
-                object obj = ResourceManager.GetObject("Logo_ImportadorVelasquez1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Logo_ImportadorVelasquez2 {
             get {
                 object obj = ResourceManager.GetObject("Logo_ImportadorVelasquez2", resourceCulture);
