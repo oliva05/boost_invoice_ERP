@@ -3972,6 +3972,9 @@
     <None Include="Resources\material32px.png" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\marca-de-verificacion.png" />
+    <None Include="Resources\Logo_ImportadorVelasquez.jpeg" />
+    <None Include="Resources\Logo_ImportadorVelasquez1.jpeg" />
+    <None Include="Resources\Logo_ImportadorVelasquez.jpg" />
     <Content Include="Resources\medal.png" />
     <None Include="Resources\pallet pallet solo.png" />
     <None Include="Resources\pallet32px.png" />
