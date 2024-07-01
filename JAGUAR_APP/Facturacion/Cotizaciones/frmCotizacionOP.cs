@@ -567,6 +567,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         {
                             cmd.Parameters.Clear();
                             cmd.CommandText = "sp_cotizacion_insert_detalle";
+                            //cmd.CommandText = "[sp_cotizacion_insert_detalleV2]";
                             cmd.Connection = conn;
                             cmd.Transaction = transaction;
                             cmd.CommandType = CommandType.StoredProcedure;

@@ -29,22 +29,22 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCotizacionesHome));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grdCotizaciones = new DevExpress.XtraGrid.GridControl();
             this.dsFactCotizacion1 = new JAGUAR_APP.Facturacion.Cotizaciones.dsFactCotizacion();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -58,13 +58,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.coluser_creador = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colestado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltotal = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.reposEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.reposEliminar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.reposPrint = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.reposEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cmdNew = new DevExpress.XtraEditors.SimpleButton();
             this.cmdSalir = new DevExpress.XtraEditors.SimpleButton();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -77,9 +75,9 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             ((System.ComponentModel.ISupportInitialize)(this.grdCotizaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsFactCotizacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposPrint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaHastaDisponibles.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaHastaDisponibles.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaDesdeDisponibles.Properties)).BeginInit();
@@ -127,8 +125,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.coluser_creador,
             this.colestado,
             this.coltotal,
-            this.gridColumn1,
-            this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4});
             this.gridView1.GridControl = this.grdCotizaciones;
@@ -151,7 +147,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colcliente.OptionsColumn.AllowEdit = false;
             this.colcliente.Visible = true;
             this.colcliente.VisibleIndex = 1;
-            this.colcliente.Width = 98;
+            this.colcliente.Width = 105;
             // 
             // colrtn
             // 
@@ -161,7 +157,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colrtn.OptionsColumn.AllowEdit = false;
             this.colrtn.Visible = true;
             this.colrtn.VisibleIndex = 2;
-            this.colrtn.Width = 98;
+            this.colrtn.Width = 105;
             // 
             // colcontacto
             // 
@@ -171,7 +167,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colcontacto.OptionsColumn.AllowEdit = false;
             this.colcontacto.Visible = true;
             this.colcontacto.VisibleIndex = 3;
-            this.colcontacto.Width = 98;
+            this.colcontacto.Width = 105;
             // 
             // coltelefono
             // 
@@ -181,7 +177,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.coltelefono.OptionsColumn.AllowEdit = false;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 4;
-            this.coltelefono.Width = 98;
+            this.coltelefono.Width = 105;
             // 
             // colfecha_emision
             // 
@@ -191,7 +187,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colfecha_emision.OptionsColumn.AllowEdit = false;
             this.colfecha_emision.Visible = true;
             this.colfecha_emision.VisibleIndex = 5;
-            this.colfecha_emision.Width = 98;
+            this.colfecha_emision.Width = 105;
             // 
             // colfecha_vencimiento
             // 
@@ -201,7 +197,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colfecha_vencimiento.OptionsColumn.AllowEdit = false;
             this.colfecha_vencimiento.Visible = true;
             this.colfecha_vencimiento.VisibleIndex = 6;
-            this.colfecha_vencimiento.Width = 98;
+            this.colfecha_vencimiento.Width = 105;
             // 
             // coluser_creador
             // 
@@ -211,7 +207,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.coluser_creador.OptionsColumn.AllowEdit = false;
             this.coluser_creador.Visible = true;
             this.coluser_creador.VisibleIndex = 7;
-            this.coluser_creador.Width = 98;
+            this.coluser_creador.Width = 105;
             // 
             // colestado
             // 
@@ -221,7 +217,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colestado.OptionsColumn.AllowEdit = false;
             this.colestado.Visible = true;
             this.colestado.VisibleIndex = 8;
-            this.colestado.Width = 98;
+            this.colestado.Width = 105;
             // 
             // coltotal
             // 
@@ -231,42 +227,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.coltotal.OptionsColumn.AllowEdit = false;
             this.coltotal.Visible = true;
             this.coltotal.VisibleIndex = 9;
-            this.coltotal.Width = 98;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Editar";
-            this.gridColumn1.ColumnEdit = this.reposEditar;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 10;
-            this.gridColumn1.Width = 98;
-            // 
-            // reposEditar
-            // 
-            this.reposEditar.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.reposEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.reposEditar.Name = "reposEditar";
-            this.reposEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.reposEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEditar_ButtonClick);
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Eliminar";
-            this.gridColumn2.ColumnEdit = this.reposEliminar;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 12;
-            this.gridColumn2.Width = 98;
+            this.coltotal.Width = 105;
             // 
             // reposEliminar
             // 
             this.reposEliminar.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
             this.reposEliminar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposEliminar.Name = "reposEliminar";
             this.reposEliminar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.reposEliminar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEliminar_ButtonClick);
@@ -277,15 +245,15 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.gridColumn3.ColumnEdit = this.reposPrint;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 11;
-            this.gridColumn3.Width = 142;
+            this.gridColumn3.VisibleIndex = 10;
+            this.gridColumn3.Width = 120;
             // 
             // reposPrint
             // 
             this.reposPrint.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.reposPrint.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposPrint.Name = "reposPrint";
             this.reposPrint.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.reposPrint.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposPrint_ButtonClick);
@@ -298,7 +266,17 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 0;
-            this.gridColumn4.Width = 87;
+            this.gridColumn4.Width = 94;
+            // 
+            // reposEditar
+            // 
+            this.reposEditar.AutoHeight = false;
+            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
+            this.reposEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.reposEditar.Name = "reposEditar";
+            this.reposEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEditar_ButtonClick);
             // 
             // cmdNew
             // 
@@ -348,7 +326,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.btnExcelAuto.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcelAuto.ImageOptions.Image")));
             this.btnExcelAuto.Location = new System.Drawing.Point(896, 41);
             this.btnExcelAuto.Name = "btnExcelAuto";
-            this.btnExcelAuto.Size = new System.Drawing.Size(106, 39);
+            this.btnExcelAuto.Size = new System.Drawing.Size(106, 36);
             this.btnExcelAuto.TabIndex = 112;
             this.btnExcelAuto.Text = "Excel";
             this.btnExcelAuto.Visible = false;
@@ -441,9 +419,9 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             ((System.ComponentModel.ISupportInitialize)(this.grdCotizaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsFactCotizacion1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposPrint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaHastaDisponibles.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaHastaDisponibles.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaDesdeDisponibles.Properties.CalendarTimeProperties)).EndInit();
@@ -474,8 +452,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         private DevExpress.XtraGrid.Columns.GridColumn coluser_creador;
         private DevExpress.XtraGrid.Columns.GridColumn colestado;
         private DevExpress.XtraGrid.Columns.GridColumn coltotal;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.SimpleButton btnExcelAuto;
         private DevExpress.XtraEditors.SimpleButton cmdRefreshDisponibles;

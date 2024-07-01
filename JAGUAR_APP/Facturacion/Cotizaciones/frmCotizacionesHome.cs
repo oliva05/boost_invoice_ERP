@@ -98,6 +98,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             var grdvDetalle = (GridView)grdCotizaciones.FocusedView;
             var row = (dsFactCotizacion.ListaCotizacionesRow)grdvDetalle.GetFocusedDataRow();
 
+            DialogResult r = CajaDialogo.Pregunta("Desea eliminar esta Cotizacion?");
+            if (r != System.Windows.Forms.DialogResult.Yes)
+                return;
+
+
             if (row.id > 0)
             {
                 bool Proceder = false;

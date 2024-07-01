@@ -625,8 +625,14 @@
   <data name="Products_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Products_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <!--<data name="Logo_ImportadorVelasquez" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_ImportadorVelasquez.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>-->
   <data name="inventory_24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inventory_24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="workers32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\workers32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="salir_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salir_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1078,7 +1084,10 @@
   <data name="Truck_pending_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Truck_pending_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="workers32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\workers32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <!--<data name="Logo_ImportadorVelasquez1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_ImportadorVelasquez1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>-->
+  <data name="Logo_ImportadorVelasquez2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_ImportadorVelasquez.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
