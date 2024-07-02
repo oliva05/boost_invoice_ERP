@@ -47,6 +47,11 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             ClienteFactura = new ClienteFacturacion();
             LoadVendedores();
 
+            if (UsuarioLogeado.AdminCambiarPrecio)
+                gridView1.Columns["precio_original"].OptionsColumn.ReadOnly = false;
+            else
+                gridView1.Columns["precio_original"].OptionsColumn.ReadOnly = true;
+
             switch (tipoOP)
             {
                 case TipoOperacion.Insert:
@@ -166,16 +171,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                             item.total = item.cantidad * item.precio_original;
                             item.isv = (item.cantidad * item.precio_original) * tasaISV;
 
-                            total += item.total;
-                            isv_total += item.isv;
                         }
                     }
-                    txtSubTotalBruto.Text = string.Format("{0:#,###,##0.00}", Math.Round(total, 2));
-                    txtISV.Text = string.Format("{0:#,###,##0.00}", Math.Round(isv_total, 2));
-                    txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(total + isv_total, 2));
+                    CalcularTotal();
                 }
             }
         }
+
+  
 
         private void btnSelec_Click(object sender, EventArgs e)
         {
@@ -273,9 +276,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         dsFactCotizacion1.detalle_cotizacion.Adddetalle_cotizacionRow(row1);
                         valor_total += (row1.total);// + row1.isv1);
 
-                        txtSubTotalBruto.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total, 2));
-                        txtISV.EditValue = Convert.ToDecimal(txtISV.EditValue) + row1.isv;
-                        txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total + Convert.ToDecimal(txtISV.EditValue), 2));
+                        CalcularTotal();
 
 
                         if (dsFactCotizacion1.detalle_cotizacion.Count > 0)

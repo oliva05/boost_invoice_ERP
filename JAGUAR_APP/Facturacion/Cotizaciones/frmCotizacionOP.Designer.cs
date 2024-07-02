@@ -30,12 +30,12 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCotizacionOP));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dsFactCotizacion1 = new JAGUAR_APP.Facturacion.Cotizaciones.dsFactCotizacion();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -172,7 +172,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colcodigo.Name = "colcodigo";
             this.colcodigo.Visible = true;
             this.colcodigo.VisibleIndex = 0;
-            this.colcodigo.Width = 200;
+            this.colcodigo.Width = 113;
             // 
             // coldescripcion
             // 
@@ -181,7 +181,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.coldescripcion.Name = "coldescripcion";
             this.coldescripcion.Visible = true;
             this.coldescripcion.VisibleIndex = 1;
-            this.coldescripcion.Width = 200;
+            this.coldescripcion.Width = 295;
             // 
             // colcantidad
             // 
@@ -190,7 +190,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colcantidad.Name = "colcantidad";
             this.colcantidad.Visible = true;
             this.colcantidad.VisibleIndex = 2;
-            this.colcantidad.Width = 200;
+            this.colcantidad.Width = 179;
             // 
             // colprecio_original
             // 
@@ -201,7 +201,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colprecio_original.Name = "colprecio_original";
             this.colprecio_original.Visible = true;
             this.colprecio_original.VisibleIndex = 3;
-            this.colprecio_original.Width = 200;
+            this.colprecio_original.Width = 179;
             // 
             // coldescuento_unitario
             // 
@@ -221,7 +221,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colprecio_unitario.OptionsColumn.ReadOnly = true;
             this.colprecio_unitario.Visible = true;
             this.colprecio_unitario.VisibleIndex = 4;
-            this.colprecio_unitario.Width = 211;
+            this.colprecio_unitario.Width = 189;
             // 
             // colDataColumn3
             // 
@@ -234,7 +234,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.colDataColumn3.OptionsColumn.ReadOnly = true;
             this.colDataColumn3.Visible = true;
             this.colDataColumn3.VisibleIndex = 5;
-            this.colDataColumn3.Width = 190;
+            this.colDataColumn3.Width = 169;
             // 
             // gridColumn1
             // 
@@ -243,13 +243,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 6;
+            this.gridColumn1.Width = 77;
             // 
             // reposDelete
             // 
             this.reposDelete.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.reposDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposDelete.Name = "reposDelete";
             this.reposDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.reposDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposDelete_ButtonClick);
