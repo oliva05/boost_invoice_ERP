@@ -601,6 +601,25 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                             cmd.ExecuteNonQuery();
                         }
 
+                        if (ProIdCliente > 0)
+                        {
+                            //cmd.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v4]";
+                            cmd.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v5_hacia_cotizacion]";
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.Clear();
+                            //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                            cmd.Parameters.AddWithValue("@id_facturaH", id_header);
+                            cmd.Parameters.AddWithValue("@enable", 1);
+                            cmd.Parameters.AddWithValue("@credito", 0);//Abonos
+                            cmd.Parameters.AddWithValue("@debito", Convert.ToDecimal(txtTotal.EditValue));//cargos
+                            cmd.Parameters.AddWithValue("@concepto", string.Concat("Por Cotizacion #"));
+                            cmd.Parameters.AddWithValue("@doc_date", dtFechaRegistro.Value);
+                            cmd.Parameters.AddWithValue("@date_created", dtFechaRegistro.Value);
+                            cmd.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
+                            cmd.Parameters.AddWithValue("@id_cliente", ProIdCliente);
+                            cmd.ExecuteNonQuery();
+                        }
+
                         transaction.Commit();
                         Guardar = true;
                     }
