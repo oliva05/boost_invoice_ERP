@@ -285,7 +285,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
 
                 Factura factura = new Factura();
 
-                xfrmDialogFormatoFactura frm = new xfrmDialogFormatoFactura(row.id);
+                xfrmDialogFormatoFactura frm = new xfrmDialogFormatoFactura(row.id, this.PuntoDeVentaActual);
 
                 frm.ShowDialog();
 

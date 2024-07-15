@@ -132,14 +132,11 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         {
             try
             {
-                //var row = (dsFacturasGestion.HomeFacturasRow)gridView1.GetFocusedDataRow();
-
-                //var gridView = (GridView)gvFacturas.FocusedView;
                 var row = (dsFacturasGestion.HomeFacturasRow)gvFacturas.GetFocusedDataRow();
 
                 Factura factura = new Factura();
 
-                xfrmDialogFormatoFactura frm = new xfrmDialogFormatoFactura(row.id);
+                xfrmDialogFormatoFactura frm = new xfrmDialogFormatoFactura(row.id, this.PuntoDeVentaActual);
 
                 frm.ShowDialog();
 
