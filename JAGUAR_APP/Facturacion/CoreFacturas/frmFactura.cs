@@ -2051,11 +2051,6 @@ namespace Eatery.Ventas
                         }
                     }
                     break;
-
-                case "precio":
-
-
-                    break;
             }
             CalcularTotalFactura();
         }
