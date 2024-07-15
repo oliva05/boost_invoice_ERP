@@ -44,7 +44,13 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             tipoOP = tipoOperacion;
             UsuarioLogeado = pUserLog;
             PuntoVentaActual = pPuntoVentaActual;
+            ClienteFactura = new ClienteFacturacion();
             LoadVendedores();
+
+            if (UsuarioLogeado.AdminCambiarPrecio)
+                gridView1.Columns["precio_original"].OptionsColumn.ReadOnly = false;
+            else
+                gridView1.Columns["precio_original"].OptionsColumn.ReadOnly = true;
 
             switch (tipoOP)
             {
@@ -150,10 +156,29 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         txtDireccion.Text = ClienteFactura.Direccion;
                         txtRTN.Text = "";
                     }
+                    decimal total = 0;
+                    decimal isv_total = 0;
+                    foreach (dsFactCotizacion.detalle_cotizacionRow item in dsFactCotizacion1.detalle_cotizacion.Rows)
+                    {
+                        ProductoTerminado pt1 = new ProductoTerminado();
+                        if (pt1.Recuperar_producto(item.id_pt))
+                        {
+                            item.precio_original = PuntoVentaActual.RecuperarPrecioItem(item.id_pt, PuntoVentaActual.ID, this.ClienteFactura.Id);
 
+                            Impuesto impuesto = new Impuesto();
+                            decimal tasaISV = 0.15M;
+
+                            item.total = item.cantidad * item.precio_original;
+                            item.isv = (item.cantidad * item.precio_original) * tasaISV;
+
+                        }
+                    }
+                    CalcularTotal();
                 }
             }
         }
+
+  
 
         private void btnSelec_Click(object sender, EventArgs e)
         {
@@ -230,38 +255,29 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         //row1.total_linea = (row1.cantidad * row1.precio) - row1.descuento + row1.isv1 + row1.isv2 + row1.isv3;
                         #endregion
 
-                        //if (row1.precio_original == 0)
-                        //{
-                        //    CajaDialogo.Error("Este producto no tiene definido un precio. Por favor valide Lista de Precios!");
-                        //    return;
-                        //}
-
+                        row1.precio_original = PuntoVentaActual.RecuperarPrecioItem(row1.id_pt, PuntoVentaActual.ID, this.ClienteFactura.Id);
                         Impuesto impuesto = new Impuesto();
                         decimal tasaISV = 0;
 
-                        //if (impuesto.RecuperarRegistro(pt1.Id_isv_aplicable))
+                        if (row1.precio_original > 0)
+                        {
+                            row1.total = row1.cantidad * row1.precio_original;
+                            row1.isv = (row1.cantidad * row1.precio_original)* Convert.ToDecimal(0.15);
+                        }
+
+                        //foreach (dsFactCotizacion.detalle_cotizacionRow rowF in dsFactCotizacion1.detalle_cotizacion)
                         //{
-                        //    tasaISV = impuesto.Valor / 100;
-                        //    row1.isv1 = ((row1.precio - row1.descuento) / 100) * impuesto.Valor;
-                        //    row1.precio = (row1.precio - row1.descuento) - row1.isv1;
-
-                        //    row1.tasa_isv = tasaISV;
-                        //    row1.id_isv_aplicable = impuesto.Id;
+                        //    txtSubTotalBruto.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total, 2));
+                        //    txtISV.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_isv, 2));
+                        //    txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total + valor_isv, 2));
                         //}
-                        //else
-                        //{
-                        //    row1.tasa_isv = 0;
-                        //    row1.id_isv_aplicable = 0;
-                        //    row1.precio = (row1.precio - row1.descuento);
-                        //}
-
-                        //row1.total_linea = (row1.cantidad * row1.precio) + (row1.cantidad * row1.isv1) + (row1.cantidad * row1.isv2) + (row1.cantidad * row1.isv3);
-
 
                         //dsCompras.oc_d_normal.Addoc_d_normalRow(row1);
                         dsFactCotizacion1.detalle_cotizacion.Adddetalle_cotizacionRow(row1);
                         valor_total += (row1.total);// + row1.isv1);
-                        txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total, 2));
+
+                        CalcularTotal();
+
 
                         if (dsFactCotizacion1.detalle_cotizacion.Count > 0)
                             gridView1.FocusedRowHandle = dsFactCotizacion1.detalle_cotizacion.Count - 1;
@@ -582,6 +598,25 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                             cmd.Parameters.AddWithValue("@punto_venta", PuntoVentaActual.ID);
                             cmd.Parameters.AddWithValue("@user_id", UsuarioLogeado.Id);
                             cmd.Parameters.AddWithValue("@fecha_hora", dp.NowSetDateTime());
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        if (ProIdCliente > 0)
+                        {
+                            //cmd.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v4]";
+                            cmd.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v5_hacia_cotizacion]";
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.Clear();
+                            //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                            cmd.Parameters.AddWithValue("@id_facturaH", id_header);
+                            cmd.Parameters.AddWithValue("@enable", 1);
+                            cmd.Parameters.AddWithValue("@credito", 0);//Abonos
+                            cmd.Parameters.AddWithValue("@debito", Convert.ToDecimal(txtTotal.EditValue));//cargos
+                            cmd.Parameters.AddWithValue("@concepto", string.Concat("Por Cotizacion #"));
+                            cmd.Parameters.AddWithValue("@doc_date", dtFechaRegistro.Value);
+                            cmd.Parameters.AddWithValue("@date_created", dtFechaRegistro.Value);
+                            cmd.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
+                            cmd.Parameters.AddWithValue("@id_cliente", ProIdCliente);
                             cmd.ExecuteNonQuery();
                         }
 

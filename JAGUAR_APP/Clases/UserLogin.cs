@@ -33,7 +33,7 @@ namespace JAGUAR_APP.Clases
         public int TurnoId { get => idnivel; set => idnivel = value; }
         public string Tipo { get => tipo; set => tipo = value; }
         public bool Enable { get; set; }
-
+        public bool AdminCambiarPrecio { get; set; }
 
         //Migracion ACS
 
@@ -286,6 +286,7 @@ namespace JAGUAR_APP.Clases
                                       ,[password]
                                       ,[habilitado]
                                       ,[id_grupo_losa]
+                                      ,[bit_cambio_precio]
                                   FROM [ACS].[conf_usuarios]
                                    where [usuario] = '" + pAlias + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -299,6 +300,7 @@ namespace JAGUAR_APP.Clases
                     IsSuperUser = dr.GetBoolean(3);
                     Pass = dr.GetString(4);
                     Habilitado = dr.GetBoolean(5);
+                    AdminCambiarPrecio = dr.GetBoolean(7);
                     GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)dr.GetInt32(6);
                 }
                 x = true;

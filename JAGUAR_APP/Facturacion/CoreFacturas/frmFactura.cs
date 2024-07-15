@@ -658,23 +658,23 @@ namespace Eatery.Ventas
                             }
 
                             //Vamos a postear transaccion en estado de cuenta de cliente
-                            if (factura.IdCliente > 0)
-                            {
-                                command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v4]";
-                                command.CommandType = CommandType.StoredProcedure;
-                                command.Parameters.Clear();
-                                //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
-                                command.Parameters.AddWithValue("@id_facturaH", IdFacturaH);
-                                command.Parameters.AddWithValue("@enable", 1);
-                                command.Parameters.AddWithValue("@credito", 0);//Abonos
-                                command.Parameters.AddWithValue("@debito", TotalFactura);//cargos
-                                command.Parameters.AddWithValue("@concepto", string.Concat("Por Factura #", factura.NumeroDocumento));
-                                command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
-                                command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
-                                command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
-                                command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
-                                command.ExecuteNonQuery();
-                            }
+                            //if (factura.IdCliente > 0)
+                            //{
+                            //    command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v4]";
+                            //    command.CommandType = CommandType.StoredProcedure;
+                            //    command.Parameters.Clear();
+                            //    //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                            //    command.Parameters.AddWithValue("@id_facturaH", IdFacturaH);
+                            //    command.Parameters.AddWithValue("@enable", 1);
+                            //    command.Parameters.AddWithValue("@credito", 0);//Abonos
+                            //    command.Parameters.AddWithValue("@debito", TotalFactura);//cargos
+                            //    command.Parameters.AddWithValue("@concepto", string.Concat("Por Factura #", factura.NumeroDocumento));
+                            //    command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
+                            //    command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
+                            //    command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
+                            //    command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
+                            //    command.ExecuteNonQuery();
+                            //}
 
                             // Attempt to commit the transaction.
                             transaction.Commit();
