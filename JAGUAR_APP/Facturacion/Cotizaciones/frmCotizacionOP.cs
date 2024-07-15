@@ -191,6 +191,17 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                     decimal valor_total = 0;
                     decimal valor_isv = 0;
 
+                   
+                    Impuesto isv = new Impuesto();
+                    isv.RecuperarRegistro(1);
+
+                 
+
+                        //row.isv = (row.cantidad * row.precio_original) * (isv.Valor / 100);
+                        //row.total = (row.cantidad * row.precio_original) + row.isv;
+
+                  
+
                     bool AgregarNuevo = true;
                     foreach (dsFactCotizacion.detalle_cotizacionRow rowF in dsFactCotizacion1.detalle_cotizacion)
                     {
@@ -198,8 +209,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         {
                             //Sumar cantidad nada mas
                             rowF.cantidad = rowF.cantidad + 1;
-                            rowF.total = rowF.cantidad * rowF.precio_original;
-                            rowF.isv = (rowF.cantidad * rowF.precio_original) * Convert.ToDecimal(0.15);
+                            rowF.total = rowF.cantidad * rowF.precio_original + (isv.Valor / 100);
+                            rowF.isv = (rowF.cantidad * rowF.precio_original) * (isv.Valor / 100);
                             AgregarNuevo = false;
                         }
                         //valor_total += (rowF.total_linea + rowF.isv1);
@@ -207,7 +218,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
                         valor_isv += rowF.isv;
                         txtSubTotalBruto.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total, 2));
                         txtISV.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_isv, 2));
-                        txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total + valor_isv, 2));
+                        //txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total + valor_isv, 2));
+                        txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total, 2));
                     }
 
                     if (AgregarNuevo)
@@ -261,8 +273,8 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
                         if (row1.precio_original > 0)
                         {
-                            row1.total = row1.cantidad * row1.precio_original;
-                            row1.isv = (row1.cantidad * row1.precio_original)* Convert.ToDecimal(0.15);
+                            row1.total = (row1.cantidad * row1.precio_original)+ (isv.Valor / 100);
+                            row1.isv = (row1.cantidad * row1.precio_original)* (isv.Valor / 100);
                         }
 
                         //foreach (dsFactCotizacion.detalle_cotizacionRow rowF in dsFactCotizacion1.detalle_cotizacion)
@@ -298,22 +310,23 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
             try
             {
+                Impuesto isv = new Impuesto();
+                isv.RecuperarRegistro(1);
+
                 switch (e.Column.FieldName)
                 {
                     case "cantidad":
 
-                        Impuesto isv = new Impuesto();
-                        isv.RecuperarRegistro(1);
-
-                        row.total = (row.cantidad * row.precio_original);
-                        row.isv = (row.cantidad * row.precio_original) * Convert.ToDecimal(0.15);
+                        row.isv = (row.cantidad * row.precio_original) * (isv.Valor/100);
+                        row.total = (row.cantidad * row.precio_original) + row.isv;
 
                         break;
 
                     case "precio_original":
 
-                        row.total = (row.cantidad * row.precio_original);
-                        row.isv = (row.cantidad * row.precio_original) * Convert.ToDecimal(0.15);
+                        //row.total = (row.cantidad * row.precio_original);
+                        row.isv = (row.cantidad * row.precio_original) * (isv.Valor / 100);
+                        row.total = (row.cantidad * row.precio_original) + row.isv;
 
                         break;
 
@@ -339,7 +352,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             {
                 Subtotal += item.total;
                 ISV += item.isv;
-
             }
 
             txtSubTotalBruto.Text = string.Format("{0:##,###,##0.##}", Subtotal);
@@ -348,7 +360,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
             txtISV.Text = string.Format("{0:##,###,##0.##}", ISV);
 
-            txtTotal.Text = string.Format("{0:##,###,##0.##}", Convert.ToDecimal(txtSubTotalNeto.EditValue) + Convert.ToDecimal(txtISV.EditValue));
+            txtTotal.Text = string.Format("{0:##,###,##0.##}", Convert.ToDecimal(txtSubTotalNeto.EditValue)); //+ Convert.ToDecimal(txtISV.EditValue)) ;
         }
 
         private void cmdSalir_Click(object sender, EventArgs e)
