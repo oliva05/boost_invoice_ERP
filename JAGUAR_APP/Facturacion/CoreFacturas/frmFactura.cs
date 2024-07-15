@@ -73,7 +73,12 @@ namespace Eatery.Ventas
             string.Format("{0:MM/dd/yyyy}", lblfecha.Text);
 
             string HostName = Dns.GetHostName();
-            
+
+            if (UsuarioLogeado.AdminCambiarPrecio)
+                gridView1.Columns["precio"].OptionsColumn.ReadOnly = false;
+            else
+                gridView1.Columns["precio"].OptionsColumn.ReadOnly = true;
+
             FacturacionEquipo Equipo1 = new FacturacionEquipo();
             if (Equipo1.RecuperarRegistro(HostName))
             {
@@ -2025,11 +2030,13 @@ namespace Eatery.Ventas
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
+            var gridView = (GridView)gridControl1.FocusedView;
+            var row = (dsVentas.detalle_factura_transactionRow)gridView.GetFocusedDataRow();
+
             switch (e.Column.FieldName)
             {
                 case "cantidad":
-                    var gridView = (GridView)gridControl1.FocusedView;
-                    var row = (dsVentas.detalle_factura_transactionRow)gridView.GetFocusedDataRow();
+                    
                     if (row.cantidad > 0)
                     {
                         //No permitiremos facturar mas que lo que hay en inventario
@@ -2043,6 +2050,11 @@ namespace Eatery.Ventas
                             row.ClearErrors();
                         }
                     }
+                    break;
+
+                case "precio":
+
+
                     break;
             }
             CalcularTotalFactura();
