@@ -39,6 +39,7 @@ namespace JAGUAR_APP.Clases
         string _TipoFacturacion_prd_name;
         int _id_clase;
         int _id_isv_aplicable;
+        bool generaComision;
 
         public int Id { get => id; set => id = value; }
         public bool Enable { get => enable; set => enable = value; }
@@ -77,6 +78,7 @@ namespace JAGUAR_APP.Clases
         public int Id_clase { get => _id_clase; set => _id_clase = value; }
         public int Id_isv_aplicable { get => _id_isv_aplicable; set => _id_isv_aplicable = value; }
         public decimal CantInventarioKardexFor_Facturacion { get => _cantInventarioKardexFor_Facturacion; set => _cantInventarioKardexFor_Facturacion = value; }
+        public bool GeneraComision { get => generaComision; set => generaComision = value; }
 
         public ProductoTerminado(string pConnectionString, DateTime fecha = default)
         {
@@ -211,7 +213,8 @@ namespace JAGUAR_APP.Clases
                         _id_isv_aplicable = dl.GetInt32(20);
                     else
                         _id_isv_aplicable = 0;
-                     
+                    GeneraComision = dl.GetBoolean(21);
+
                     Recuperado = true;
                     Recuperar_Latas_and_bolsas(IdProd);
 

@@ -74,7 +74,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
 
                         gle_ClaseProducto.EditValue = PT_Class_instance.Id_clase;
                         gleImpuestoAplicable.EditValue = PT_Class_instance.Id_isv_aplicable;
-
+                        tggSwitchGeneraComision.IsOn = PT_Class_instance.GeneraComision;
                         //gridLookUpEditTipoFacturacionDestino.TextChanged -= new EventHandler(gridLookUpEditTipoFacturacionDestino_TextChanged);
                         //gridLookUpEditTipoFacturacionDestino.Text = PT_Class_instance.TipoFacturacion_prd_name;
                         //gridLookUpEditTipoFacturacionDestino.TextChanged += new EventHandler(gridLookUpEditTipoFacturacionDestino_TextChanged);
@@ -333,11 +333,11 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
                 switch (TipoOperacionActual)
                 {
                     case TipoOperacion.Insert:
-                        cmd.CommandText = "[codesahn].[sp_set_insert_nuevo_producto_terminado_v5]";
+                        cmd.CommandText = "[codesahn].[sp_set_insert_nuevo_producto_terminado_v6]";
 
                         break;
                     case TipoOperacion.Update:
-                        cmd.CommandText = "[codesahn].[sp_set_update_nuevo_producto_terminado_v5]";
+                        cmd.CommandText = "[codesahn].[sp_set_update_nuevo_producto_terminado_v6]";
                         cmd.Parameters.AddWithValue("@id", PT_Class_instance.Id);
                         break;
                 }
@@ -374,6 +374,7 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
                     cmd.Parameters.AddWithValue("@id_impuesto_aplicable", DBNull.Value);
                 else
                     cmd.Parameters.AddWithValue("@id_impuesto_aplicable", gleImpuestoAplicable.EditValue);
+                cmd.Parameters.AddWithValue("@generaComision", tggSwitchGeneraComision.IsOn);
 
                 cmd.ExecuteNonQuery();
 
