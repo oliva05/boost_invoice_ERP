@@ -350,7 +350,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
             foreach (dsFactCotizacion.detalle_cotizacionRow item in dsFactCotizacion1.detalle_cotizacion.Rows)
             {
-                Subtotal += item.total;
+                Subtotal += item.cantidad * item.precio_original;// item.total;
                 ISV += item.isv;
             }
 
@@ -360,7 +360,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
 
             txtISV.Text = string.Format("{0:##,###,##0.##}", ISV);
 
-            txtTotal.Text = string.Format("{0:##,###,##0.##}", Convert.ToDecimal(txtSubTotalNeto.EditValue)); //+ Convert.ToDecimal(txtISV.EditValue)) ;
+            txtTotal.Text = string.Format("{0:##,###,##0.##}", Subtotal + ISV) ;
         }
 
         private void cmdSalir_Click(object sender, EventArgs e)
