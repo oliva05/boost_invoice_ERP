@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsBancos" targetNamespace="http://tempuri.org/dsBancos.xsd" xmlns:mstns="http://tempuri.org/dsBancos.xsd" xmlns="http://tempuri.org/dsBancos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsBancos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBancos" msprop:Generator_UserDSName="dsBancos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="lista_titulares" msprop:Generator_TableClassName="lista_titularesDataTable" msprop:Generator_TableVarName="tablelista_titulares" msprop:Generator_RowChangedName="lista_titularesRowChanged" msprop:Generator_TablePropName="lista_titulares" msprop:Generator_RowDeletingName="lista_titularesRowDeleting" msprop:Generator_RowChangingName="lista_titularesRowChanging" msprop:Generator_RowEvHandlerName="lista_titularesRowChangeEventHandler" msprop:Generator_RowDeletedName="lista_titularesRowDeleted" msprop:Generator_RowClassName="lista_titularesRow" msprop:Generator_UserTableName="lista_titulares" msprop:Generator_RowEvArgName="lista_titularesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_titular" msprop:Generator_ColumnVarNameInTable="columnid_titular" msprop:Generator_ColumnPropNameInRow="id_titular" msprop:Generator_ColumnPropNameInTable="id_titularColumn" msprop:Generator_UserColumnName="id_titular" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="correo" msprop:Generator_ColumnVarNameInTable="columncorreo" msprop:Generator_ColumnPropNameInRow="correo" msprop:Generator_ColumnPropNameInTable="correoColumn" msprop:Generator_UserColumnName="correo" type="xs:string" minOccurs="0" />
+              <xs:element name="RTN" msprop:Generator_ColumnVarNameInTable="columnRTN" msprop:Generator_ColumnPropNameInRow="RTN" msprop:Generator_ColumnPropNameInTable="RTNColumn" msprop:Generator_UserColumnName="RTN" type="xs:string" minOccurs="0" />
+              <xs:element name="identidad" msprop:Generator_ColumnVarNameInTable="columnidentidad" msprop:Generator_ColumnPropNameInRow="identidad" msprop:Generator_ColumnPropNameInTable="identidadColumn" msprop:Generator_UserColumnName="identidad" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lista_tipo_cuenta" msprop:Generator_TableClassName="lista_tipo_cuentaDataTable" msprop:Generator_TableVarName="tablelista_tipo_cuenta" msprop:Generator_TablePropName="lista_tipo_cuenta" msprop:Generator_RowDeletingName="lista_tipo_cuentaRowDeleting" msprop:Generator_RowChangingName="lista_tipo_cuentaRowChanging" msprop:Generator_RowEvHandlerName="lista_tipo_cuentaRowChangeEventHandler" msprop:Generator_RowDeletedName="lista_tipo_cuentaRowDeleted" msprop:Generator_UserTableName="lista_tipo_cuenta" msprop:Generator_RowChangedName="lista_tipo_cuentaRowChanged" msprop:Generator_RowEvArgName="lista_tipo_cuentaRowChangeEvent" msprop:Generator_RowClassName="lista_tipo_cuentaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lista_bancos" msprop:Generator_TableClassName="lista_bancosDataTable" msprop:Generator_TableVarName="tablelista_bancos" msprop:Generator_TablePropName="lista_bancos" msprop:Generator_RowDeletingName="lista_bancosRowDeleting" msprop:Generator_RowChangingName="lista_bancosRowChanging" msprop:Generator_RowEvHandlerName="lista_bancosRowChangeEventHandler" msprop:Generator_RowDeletedName="lista_bancosRowDeleted" msprop:Generator_UserTableName="lista_bancos" msprop:Generator_RowChangedName="lista_bancosRowChanged" msprop:Generator_RowEvArgName="lista_bancosRowChangeEvent" msprop:Generator_RowClassName="lista_bancosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="descripcion_banco" msprop:Generator_ColumnVarNameInTable="columndescripcion_banco" msprop:Generator_ColumnPropNameInRow="descripcion_banco" msprop:Generator_ColumnPropNameInTable="descripcion_bancoColumn" msprop:Generator_UserColumnName="descripcion_banco" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="listados_cuentas_by_id" msprop:Generator_TableClassName="listados_cuentas_by_idDataTable" msprop:Generator_TableVarName="tablelistados_cuentas_by_id" msprop:Generator_TablePropName="listados_cuentas_by_id" msprop:Generator_RowDeletingName="listados_cuentas_by_idRowDeleting" msprop:Generator_RowChangingName="listados_cuentas_by_idRowChanging" msprop:Generator_RowEvHandlerName="listados_cuentas_by_idRowChangeEventHandler" msprop:Generator_RowDeletedName="listados_cuentas_by_idRowDeleted" msprop:Generator_UserTableName="listados_cuentas_by_id" msprop:Generator_RowChangedName="listados_cuentas_by_idRowChanged" msprop:Generator_RowEvArgName="listados_cuentas_by_idRowChangeEvent" msprop:Generator_RowClassName="listados_cuentas_by_idRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_cuenta" msprop:Generator_ColumnVarNameInTable="columnid_cuenta" msprop:Generator_ColumnPropNameInRow="id_cuenta" msprop:Generator_ColumnPropNameInTable="id_cuentaColumn" msprop:Generator_UserColumnName="id_cuenta" type="xs:int" minOccurs="0" />
+              <xs:element name="id_banco" msprop:Generator_ColumnVarNameInTable="columnid_banco" msprop:Generator_ColumnPropNameInRow="id_banco" msprop:Generator_ColumnPropNameInTable="id_bancoColumn" msprop:Generator_UserColumnName="id_banco" type="xs:int" minOccurs="0" />
+              <xs:element name="num_cuenta" msprop:Generator_ColumnVarNameInTable="columnnum_cuenta" msprop:Generator_ColumnPropNameInRow="num_cuenta" msprop:Generator_ColumnPropNameInTable="num_cuentaColumn" msprop:Generator_UserColumnName="num_cuenta" type="xs:string" minOccurs="0" />
+              <xs:element name="moneda" msprop:Generator_ColumnVarNameInTable="columnmoneda" msprop:Generator_ColumnPropNameInRow="moneda" msprop:Generator_ColumnPropNameInTable="monedaColumn" msprop:Generator_UserColumnName="moneda" type="xs:string" minOccurs="0" />
+              <xs:element name="tipo_cuenta" msprop:Generator_ColumnVarNameInTable="columntipo_cuenta" msprop:Generator_ColumnPropNameInRow="tipo_cuenta" msprop:Generator_ColumnPropNameInTable="tipo_cuentaColumn" msprop:Generator_UserColumnName="tipo_cuenta" type="xs:int" minOccurs="0" />
+              <xs:element name="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_UserColumnName="activo" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
