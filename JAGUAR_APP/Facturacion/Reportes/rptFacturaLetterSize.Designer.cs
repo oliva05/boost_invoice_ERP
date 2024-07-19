@@ -1307,7 +1307,7 @@
             // 
             // xrPictureBox1
             // 
-            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::JAGUAR_APP.Properties.Resources.Ovejita, true);
+            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::JAGUAR_APP.Properties.Resources.Logo_Import__1_, true);
             this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(632.6144F, 1.999998F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(136.1507F, 115.8712F);

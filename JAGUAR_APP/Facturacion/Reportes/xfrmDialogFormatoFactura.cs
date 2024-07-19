@@ -18,10 +18,12 @@ namespace JAGUAR_APP.Facturacion.Reportes
     {
         Factura factura = new Factura();
         int factura_id = 0;
-        public xfrmDialogFormatoFactura(int pFactura_id)
+        PDV PuntoVentaActual;
+        public xfrmDialogFormatoFactura(int pFactura_id, PDV pPuntoVentaParametro)
         {
             InitializeComponent();
             factura_id = pFactura_id;
+            PuntoVentaActual = pPuntoVentaParametro;
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -51,34 +53,48 @@ namespace JAGUAR_APP.Facturacion.Reportes
         {
             if (factura.RecuperarRegistro(factura_id))
             {
-                if (factura.CantidadImpresionesFactura == 0)
+                if (this.PuntoVentaActual.PermiteReimpresionFacturaConAutorizacion)
                 {
-                    if (factura.IdNumeracionFiscal == 0)
+                    if (factura.CantidadImpresionesFactura == 0)//Cantidad de impresiones de la factura
                     {
-                        rptFact_ReciboVentaLetterSize report = new rptFact_ReciboVentaLetterSize(factura, rptFact_ReciboVentaLetterSize.TipoCopia.Blanco);
-
-                        using (ReportPrintTool printTool = new ReportPrintTool(report))
+                        if (factura.IdNumeracionFiscal == 0)
                         {
-                            // Send the report to the default printer.
-                            factura.UpdatePrintCount(factura_id);
-                            printTool.ShowPreviewDialog();
+                            rptFact_ReciboVentaLetterSize report = new rptFact_ReciboVentaLetterSize(factura, rptFact_ReciboVentaLetterSize.TipoCopia.Blanco);
+
+                            using (ReportPrintTool printTool = new ReportPrintTool(report))
+                            {
+                                // Send the report to the default printer.
+                                factura.UpdatePrintCount(factura_id);
+                                printTool.ShowPreviewDialog();
+                            }
+                        }
+                        else
+                        {
+                            rptFacturaLetterSize report = new rptFacturaLetterSize(factura, rptFacturaLetterSize.TipoCopia.Blanco);
+
+                            using (ReportPrintTool printTool = new ReportPrintTool(report))
+                            {
+                                // Send the report to the default printer.
+                                factura.UpdatePrintCount(factura_id);
+                                printTool.ShowPreviewDialog();
+                            }
                         }
                     }
                     else
                     {
-                        rptFacturaLetterSize report = new rptFacturaLetterSize(factura, rptFacturaLetterSize.TipoCopia.Blanco);
-
-                        using (ReportPrintTool printTool = new ReportPrintTool(report))
-                        {
-                            // Send the report to the default printer.
-                            factura.UpdatePrintCount(factura_id);
-                            printTool.ShowPreviewDialog();
-                        }
+                        CajaDialogo.Error("Esta factura ya se imprimió! Para una reimpresión debe solicitar una autorización!");
                     }
                 }
                 else
                 {
-                    CajaDialogo.Error("Esta factura ya se imprimió! Para una reimpresión debe solicitar una autorización!");
+                    rptFacturaLetterSize report = new rptFacturaLetterSize(factura, rptFacturaLetterSize.TipoCopia.Blanco);
+
+                    using (ReportPrintTool printTool = new ReportPrintTool(report))
+                    {
+                        // Send the report to the default printer.
+                        factura.UpdatePrintCount(factura_id);
+                        printTool.ShowPreviewDialog();
+                    }
                 }
             }
             this.Close();

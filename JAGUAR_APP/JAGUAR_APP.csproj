@@ -3518,7 +3518,6 @@
     <EmbeddedResource Include="Micro\frmOpcionesMicro.resx">
       <DependentUpon>frmOpcionesMicro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -4008,6 +4007,7 @@
     <None Include="Resources\Logo.png" />
     <None Include="Resources\marca-de-verificacion.png" />
     <None Include="Resources\Logo_ImportadorVelasquez.jpg" />
+    <None Include="Resources\Logo Import %281%29.jpg" />
     <Content Include="Resources\medal.png" />
     <None Include="Resources\pallet pallet solo.png" />
     <None Include="Resources\pallet32px.png" />
