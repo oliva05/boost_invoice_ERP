@@ -108,13 +108,13 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.lblTituloEmpresa2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.lblTituloEmpresa = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             this.dpiAwareImageCollection1 = new DevExpress.Utils.DPIAwareImageCollection(this.components);
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.dsFactCotizacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dpiAwareImageCollection1)).BeginInit();
@@ -379,13 +379,13 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLine1
             // 
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 263.5317F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(700F, 13.16668F);
             // 
             // xrLabel34
             // 
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(451.0241F, 271.9999F);
+            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(450.0141F, 535.5317F);
             this.xrLabel34.Name = "xrLabel34";
             this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel34.SizeF = new System.Drawing.SizeF(128.6169F, 17F);
@@ -396,7 +396,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblSub2
             // 
-            this.lblSub2.LocationFloat = new DevExpress.Utils.PointFloat(579.6411F, 271.9999F);
+            this.lblSub2.LocationFloat = new DevExpress.Utils.PointFloat(578.6311F, 535.5317F);
             this.lblSub2.Name = "lblSub2";
             this.lblSub2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblSub2.SizeF = new System.Drawing.SizeF(119.3587F, 16.99994F);
@@ -410,7 +410,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel37
             // 
-            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(451.0201F, 288.9999F);
+            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(450.0101F, 552.5316F);
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel37.SizeF = new System.Drawing.SizeF(128.6209F, 17F);
@@ -421,7 +421,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblIsv152
             // 
-            this.lblIsv152.LocationFloat = new DevExpress.Utils.PointFloat(579.6411F, 289F);
+            this.lblIsv152.LocationFloat = new DevExpress.Utils.PointFloat(578.6311F, 552.5317F);
             this.lblIsv152.Name = "lblIsv152";
             this.lblIsv152.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblIsv152.SizeF = new System.Drawing.SizeF(119.3587F, 16.99994F);
@@ -435,7 +435,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel39
             // 
-            this.xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(451.0241F, 305.9999F);
+            this.xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(450.0141F, 569.5317F);
             this.xrLabel39.Name = "xrLabel39";
             this.xrLabel39.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel39.SizeF = new System.Drawing.SizeF(128.617F, 17F);
@@ -446,7 +446,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblTotal2
             // 
-            this.lblTotal2.LocationFloat = new DevExpress.Utils.PointFloat(579.6411F, 305.9999F);
+            this.lblTotal2.LocationFloat = new DevExpress.Utils.PointFloat(578.6311F, 569.5317F);
             this.lblTotal2.Name = "lblTotal2";
             this.lblTotal2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblTotal2.SizeF = new System.Drawing.SizeF(119.3505F, 16.99997F);
@@ -460,7 +460,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel41
             // 
-            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 305.9999F);
+            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(13.57334F, 569.5317F);
             this.xrLabel41.Name = "xrLabel41";
             this.xrLabel41.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel41.SizeF = new System.Drawing.SizeF(89.36107F, 16.99998F);
@@ -471,7 +471,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblUsuario2
             // 
-            this.lblUsuario2.LocationFloat = new DevExpress.Utils.PointFloat(103.9444F, 305.9999F);
+            this.lblUsuario2.LocationFloat = new DevExpress.Utils.PointFloat(102.9344F, 569.5317F);
             this.lblUsuario2.Name = "lblUsuario2";
             this.lblUsuario2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblUsuario2.SizeF = new System.Drawing.SizeF(222.7055F, 17F);
@@ -480,7 +480,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel10
             // 
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(213.5241F, 97.93523F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(212.5141F, 361.4669F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(237.5F, 19F);
@@ -491,7 +491,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel12
             // 
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 120.4768F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(13.57334F, 384.0086F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -502,7 +502,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblcliente2
             // 
-            this.lblcliente2.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 120.4768F);
+            this.lblcliente2.LocationFloat = new DevExpress.Utils.PointFloat(145.865F, 384.0086F);
             this.lblcliente2.Name = "lblcliente2";
             this.lblcliente2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblcliente2.SizeF = new System.Drawing.SizeF(250.8305F, 17F);
@@ -511,7 +511,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblNumCoti2
             // 
-            this.lblNumCoti2.LocationFloat = new DevExpress.Utils.PointFloat(534.833F, 57.3101F);
+            this.lblNumCoti2.LocationFloat = new DevExpress.Utils.PointFloat(533.823F, 320.8419F);
             this.lblNumCoti2.Name = "lblNumCoti2";
             this.lblNumCoti2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblNumCoti2.SizeF = new System.Drawing.SizeF(139.5834F, 19F);
@@ -522,7 +522,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel15
             // 
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 137.4769F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(13.57334F, 401.0087F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -533,7 +533,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel16
             // 
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 171.4768F);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(13.57334F, 435.0085F);
             this.xrLabel16.Name = "xrLabel16";
             this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel16.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -544,7 +544,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel17
             // 
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 154.4767F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(13.57334F, 418.0085F);
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel17.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -555,7 +555,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel18
             // 
-            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(14.58333F, 188.4767F);
+            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(13.57334F, 452.0085F);
             this.xrLabel18.Name = "xrLabel18";
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel18.SizeF = new System.Drawing.SizeF(132.2917F, 16.99998F);
@@ -566,7 +566,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblDireccion2
             // 
-            this.lblDireccion2.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 137.4769F);
+            this.lblDireccion2.LocationFloat = new DevExpress.Utils.PointFloat(145.865F, 401.0087F);
             this.lblDireccion2.Name = "lblDireccion2";
             this.lblDireccion2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblDireccion2.SizeF = new System.Drawing.SizeF(250.8305F, 17F);
@@ -575,7 +575,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblRTN2
             // 
-            this.lblRTN2.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 154.4767F);
+            this.lblRTN2.LocationFloat = new DevExpress.Utils.PointFloat(145.865F, 418.0085F);
             this.lblRTN2.Name = "lblRTN2";
             this.lblRTN2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblRTN2.SizeF = new System.Drawing.SizeF(250.8305F, 17.00001F);
@@ -584,7 +584,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblTelefono2
             // 
-            this.lblTelefono2.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 171.4768F);
+            this.lblTelefono2.LocationFloat = new DevExpress.Utils.PointFloat(145.865F, 435.0085F);
             this.lblTelefono2.Name = "lblTelefono2";
             this.lblTelefono2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblTelefono2.SizeF = new System.Drawing.SizeF(250.8305F, 17F);
@@ -593,7 +593,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblEmail2
             // 
-            this.lblEmail2.LocationFloat = new DevExpress.Utils.PointFloat(146.875F, 188.4767F);
+            this.lblEmail2.LocationFloat = new DevExpress.Utils.PointFloat(145.865F, 452.0085F);
             this.lblEmail2.Name = "lblEmail2";
             this.lblEmail2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblEmail2.SizeF = new System.Drawing.SizeF(250.8305F, 17F);
@@ -602,7 +602,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel23
             // 
-            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(397.7053F, 120.4768F);
+            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(396.6953F, 384.0086F);
             this.xrLabel23.Name = "xrLabel23";
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel23.SizeF = new System.Drawing.SizeF(113.5417F, 16.99998F);
@@ -613,7 +613,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblFecha2
             // 
-            this.lblFecha2.LocationFloat = new DevExpress.Utils.PointFloat(511.247F, 137.4769F);
+            this.lblFecha2.LocationFloat = new DevExpress.Utils.PointFloat(510.237F, 401.0087F);
             this.lblFecha2.Name = "lblFecha2";
             this.lblFecha2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblFecha2.SizeF = new System.Drawing.SizeF(177.7528F, 17F);
@@ -623,7 +623,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel25
             // 
-            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(397.7053F, 154.4769F);
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(396.6953F, 418.0086F);
             this.xrLabel25.Name = "xrLabel25";
             this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel25.SizeF = new System.Drawing.SizeF(113.5417F, 16.99998F);
@@ -634,7 +634,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // xrLabel26
             // 
-            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(397.7053F, 137.4769F);
+            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(396.6953F, 401.0087F);
             this.xrLabel26.Name = "xrLabel26";
             this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel26.SizeF = new System.Drawing.SizeF(113.5417F, 16.99998F);
@@ -645,7 +645,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblContacto2
             // 
-            this.lblContacto2.LocationFloat = new DevExpress.Utils.PointFloat(511.247F, 120.4768F);
+            this.lblContacto2.LocationFloat = new DevExpress.Utils.PointFloat(510.237F, 384.0086F);
             this.lblContacto2.Name = "lblContacto2";
             this.lblContacto2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblContacto2.SizeF = new System.Drawing.SizeF(177.7528F, 17F);
@@ -654,7 +654,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblFechaVenc2
             // 
-            this.lblFechaVenc2.LocationFloat = new DevExpress.Utils.PointFloat(511.247F, 154.4767F);
+            this.lblFechaVenc2.LocationFloat = new DevExpress.Utils.PointFloat(510.237F, 418.0085F);
             this.lblFechaVenc2.Name = "lblFechaVenc2";
             this.lblFechaVenc2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblFechaVenc2.SizeF = new System.Drawing.SizeF(177.7528F, 17F);
@@ -664,7 +664,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblDireccionPuntoVenta2
             // 
-            this.lblDireccionPuntoVenta2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 55.93523F);
+            this.lblDireccionPuntoVenta2.LocationFloat = new DevExpress.Utils.PointFloat(175.6189F, 319.467F);
             this.lblDireccionPuntoVenta2.Multiline = true;
             this.lblDireccionPuntoVenta2.Name = "lblDireccionPuntoVenta2";
             this.lblDireccionPuntoVenta2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -674,7 +674,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblEmailPDV2
             // 
-            this.lblEmailPDV2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 69.93523F);
+            this.lblEmailPDV2.LocationFloat = new DevExpress.Utils.PointFloat(175.6189F, 333.4669F);
             this.lblEmailPDV2.Multiline = true;
             this.lblEmailPDV2.Name = "lblEmailPDV2";
             this.lblEmailPDV2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -684,7 +684,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblTelefonoPDV2
             // 
-            this.lblTelefonoPDV2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 83.93523F);
+            this.lblTelefonoPDV2.LocationFloat = new DevExpress.Utils.PointFloat(175.6189F, 347.467F);
             this.lblTelefonoPDV2.Multiline = true;
             this.lblTelefonoPDV2.Name = "lblTelefonoPDV2";
             this.lblTelefonoPDV2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -795,21 +795,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // GroupFooter1
             // 
             this.GroupFooter1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lblUsuario,
-            this.xrLabel7,
-            this.lblTotal,
-            this.xrLabel35,
-            this.xrLabel32,
-            this.xrLabel33,
-            this.lblSub,
-            this.lblIsv15});
-            this.GroupFooter1.HeightF = 71.03844F;
-            this.GroupFooter1.Name = "GroupFooter1";
-            // 
-            // PageFooter
-            // 
-            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLine1,
+            this.lblEmailPDV2,
             this.xrPictureBox2,
             this.lblTituloEmpresa2,
             this.xrSubreport1,
@@ -841,14 +827,27 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.lblContacto2,
             this.lblFechaVenc2,
             this.lblDireccionPuntoVenta2,
-            this.lblEmailPDV2});
-            this.PageFooter.HeightF = 379.3739F;
+            this.xrLine1,
+            this.lblUsuario,
+            this.xrLabel7,
+            this.lblTotal,
+            this.xrLabel35,
+            this.xrLabel32,
+            this.xrLabel33,
+            this.lblSub,
+            this.lblIsv15});
+            this.GroupFooter1.HeightF = 594.7817F;
+            this.GroupFooter1.Name = "GroupFooter1";
+            // 
+            // PageFooter
+            // 
+            this.PageFooter.HeightF = 34.38708F;
             this.PageFooter.Name = "PageFooter";
             // 
             // xrPictureBox2
             // 
             this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox2.ImageSource"));
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(10F, 22F);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(8.990002F, 285.5317F);
             this.xrPictureBox2.Name = "xrPictureBox2";
             this.xrPictureBox2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrPictureBox2.SizeF = new System.Drawing.SizeF(136.88F, 84.87F);
@@ -856,13 +855,21 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             // lblTituloEmpresa2
             // 
-            this.lblTituloEmpresa2.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 41.93523F);
+            this.lblTituloEmpresa2.LocationFloat = new DevExpress.Utils.PointFloat(175.6189F, 305.467F);
             this.lblTituloEmpresa2.Multiline = true;
             this.lblTituloEmpresa2.Name = "lblTituloEmpresa2";
             this.lblTituloEmpresa2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblTituloEmpresa2.SizeF = new System.Drawing.SizeF(334.62F, 14F);
             this.lblTituloEmpresa2.StylePriority.UseTextAlignment = false;
             this.lblTituloEmpresa2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 480.865F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Id_cotizacion", this.Id_cotizacion));
+            this.xrSubreport1.ReportSource = new JAGUAR_APP.Facturacion.Cotizaciones.xrSubRptCotizacion();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(698.9916F, 54.66656F);
             // 
             // PageHeader
             // 
@@ -894,6 +901,14 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             this.PageHeader.HeightF = 251.67F;
             this.PageHeader.Name = "PageHeader";
             // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 197F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Id_cotizacion", this.Id_cotizacion));
+            this.xrSubreport2.ReportSource = new JAGUAR_APP.Facturacion.Cotizaciones.xrSubRptCotizacion();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(698.99F, 54.67F);
+            // 
             // lblTituloEmpresa
             // 
             this.lblTituloEmpresa.LocationFloat = new DevExpress.Utils.PointFloat(176.6289F, 9.99999F);
@@ -916,22 +931,6 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // dpiAwareImageCollection1
             // 
             this.dpiAwareImageCollection1.Stream = ((DevExpress.Utils.DPIAwareImageCollectionStreamer)(resources.GetObject("dpiAwareImageCollection1.Stream")));
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 217.3333F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Id_cotizacion", this.Id_cotizacion));
-            this.xrSubreport1.ReportSource = new JAGUAR_APP.Facturacion.Cotizaciones.xrSubRptCotizacion();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(698.9916F, 54.66656F);
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 197F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Id_cotizacion", this.Id_cotizacion));
-            this.xrSubreport2.ReportSource = new JAGUAR_APP.Facturacion.Cotizaciones.xrSubRptCotizacion();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(698.99F, 54.67F);
             // 
             // xrptCotizacion
             // 
