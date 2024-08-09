@@ -466,7 +466,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label10.Location = new System.Drawing.Point(655, 92);
+            this.label10.Location = new System.Drawing.Point(654, 92);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 18);
             this.label10.TabIndex = 60;
@@ -648,7 +648,7 @@ namespace JAGUAR_APP.Facturacion.Cotizaciones
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label14.Location = new System.Drawing.Point(655, 120);
+            this.label14.Location = new System.Drawing.Point(655, 117);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 18);
             this.label14.TabIndex = 90;

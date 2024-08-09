@@ -642,6 +642,23 @@
     <Compile Include="Autorizaciones\frmSolicitudAutorizacion.Designer.cs">
       <DependentUpon>frmSolicitudAutorizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="BancosYTitulares\dsBancos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBancos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BancosYTitulares\frmTitularMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BancosYTitulares\frmTitularMain.Designer.cs">
+      <DependentUpon>frmTitularMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BancosYTitulares\frmTitularOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BancosYTitulares\frmTitularOP.Designer.cs">
+      <DependentUpon>frmTitularOP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calidad\LoteConfConsumo\dsConfigLoteConsumo.cs">
       <DependentUpon>dsConfigLoteConsumo.xsd</DependentUpon>
     </Compile>
@@ -673,6 +690,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ClientesPuntoVentaLP.cs" />
     <Compile Include="Clases\Conf_TablesID.cs" />
+    <Compile Include="Clases\Cuentas.cs" />
     <Compile Include="Clases\DataOperations.cs" />
     <Compile Include="Clases\FacturaEstado.cs" />
     <Compile Include="Clases\FacturasPagoMultiple.cs" />
@@ -2088,6 +2106,17 @@
     <None Include="Autorizaciones\dsAutorizaciones.xss">
       <DependentUpon>dsAutorizaciones.xsd</DependentUpon>
     </None>
+    <None Include="BancosYTitulares\dsBancos.xsc">
+      <DependentUpon>dsBancos.xsd</DependentUpon>
+    </None>
+    <None Include="BancosYTitulares\dsBancos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBancos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BancosYTitulares\dsBancos.xss">
+      <DependentUpon>dsBancos.xsd</DependentUpon>
+    </None>
     <None Include="Calidad\LoteConfConsumo\dsConfigLoteConsumo.xsc">
       <DependentUpon>dsConfigLoteConsumo.xsd</DependentUpon>
     </None>
@@ -2940,6 +2969,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Autorizaciones\frmSolicitudAutorizacion.resx">
       <DependentUpon>frmSolicitudAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BancosYTitulares\frmTitularMain.resx">
+      <DependentUpon>frmTitularMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BancosYTitulares\frmTitularOP.resx">
+      <DependentUpon>frmTitularOP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calidad\LoteConfConsumo\frmSearchMP.resx">
       <DependentUpon>frmSearchMP.cs</DependentUpon>

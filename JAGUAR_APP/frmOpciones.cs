@@ -59,6 +59,7 @@ using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
 using JAGUAR_APP.Facturacion.Cotizaciones;
+using JAGUAR_APP.BancosYTitulares;
 
 namespace JAGUAR_APP
 {
@@ -4353,6 +4354,13 @@ namespace JAGUAR_APP
             //        CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #16 (Configuraciones de Facturacion)");
             //    }
             //}
+        }
+
+        private void cmdCuentas_Click(object sender, EventArgs e)
+        {
+            frmTitularMain frm = new frmTitularMain(UsuarioLogeado);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
         }
     }
 }
