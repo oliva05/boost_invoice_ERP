@@ -320,7 +320,6 @@ namespace JAGUAR_APP.Mantenimientos.ProductoTerminado
 
             if (tggCosteoPorArroba.IsOn)
             {
-
             }
 
             try
