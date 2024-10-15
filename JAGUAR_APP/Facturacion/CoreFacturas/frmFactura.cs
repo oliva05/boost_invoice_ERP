@@ -1953,8 +1953,13 @@ namespace Eatery.Ventas
                         if (impuesto.RecuperarRegistro(pt1.Id_isv_aplicable))
                         {
                             tasaISV = impuesto.Valor / 100;
-                            row1.isv1 = ((row1.precio - row1.descuento) / 100) * impuesto.Valor;
-                            row1.precio = (row1.precio - row1.descuento) - row1.isv1;
+                            //row1.isv1 = ((row1.precio - row1.descuento)) * (impuesto.Valor / 100);
+
+                            //Esta linea si el impuesto va incluido en el precio
+                            row1.precio = (row1.precio - row1.descuento) / (1 + (impuesto.Valor / 100));
+                            row1.isv1 = row1.precio * (impuesto.Valor / 100);
+
+                            //row1.precio = (row1.precio - row1.descuento);
 
                             row1.tasa_isv = tasaISV;
                             row1.id_isv_aplicable = impuesto.Id;
