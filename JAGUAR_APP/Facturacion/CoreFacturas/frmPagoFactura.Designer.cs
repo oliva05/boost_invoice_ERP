@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPagoFactura));
             this.tabPagos = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.grdCuentas = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.cuentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid_cuenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_banco = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcuenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltitular = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnum_cuenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmoneda = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ListboxPrintersEfectivo = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.label6 = new System.Windows.Forms.Label();
             this.cmdPagar = new DevExpress.XtraEditors.SimpleButton();
@@ -90,6 +101,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabPagos)).BeginInit();
             this.tabPagos.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCuentas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuentasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListboxPrintersEfectivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
@@ -111,7 +125,7 @@
             this.tabPagos.Location = new System.Drawing.Point(209, 23);
             this.tabPagos.Name = "tabPagos";
             this.tabPagos.SelectedTabPage = this.xtraTabPage1;
-            this.tabPagos.Size = new System.Drawing.Size(355, 378);
+            this.tabPagos.Size = new System.Drawing.Size(355, 414);
             this.tabPagos.TabIndex = 0;
             this.tabPagos.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -122,6 +136,8 @@
             // 
             this.xtraTabPage1.Appearance.PageClient.BackColor = System.Drawing.Color.White;
             this.xtraTabPage1.Appearance.PageClient.Options.UseBackColor = true;
+            this.xtraTabPage1.Controls.Add(this.label22);
+            this.xtraTabPage1.Controls.Add(this.grdCuentas);
             this.xtraTabPage1.Controls.Add(this.ListboxPrintersEfectivo);
             this.xtraTabPage1.Controls.Add(this.label6);
             this.xtraTabPage1.Controls.Add(this.cmdPagar);
@@ -135,13 +151,89 @@
             this.xtraTabPage1.Controls.Add(this.label2);
             this.xtraTabPage1.Controls.Add(this.label1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(353, 353);
+            this.xtraTabPage1.Size = new System.Drawing.Size(353, 389);
             this.xtraTabPage1.Text = "Detalles del Pago";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label22.Location = new System.Drawing.Point(45, 139);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(64, 21);
+            this.label22.TabIndex = 35;
+            this.label22.Text = "Cuenta";
+            // 
+            // grdCuentas
+            // 
+            this.grdCuentas.Location = new System.Drawing.Point(115, 137);
+            this.grdCuentas.Name = "grdCuentas";
+            this.grdCuentas.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdCuentas.Properties.Appearance.Options.UseFont = true;
+            this.grdCuentas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.grdCuentas.Properties.DataSource = this.cuentasBindingSource;
+            this.grdCuentas.Properties.DisplayMember = "cuenta";
+            this.grdCuentas.Properties.NullText = "";
+            this.grdCuentas.Properties.PopupView = this.gridLookUpEdit1View;
+            this.grdCuentas.Properties.ValueMember = "id_cuenta";
+            this.grdCuentas.Size = new System.Drawing.Size(178, 26);
+            this.grdCuentas.TabIndex = 34;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid_cuenta,
+            this.colid_banco,
+            this.colcuenta,
+            this.coltitular,
+            this.colnum_cuenta,
+            this.colmoneda});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid_cuenta
+            // 
+            this.colid_cuenta.FieldName = "id_cuenta";
+            this.colid_cuenta.Name = "colid_cuenta";
+            // 
+            // colid_banco
+            // 
+            this.colid_banco.FieldName = "id_banco";
+            this.colid_banco.Name = "colid_banco";
+            // 
+            // colcuenta
+            // 
+            this.colcuenta.Caption = "Cuenta";
+            this.colcuenta.FieldName = "cuenta";
+            this.colcuenta.Name = "colcuenta";
+            this.colcuenta.Visible = true;
+            this.colcuenta.VisibleIndex = 0;
+            // 
+            // coltitular
+            // 
+            this.coltitular.Caption = "Titular";
+            this.coltitular.FieldName = "titular";
+            this.coltitular.Name = "coltitular";
+            this.coltitular.Visible = true;
+            this.coltitular.VisibleIndex = 1;
+            // 
+            // colnum_cuenta
+            // 
+            this.colnum_cuenta.FieldName = "num_cuenta";
+            this.colnum_cuenta.Name = "colnum_cuenta";
+            // 
+            // colmoneda
+            // 
+            this.colmoneda.FieldName = "moneda";
+            this.colmoneda.Name = "colmoneda";
             // 
             // ListboxPrintersEfectivo
             // 
             this.ListboxPrintersEfectivo.CheckMode = DevExpress.XtraEditors.CheckMode.Single;
-            this.ListboxPrintersEfectivo.Location = new System.Drawing.Point(115, 203);
+            this.ListboxPrintersEfectivo.Location = new System.Drawing.Point(115, 235);
             this.ListboxPrintersEfectivo.Name = "ListboxPrintersEfectivo";
             this.ListboxPrintersEfectivo.Size = new System.Drawing.Size(236, 96);
             this.ListboxPrintersEfectivo.TabIndex = 33;
@@ -151,7 +243,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(22, 203);
+            this.label6.Location = new System.Drawing.Point(22, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 21);
             this.label6.TabIndex = 32;
@@ -163,7 +255,7 @@
             this.cmdPagar.Appearance.Options.UseFont = true;
             this.cmdPagar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdPagar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdPagar.ImageOptions.Image")));
-            this.cmdPagar.Location = new System.Drawing.Point(85, 305);
+            this.cmdPagar.Location = new System.Drawing.Point(85, 337);
             this.cmdPagar.Name = "cmdPagar";
             this.cmdPagar.Size = new System.Drawing.Size(212, 45);
             this.cmdPagar.TabIndex = 31;
@@ -174,7 +266,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(35, 136);
+            this.label5.Location = new System.Drawing.Point(35, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 21);
             this.label5.TabIndex = 30;
@@ -182,7 +274,7 @@
             // 
             // radioGroup1
             // 
-            this.radioGroup1.Location = new System.Drawing.Point(115, 136);
+            this.radioGroup1.Location = new System.Drawing.Point(115, 170);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Properties.Appearance.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioGroup1.Properties.Appearance.Options.UseFont = true;
@@ -281,7 +373,7 @@
             this.xtraTabPage2.Controls.Add(this.label10);
             this.xtraTabPage2.Controls.Add(this.label11);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(353, 353);
+            this.xtraTabPage2.Size = new System.Drawing.Size(353, 389);
             this.xtraTabPage2.Text = "Detalles del Pago";
             // 
             // simpleButton1
@@ -408,7 +500,7 @@
             this.xtraTabPage3.Controls.Add(this.label14);
             this.xtraTabPage3.Controls.Add(this.label15);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(353, 353);
+            this.xtraTabPage3.Size = new System.Drawing.Size(353, 389);
             this.xtraTabPage3.Text = "Detalles del Pago";
             // 
             // txtReferencia
@@ -747,7 +839,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 405);
+            this.ClientSize = new System.Drawing.Size(897, 439);
             this.Controls.Add(this.lblSaldo);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -768,6 +860,9 @@
             this.tabPagos.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCuentas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuentasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListboxPrintersEfectivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
@@ -847,5 +942,15 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label lblSaldo;
         private DevExpress.XtraGrid.Columns.GridColumn colreferencia;
+        private System.Windows.Forms.Label label22;
+        private DevExpress.XtraEditors.GridLookUpEdit grdCuentas;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private System.Windows.Forms.BindingSource cuentasBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_cuenta;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_banco;
+        private DevExpress.XtraGrid.Columns.GridColumn colcuenta;
+        private DevExpress.XtraGrid.Columns.GridColumn coltitular;
+        private DevExpress.XtraGrid.Columns.GridColumn colnum_cuenta;
+        private DevExpress.XtraGrid.Columns.GridColumn colmoneda;
     }
 }

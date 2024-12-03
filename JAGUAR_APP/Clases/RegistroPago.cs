@@ -14,6 +14,7 @@ namespace JAGUAR_APP.Clases
         public int IdTipo { get; set; }
         public string TipoName { get; set; }
         public string Referencia { get; set; }
+        public int IdCuenta { get; set; }
 
         public RegistroPago() { }
 

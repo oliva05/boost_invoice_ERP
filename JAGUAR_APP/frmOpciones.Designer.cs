@@ -117,6 +117,7 @@
             this.TabAdmin = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageCRUDS = new DevExpress.XtraTab.XtraTabPage();
+            this.cmdCuentas = new DevExpress.XtraEditors.SimpleButton();
             this.btnME = new DevExpress.XtraEditors.SimpleButton();
             this.btnClientes = new DevExpress.XtraEditors.SimpleButton();
             this.cmdPanaderos = new DevExpress.XtraEditors.SimpleButton();
@@ -278,7 +279,6 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtEquipoLogeadoActual = new DevExpress.XtraEditors.TextEdit();
             this.nBarRecepcionFactPuntoVenta = new DevExpress.XtraNavBar.NavBarItem();
-            this.cmdCuentas = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tabOpciones)).BeginInit();
             this.tabOpciones.SuspendLayout();
             this.TabMontacarga.SuspendLayout();
@@ -1572,6 +1572,19 @@
             this.xtraTabPageCRUDS.Name = "xtraTabPageCRUDS";
             this.xtraTabPageCRUDS.Size = new System.Drawing.Size(805, 526);
             this.xtraTabPageCRUDS.Text = "Mantenimientos";
+            // 
+            // cmdCuentas
+            // 
+            this.cmdCuentas.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCuentas.Appearance.Options.UseFont = true;
+            this.cmdCuentas.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.cmdCuentas.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdCuentas.ImageOptions.Image")));
+            this.cmdCuentas.Location = new System.Drawing.Point(2, 250);
+            this.cmdCuentas.Name = "cmdCuentas";
+            this.cmdCuentas.Size = new System.Drawing.Size(227, 58);
+            this.cmdCuentas.TabIndex = 34;
+            this.cmdCuentas.Text = "Master Cuentas";
+            this.cmdCuentas.Click += new System.EventHandler(this.cmdCuentas_Click);
             // 
             // btnME
             // 
@@ -3620,6 +3633,7 @@
             this.navBarGroup11.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Bold);
             this.navBarGroup11.Appearance.Options.UseFont = true;
             this.navBarGroup11.Caption = "Inventario";
+            this.navBarGroup11.Expanded = true;
             this.navBarGroup11.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbKardexFacturacion)});
             this.navBarGroup11.Name = "navBarGroup11";
@@ -3923,19 +3937,6 @@
             this.nBarRecepcionFactPuntoVenta.Caption = "Recepcion Factura Punto Venta";
             this.nBarRecepcionFactPuntoVenta.Name = "nBarRecepcionFactPuntoVenta";
             this.nBarRecepcionFactPuntoVenta.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nBarRecepcionFactPuntoVenta_LinkClicked);
-            // 
-            // cmdCuentas
-            // 
-            this.cmdCuentas.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCuentas.Appearance.Options.UseFont = true;
-            this.cmdCuentas.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdCuentas.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
-            this.cmdCuentas.Location = new System.Drawing.Point(2, 250);
-            this.cmdCuentas.Name = "cmdCuentas";
-            this.cmdCuentas.Size = new System.Drawing.Size(227, 58);
-            this.cmdCuentas.TabIndex = 34;
-            this.cmdCuentas.Text = "Master Cuentas";
-            this.cmdCuentas.Click += new System.EventHandler(this.cmdCuentas_Click);
             // 
             // frmOpciones
             // 

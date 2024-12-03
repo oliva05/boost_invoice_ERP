@@ -1006,7 +1006,7 @@ namespace Eatery.Ventas
                                 //postearemos varias lineas por si el pago se combina entre si
                                 foreach (RegistroPago registroPago in frm.ListaDetallePago)
                                 {
-                                    command.CommandText = "dbo.[sp_set_insert_recibo_pago_detalle_v3]";
+                                    command.CommandText = "dbo.[sp_set_insert_recibo_pago_detalle_v4]";
                                     command.CommandType = CommandType.StoredProcedure;
                                     command.Parameters.Clear();
                                     command.Parameters.AddWithValue("@id_facturaH", IdFacturaH);
@@ -1038,6 +1038,8 @@ namespace Eatery.Ventas
                                         command.Parameters.AddWithValue("@id_tipo_pago", DBNull.Value);
                                     else
                                         command.Parameters.AddWithValue("@id_tipo_pago", registroPago.IdTipo);
+
+                                    command.Parameters.AddWithValue("@IdCuenta", registroPago.IdCuenta);
 
                                     command.ExecuteNonQuery();
                                 }

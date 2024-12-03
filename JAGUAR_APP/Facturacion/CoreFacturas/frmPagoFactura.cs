@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -203,8 +204,31 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         {
             tabPagos.SelectedTabPage = xtraTabPage3;
             TipoPagoSeleccionadoActual = TipoPago.DepositoBancario;
+            LoadCuentas();
             SetButtonPago();
         }
+
+        private void LoadCuentas()
+        {
+            try
+            {
+                string query = @"sp_cuentas_activas";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("",);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsRegistroPagos1.cuentas.Clear();
+                adat.Fill(dsRegistroPagos1.cuentas);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
         void calcularCambio()
         {
             if (!string.IsNullOrEmpty(txtEntregado.Text))
@@ -244,6 +268,15 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         {
             calcularCambio();
 
+            if(TipoPagoSeleccionadoActual == TipoPago.DepositoBancario)
+            {
+                if (string.IsNullOrWhiteSpace(grdCuentas.Text))
+                {
+                    CajaDialogo.Error("Debe seleccionar una Cuenta");
+                    return;
+                }
+            }
+
 
             //if (ValorA_Pagar > varPago)
             //{
@@ -267,8 +300,25 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             {
                 IdFormato = Convert.ToInt32(radioGroup1.EditValue);
             }
+            string TipoPagoName = "N/D";
 
-            AgregarPago(1, "Efectivo", varPago,"N/D");
+            switch (TipoPagoSeleccionadoActual)
+            {
+                case TipoPago.Efectivo:
+                    TipoPagoName = "Efectivo";
+                    break;
+                case TipoPago.Tarjeta:
+                    TipoPagoName = "Tarjeta";
+                    break;
+                case TipoPago.DepositoBancario:
+                    TipoPagoName = "Deposito Bancario";
+                    break;
+                default:
+                    break;
+            }
+
+            //AgregarPago(1, "Efectivo", varPago,"N/D");
+            AgregarPago((int)TipoPagoSeleccionadoActual, TipoPagoName, varPago, "N/D");
 
             //this.DialogResult = DialogResult.OK;
             //this.Close();
@@ -297,6 +347,11 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
                 row1.valor = vValor;
                 row1.tipo_id = IdPago;
                 row1.referencia = pReferencia;
+                if (TipoPagoSeleccionadoActual == TipoPago.DepositoBancario)
+                    row1.id_cuenta = Convert.ToInt32(grdCuentas.EditValue);
+                else
+                    row1.id_cuenta = 0;
+
 
                 dsRegistroPagos1.resumen_pago.Addresumen_pagoRow(row1);
                 dsRegistroPagos1.AcceptChanges();
@@ -570,6 +625,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
 
                 PagoParcial.Description = row.descripcion;
                 PagoParcial.Valor = row.valor;
+                PagoParcial.IdCuenta = row.id_cuenta;
                 ListaDetallePago.Add(PagoParcial);
             }
 
