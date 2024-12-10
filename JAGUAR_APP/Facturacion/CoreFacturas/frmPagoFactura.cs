@@ -512,6 +512,18 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
                 }
             }
 
+            if (string.IsNullOrEmpty(grdCuentas.Text))
+            {
+                CajaDialogo.Error("Debe seleccionar una Cuenta para Deposito Bancario!");
+                return;
+            }
+
+            if ((int)grdCuentas.EditValue <= 0)
+            {
+                CajaDialogo.Error("Debe seleccionar una Cuenta para Deposito Bancario!");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(txtReferencia.Text))
             {
                 ReferenciaReciboPago = txtReferencia.Text;

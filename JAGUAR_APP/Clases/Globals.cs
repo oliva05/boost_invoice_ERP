@@ -34,7 +34,8 @@ namespace ACS.Classes
 
         //public static string JAGUAR_ServerAddress = "10.101.0.204";
         //public static string JAGUAR_ServerName = "10.101.0.204";
-        public static string JAGUAR_ActiveDB = "ImportadoraV";
+        //public static string JAGUAR_ActiveDB = "ImportadoraV"; //Base de Produccion 
+        public static string JAGUAR_ActiveDB = "ImportadoraV_Dev"; //Base de Desarrollo
         public static string JAGUAR_DB_User = "importadora_db";
         public static string JAGUAR_DB_Pass = "ProyProgres02024HN";
         //public static string JAGUAR_DB_Pass = "Alza2023*";

@@ -32,16 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPagoFactura));
             this.tabPagos = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.label22 = new System.Windows.Forms.Label();
-            this.grdCuentas = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.cuentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colid_cuenta = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colid_banco = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colcuenta = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coltitular = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnum_cuenta = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colmoneda = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ListboxPrintersEfectivo = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.label6 = new System.Windows.Forms.Label();
             this.cmdPagar = new DevExpress.XtraEditors.SimpleButton();
@@ -66,6 +56,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.grdCuentas = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.cuentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsRegistroPagos1 = new JAGUAR_APP.Facturacion.CoreFacturas.dsRegistroPagos();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid_cuenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_banco = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcuenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltitular = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnum_cuenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmoneda = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -82,7 +83,6 @@
             this.cmdTarjeta = new DevExpress.XtraEditors.SimpleButton();
             this.cmdDepositoBancario = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.dsRegistroPagos1 = new JAGUAR_APP.Facturacion.CoreFacturas.dsRegistroPagos();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -101,20 +101,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabPagos)).BeginInit();
             this.tabPagos.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCuentas.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cuentasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListboxPrintersEfectivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListboxPrintersTarjeta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCuentas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuentasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRegistroPagos1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListboxPrintersTransferencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsRegistroPagos1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,8 +136,6 @@
             // 
             this.xtraTabPage1.Appearance.PageClient.BackColor = System.Drawing.Color.White;
             this.xtraTabPage1.Appearance.PageClient.Options.UseBackColor = true;
-            this.xtraTabPage1.Controls.Add(this.label22);
-            this.xtraTabPage1.Controls.Add(this.grdCuentas);
             this.xtraTabPage1.Controls.Add(this.ListboxPrintersEfectivo);
             this.xtraTabPage1.Controls.Add(this.label6);
             this.xtraTabPage1.Controls.Add(this.cmdPagar);
@@ -154,86 +152,10 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(353, 389);
             this.xtraTabPage1.Text = "Detalles del Pago";
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label22.Location = new System.Drawing.Point(45, 139);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(64, 21);
-            this.label22.TabIndex = 35;
-            this.label22.Text = "Cuenta";
-            // 
-            // grdCuentas
-            // 
-            this.grdCuentas.Location = new System.Drawing.Point(115, 137);
-            this.grdCuentas.Name = "grdCuentas";
-            this.grdCuentas.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grdCuentas.Properties.Appearance.Options.UseFont = true;
-            this.grdCuentas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.grdCuentas.Properties.DataSource = this.cuentasBindingSource;
-            this.grdCuentas.Properties.DisplayMember = "cuenta";
-            this.grdCuentas.Properties.NullText = "";
-            this.grdCuentas.Properties.PopupView = this.gridLookUpEdit1View;
-            this.grdCuentas.Properties.ValueMember = "id_cuenta";
-            this.grdCuentas.Size = new System.Drawing.Size(178, 26);
-            this.grdCuentas.TabIndex = 34;
-            // 
-            // gridLookUpEdit1View
-            // 
-            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colid_cuenta,
-            this.colid_banco,
-            this.colcuenta,
-            this.coltitular,
-            this.colnum_cuenta,
-            this.colmoneda});
-            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
-            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // colid_cuenta
-            // 
-            this.colid_cuenta.FieldName = "id_cuenta";
-            this.colid_cuenta.Name = "colid_cuenta";
-            // 
-            // colid_banco
-            // 
-            this.colid_banco.FieldName = "id_banco";
-            this.colid_banco.Name = "colid_banco";
-            // 
-            // colcuenta
-            // 
-            this.colcuenta.Caption = "Cuenta";
-            this.colcuenta.FieldName = "cuenta";
-            this.colcuenta.Name = "colcuenta";
-            this.colcuenta.Visible = true;
-            this.colcuenta.VisibleIndex = 0;
-            // 
-            // coltitular
-            // 
-            this.coltitular.Caption = "Titular";
-            this.coltitular.FieldName = "titular";
-            this.coltitular.Name = "coltitular";
-            this.coltitular.Visible = true;
-            this.coltitular.VisibleIndex = 1;
-            // 
-            // colnum_cuenta
-            // 
-            this.colnum_cuenta.FieldName = "num_cuenta";
-            this.colnum_cuenta.Name = "colnum_cuenta";
-            // 
-            // colmoneda
-            // 
-            this.colmoneda.FieldName = "moneda";
-            this.colmoneda.Name = "colmoneda";
-            // 
             // ListboxPrintersEfectivo
             // 
             this.ListboxPrintersEfectivo.CheckMode = DevExpress.XtraEditors.CheckMode.Single;
-            this.ListboxPrintersEfectivo.Location = new System.Drawing.Point(115, 235);
+            this.ListboxPrintersEfectivo.Location = new System.Drawing.Point(115, 204);
             this.ListboxPrintersEfectivo.Name = "ListboxPrintersEfectivo";
             this.ListboxPrintersEfectivo.Size = new System.Drawing.Size(236, 96);
             this.ListboxPrintersEfectivo.TabIndex = 33;
@@ -243,7 +165,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(22, 235);
+            this.label6.Location = new System.Drawing.Point(22, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 21);
             this.label6.TabIndex = 32;
@@ -255,7 +177,7 @@
             this.cmdPagar.Appearance.Options.UseFont = true;
             this.cmdPagar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdPagar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdPagar.ImageOptions.Image")));
-            this.cmdPagar.Location = new System.Drawing.Point(85, 337);
+            this.cmdPagar.Location = new System.Drawing.Point(81, 323);
             this.cmdPagar.Name = "cmdPagar";
             this.cmdPagar.Size = new System.Drawing.Size(212, 45);
             this.cmdPagar.TabIndex = 31;
@@ -266,7 +188,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(35, 170);
+            this.label5.Location = new System.Drawing.Point(35, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 21);
             this.label5.TabIndex = 30;
@@ -274,7 +196,7 @@
             // 
             // radioGroup1
             // 
-            this.radioGroup1.Location = new System.Drawing.Point(115, 170);
+            this.radioGroup1.Location = new System.Drawing.Point(115, 139);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Properties.Appearance.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioGroup1.Properties.Appearance.Options.UseFont = true;
@@ -487,6 +409,8 @@
             // 
             this.xtraTabPage3.Appearance.PageClient.BackColor = System.Drawing.Color.White;
             this.xtraTabPage3.Appearance.PageClient.Options.UseBackColor = true;
+            this.xtraTabPage3.Controls.Add(this.label22);
+            this.xtraTabPage3.Controls.Add(this.grdCuentas);
             this.xtraTabPage3.Controls.Add(this.txtReferencia);
             this.xtraTabPage3.Controls.Add(this.label17);
             this.xtraTabPage3.Controls.Add(this.simpleButton2);
@@ -503,10 +427,96 @@
             this.xtraTabPage3.Size = new System.Drawing.Size(353, 389);
             this.xtraTabPage3.Text = "Detalles del Pago";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label22.Location = new System.Drawing.Point(-1, 113);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(64, 21);
+            this.label22.TabIndex = 42;
+            this.label22.Text = "Cuenta";
+            // 
+            // grdCuentas
+            // 
+            this.grdCuentas.Location = new System.Drawing.Point(188, 108);
+            this.grdCuentas.Name = "grdCuentas";
+            this.grdCuentas.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.grdCuentas.Properties.Appearance.Options.UseFont = true;
+            this.grdCuentas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.grdCuentas.Properties.DataSource = this.cuentasBindingSource;
+            this.grdCuentas.Properties.DisplayMember = "cuenta";
+            this.grdCuentas.Properties.NullText = "";
+            this.grdCuentas.Properties.PopupView = this.gridLookUpEdit1View;
+            this.grdCuentas.Properties.ValueMember = "id_cuenta";
+            this.grdCuentas.Size = new System.Drawing.Size(156, 30);
+            this.grdCuentas.TabIndex = 41;
+            // 
+            // cuentasBindingSource
+            // 
+            this.cuentasBindingSource.DataMember = "cuentas";
+            this.cuentasBindingSource.DataSource = this.dsRegistroPagos1;
+            // 
+            // dsRegistroPagos1
+            // 
+            this.dsRegistroPagos1.DataSetName = "dsRegistroPagos";
+            this.dsRegistroPagos1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid_cuenta,
+            this.colid_banco,
+            this.colcuenta,
+            this.coltitular,
+            this.colnum_cuenta,
+            this.colmoneda});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid_cuenta
+            // 
+            this.colid_cuenta.FieldName = "id_cuenta";
+            this.colid_cuenta.Name = "colid_cuenta";
+            // 
+            // colid_banco
+            // 
+            this.colid_banco.FieldName = "id_banco";
+            this.colid_banco.Name = "colid_banco";
+            // 
+            // colcuenta
+            // 
+            this.colcuenta.Caption = "Cuenta";
+            this.colcuenta.FieldName = "cuenta";
+            this.colcuenta.Name = "colcuenta";
+            this.colcuenta.Visible = true;
+            this.colcuenta.VisibleIndex = 0;
+            // 
+            // coltitular
+            // 
+            this.coltitular.Caption = "Titular";
+            this.coltitular.FieldName = "titular";
+            this.coltitular.Name = "coltitular";
+            this.coltitular.Visible = true;
+            this.coltitular.VisibleIndex = 1;
+            // 
+            // colnum_cuenta
+            // 
+            this.colnum_cuenta.FieldName = "num_cuenta";
+            this.colnum_cuenta.Name = "colnum_cuenta";
+            // 
+            // colmoneda
+            // 
+            this.colmoneda.FieldName = "moneda";
+            this.colmoneda.Name = "colmoneda";
+            // 
             // txtReferencia
             // 
             this.txtReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReferencia.Location = new System.Drawing.Point(188, 110);
+            this.txtReferencia.Location = new System.Drawing.Point(188, 143);
             this.txtReferencia.Name = "txtReferencia";
             this.txtReferencia.Size = new System.Drawing.Size(156, 29);
             this.txtReferencia.TabIndex = 40;
@@ -517,7 +527,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 115);
+            this.label17.Location = new System.Drawing.Point(3, 148);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(91, 21);
             this.label17.TabIndex = 39;
@@ -533,7 +543,7 @@
             this.simpleButton2.Appearance.Options.UseBorderColor = true;
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.simpleButton2.Location = new System.Drawing.Point(91, 305);
+            this.simpleButton2.Location = new System.Drawing.Point(91, 338);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(145, 46);
             this.simpleButton2.TabIndex = 38;
@@ -543,7 +553,7 @@
             // ListboxPrintersTransferencia
             // 
             this.ListboxPrintersTransferencia.CheckMode = DevExpress.XtraEditors.CheckMode.Single;
-            this.ListboxPrintersTransferencia.Location = new System.Drawing.Point(113, 212);
+            this.ListboxPrintersTransferencia.Location = new System.Drawing.Point(113, 245);
             this.ListboxPrintersTransferencia.Name = "ListboxPrintersTransferencia";
             this.ListboxPrintersTransferencia.Size = new System.Drawing.Size(231, 87);
             this.ListboxPrintersTransferencia.TabIndex = 37;
@@ -553,7 +563,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(3, 212);
+            this.label16.Location = new System.Drawing.Point(3, 245);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(87, 21);
             this.label16.TabIndex = 36;
@@ -573,7 +583,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(3, 145);
+            this.label12.Location = new System.Drawing.Point(3, 178);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 21);
             this.label12.TabIndex = 34;
@@ -581,7 +591,7 @@
             // 
             // radioGroup3
             // 
-            this.radioGroup3.Location = new System.Drawing.Point(188, 145);
+            this.radioGroup3.Location = new System.Drawing.Point(188, 178);
             this.radioGroup3.Name = "radioGroup3";
             this.radioGroup3.Properties.Appearance.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioGroup3.Properties.Appearance.Options.UseFont = true;
@@ -687,11 +697,6 @@
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // dsRegistroPagos1
-            // 
-            this.dsRegistroPagos1.DataSetName = "dsRegistroPagos";
-            this.dsRegistroPagos1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -860,9 +865,6 @@
             this.tabPagos.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCuentas.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cuentasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListboxPrintersEfectivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
@@ -871,11 +873,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCuentas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuentasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRegistroPagos1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListboxPrintersTransferencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsRegistroPagos1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
