@@ -4362,5 +4362,12 @@ namespace JAGUAR_APP
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
+
+        private void navBarItem60_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmRptBancos frm = new frmRptBancos(UsuarioLogeado);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
     }
 }

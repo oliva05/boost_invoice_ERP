@@ -642,6 +642,9 @@
     <Compile Include="Autorizaciones\frmSolicitudAutorizacion.Designer.cs">
       <DependentUpon>frmSolicitudAutorizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="BancosYTitulares\dsBancos.cs">
+      <DependentUpon>dsBancos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BancosYTitulares\dsBancos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1364,6 +1367,18 @@
     </Compile>
     <Compile Include="Facturacion\Reportes\frmCierreDiaHome.Designer.cs">
       <DependentUpon>frmCierreDiaHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\frmRptBancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\frmRptBancos.Designer.cs">
+      <DependentUpon>frmRptBancos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\frmRptBancosAjuste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\frmRptBancosAjuste.Designer.cs">
+      <DependentUpon>frmRptBancosAjuste.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Reportes\rptEstadoCuenta.cs">
       <SubType>Component</SubType>
@@ -3222,6 +3237,12 @@
     <EmbeddedResource Include="Facturacion\Reportes\frmCierreDiaHome.resx">
       <DependentUpon>frmCierreDiaHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\frmRptBancos.resx">
+      <DependentUpon>frmRptBancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\frmRptBancosAjuste.resx">
+      <DependentUpon>frmRptBancosAjuste.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Reportes\rptEstadoCuenta.resx">
       <DependentUpon>rptEstadoCuenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -4051,6 +4072,8 @@
     <None Include="Resources\procedimiento_16X16.png" />
     <None Include="Resources\ProdT_32X32.png" />
     <None Include="Resources\ProdT_26X26.png" />
+    <None Include="Resources\printer_16x16.png" />
+    <None Include="Resources\printarea_32x32.png" />
     <Content Include="Resources\production.png" />
     <None Include="Resources\Products_32x32.png" />
     <None Include="Resources\proveedores32px.png" />
