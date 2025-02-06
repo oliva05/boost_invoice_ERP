@@ -274,13 +274,13 @@
             this.navBarItem58 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarCotizaciones = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem59 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup12 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem60 = new DevExpress.XtraNavBar.NavBarItem();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.rd_OdooMenu = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtEquipoLogeadoActual = new DevExpress.XtraEditors.TextEdit();
             this.nBarRecepcionFactPuntoVenta = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup12 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem60 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabOpciones)).BeginInit();
             this.tabOpciones.SuspendLayout();
             this.TabMontacarga.SuspendLayout();
@@ -3889,6 +3889,30 @@
             this.navBarItem59.Name = "navBarItem59";
             this.navBarItem59.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem59_LinkClicked_1);
             // 
+            // navBarGroup12
+            // 
+            this.navBarGroup12.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Bold);
+            this.navBarGroup12.Appearance.Options.UseFont = true;
+            this.navBarGroup12.Caption = "Bancos";
+            this.navBarGroup12.Expanded = true;
+            this.navBarGroup12.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem60)});
+            this.navBarGroup12.Name = "navBarGroup12";
+            // 
+            // navBarItem60
+            // 
+            this.navBarItem60.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarItem60.Appearance.Options.UseFont = true;
+            this.navBarItem60.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarItem60.AppearanceDisabled.Options.UseFont = true;
+            this.navBarItem60.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarItem60.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItem60.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.navBarItem60.AppearancePressed.Options.UseFont = true;
+            this.navBarItem60.Caption = "Reporte de Bancos";
+            this.navBarItem60.Name = "navBarItem60";
+            this.navBarItem60.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem60_LinkClicked);
+            // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3940,30 +3964,6 @@
             this.nBarRecepcionFactPuntoVenta.Caption = "Recepcion Factura Punto Venta";
             this.nBarRecepcionFactPuntoVenta.Name = "nBarRecepcionFactPuntoVenta";
             this.nBarRecepcionFactPuntoVenta.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nBarRecepcionFactPuntoVenta_LinkClicked);
-            // 
-            // navBarGroup12
-            // 
-            this.navBarGroup12.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Bold);
-            this.navBarGroup12.Appearance.Options.UseFont = true;
-            this.navBarGroup12.Caption = "Bancos";
-            this.navBarGroup12.Expanded = true;
-            this.navBarGroup12.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem60)});
-            this.navBarGroup12.Name = "navBarGroup12";
-            // 
-            // navBarItem60
-            // 
-            this.navBarItem60.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.875F);
-            this.navBarItem60.Appearance.Options.UseFont = true;
-            this.navBarItem60.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI", 10.875F);
-            this.navBarItem60.AppearanceDisabled.Options.UseFont = true;
-            this.navBarItem60.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 10.875F);
-            this.navBarItem60.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarItem60.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 10.875F);
-            this.navBarItem60.AppearancePressed.Options.UseFont = true;
-            this.navBarItem60.Caption = "Reporte de Bancos";
-            this.navBarItem60.Name = "navBarItem60";
-            this.navBarItem60.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem60_LinkClicked);
             // 
             // frmOpciones
             // 
