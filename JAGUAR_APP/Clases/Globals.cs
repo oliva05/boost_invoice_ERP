@@ -27,15 +27,15 @@ namespace ACS.Classes
 
         //public static string JAGUAR_ServerAddress = "mssql-123688-0.cloudclusters.net,18285";
         //public static string JAGUAR_ServerName = "mssql-123688-0.cloudclusters.net,18285";
-        public static string JAGUAR_ServerAddress = "mssql-137225-0.cloudclusters.net,10006";
+        public static string JAGUAR_ServerAddress = "mssql-137225-0.cloudclusters.net,10043";
         public static string JAGUAR_ServerName = "Servidor Producción";
         //public static string JAGUAR_ServerName = "DESKTOP-P55C1OL";
         //public static string JAGUAR_ServerAddress = "DESKTOP-P55C1OL";
 
         //public static string JAGUAR_ServerAddress = "10.101.0.204";
         //public static string JAGUAR_ServerName = "10.101.0.204";
-        //public static string JAGUAR_ActiveDB = "ImportadoraV"; //Base de Produccion 
-        public static string JAGUAR_ActiveDB = "ImportadoraV_Dev"; //Base de Desarrollo
+        public static string JAGUAR_ActiveDB = "ImportadoraV"; //Base de Produccion 
+        //public static string JAGUAR_ActiveDB = "ImportadoraV_Dev"; //Base de Desarrollo
         public static string JAGUAR_DB_User = "importadora_db";
         public static string JAGUAR_DB_Pass = "ProyProgres02024HN";
         //public static string JAGUAR_DB_Pass = "Alza2023*";

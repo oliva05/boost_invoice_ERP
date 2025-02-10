@@ -3663,6 +3663,7 @@
             this.navBarGroup10.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBarGroup10.Appearance.Options.UseFont = true;
             this.navBarGroup10.Caption = "Ventas";
+            this.navBarGroup10.Expanded = true;
             this.navBarGroup10.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarFacturaMain),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemFacturasEmitidas),
